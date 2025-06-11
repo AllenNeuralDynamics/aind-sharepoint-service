@@ -1,40 +1,40 @@
-"""Module to retrieve data from a backend using a session object"""
+"""Module to retrieve data from a Sharepoint using a session object"""
 
 import logging
-
-from requests_toolbelt.sessions import BaseUrlSession
-
-from aind_sharepoint_service_server.models import Content
+from typing import Any, Optional
+from pydantic import ValidationError, ValidatorFunctionWrapHandler
+from aind_sharepoint_service_server.client import SharePointClient
+from aind_sharepoint_service_server.models import LASList
 
 
 class SessionHandler:
     """Handle session object to get data"""
 
-    def __init__(self, session: BaseUrlSession):
+    def __init__(self, session: SharePointClient):
         """Class constructor"""
         self.session = session
 
-    def get_info(self, example_arg: str) -> Content:
+    def get_las_2020_procedures(self, subject_id: str):
         """
-        Get information from a backend. An example argument is added.
-
+        Retrieve procedure info from LAS 2020 list for a given subject ID.
         Parameters
         ----------
-        example_arg : str
-
+        subject_id : str
+            Subject ID to filter the procedures.
         Returns
         -------
-        str
-          Contents of a webpage.
-
+        List[LASList]
+            A list of LASList models containing the procedure information.
         """
-
-        logging.debug(f"Sending request for {example_arg}")
-        response = self.session.get("")
-        response.raise_for_status()
-        logging.debug(f"Received response for {example_arg}")
-        text = response.text
-        if example_arg == "length":
-            return Content(info=str(len(text)), arg=example_arg)
-        else:
-            return Content(info=text, arg=example_arg)
+        logging.info(f"Pulling data from LAS 2020 for {subject_id}")
+        all_items = self.session._fetch_all_list_items(
+            site_id=self.session.las_site_id,
+            list_id=self.session.las_2020_list_id,
+            subject_id=subject_id,
+        )
+        las_models = [
+            LASList.model_validate(item["fields"]) for item in all_items
+        ]
+        return las_models
+        
+    

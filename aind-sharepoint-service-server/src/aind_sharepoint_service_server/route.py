@@ -1,11 +1,11 @@
 """Module to handle endpoint responses"""
 
 from fastapi import APIRouter, Depends, HTTPException, Path, status
-from requests_toolbelt.sessions import BaseUrlSession
-
 from aind_sharepoint_service_server.handler import SessionHandler
-from aind_sharepoint_service_server.models import Content, HealthCheck
+from aind_sharepoint_service_server.models import HealthCheck
 from aind_sharepoint_service_server.session import get_session
+from aind_sharepoint_service_server.models import LASList
+from typing import List
 
 router = APIRouter()
 
@@ -27,22 +27,24 @@ async def get_health() -> HealthCheck:
     """
     return HealthCheck()
 
-
 @router.get(
-    "/{example_arg}",
-    response_model=Content,
+    "/las2020_procedures/{subject_id}",
+    response_model=List[LASList],
 )
-async def get_content(
-    example_arg: str = Path(..., examples=["raw", "length"]),
-    session: BaseUrlSession = Depends(get_session),
+async def get_las_2020_procedures(
+    subject_id: str = Path(..., examples=["805811"]),
+    session: SessionHandler = Depends(get_session),
 ):
     """
-    ## Example content
-    Return either the raw content or the number of characters.
+    # LAS 2020 Procedures Endpoint
+    Retrieve procedure information from the LAS 2020 list for a given subject ID.
     """
-    content = SessionHandler(session=session).get_info(example_arg=example_arg)
-    # Adding this for illustrative purposes.
-    if len(content.info) == 0:
-        raise HTTPException(status_code=404, detail="Not found")
+    las_procedures = SessionHandler(session=session).get_las_2020_procedures(subject_id)
+    if not las_procedures:
+        raise HTTPException(
+            status_code=404,
+            detail=f"No procedures found for subject ID {subject_id} in LAS 2020.",
+        )
     else:
-        return content
+        return las_procedures
+
