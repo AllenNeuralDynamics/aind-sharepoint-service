@@ -99,5 +99,5 @@ env = [
     "SHAREPOINT_LAS_2020_LIST_ID=las_2020_list_id",
     "SHAREPOINT_CLIENT_ID=client_id",
     "SHAREPOINT_CLIENT_SECRET=client_secret",
-    "TENANT_ID=tenant_id"
+    "SHAREPOINT_TENANT_ID=tenant_id"
 ]
