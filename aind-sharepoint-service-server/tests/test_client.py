@@ -84,7 +84,6 @@ class TestSharepointClient(unittest.TestCase):
     def test_fetch_list_items_success(self):
         """Test that JSON is returned from successful GET call."""
         client = SharePointClient.from_settings(self.settings)
-        # Patch _get_headers to return a fixed header.
         client._get_headers = MagicMock(
             return_value={
                 "Authorization": "Bearer fake",

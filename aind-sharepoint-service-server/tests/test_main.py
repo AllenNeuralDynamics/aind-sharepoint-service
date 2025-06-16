@@ -6,7 +6,6 @@ import pytest
 from fastapi.testclient import TestClient
 
 
-# TODO: add test here
 class TestMain:
     """Tests app endpoints"""
 
