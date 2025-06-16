@@ -22,6 +22,7 @@ def mock_fetch_all_items(mocker: MockFixture, path: Path) -> MagicMock:
     """
 
     def fetch_side_effect(site_id, list_id, subject_id):
+        """Side effect function to return items from JSONs"""
         all_items = []
         for file in sorted(path.glob("list_item*.json")):
             with open(file, encoding="utf-8") as f:
