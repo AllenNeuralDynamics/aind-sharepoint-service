@@ -1,8 +1,7 @@
 """Module to retrieve data from a Sharepoint using a session object"""
 
 import logging
-from typing import Any, Optional
-from pydantic import ValidationError, ValidatorFunctionWrapHandler
+
 from aind_sharepoint_service_server.client import SharePointClient
 from aind_sharepoint_service_server.models import LASList
 
@@ -36,5 +35,3 @@ class SessionHandler:
             LASList.model_validate(item["fields"]) for item in all_items
         ]
         return las_models
-        
-    

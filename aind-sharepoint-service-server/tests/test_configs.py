@@ -3,8 +3,9 @@
 import os
 import unittest
 from unittest.mock import patch
-from tests import PYD_VERSION
+
 from aind_sharepoint_service_server.configs import Settings
+from tests import PYD_VERSION
 
 
 class TestSettings(unittest.TestCase):
@@ -23,7 +24,7 @@ class TestSettings(unittest.TestCase):
             "SHAREPOINT_CLIENT_SECRET": "client_secret",
             "SHAREPOINT_TENANT_ID": "tenant_id",
         },
-        clear=True
+        clear=True,
     )
     def test_get_settings(self):
         """Tests settings can be set via env vars"""
@@ -40,7 +41,9 @@ class TestSettings(unittest.TestCase):
             tenant_id="tenant_id",
             graph_api_url="https://graph.microsoft.com/v1.0",
             scope="https://graph.microsoft.com/.default",
-            token_url="https://login.microsoftonline.com/tenant_id/oauth2/v2.0/token",
+            token_url=(
+                "https://login.microsoftonline.com/tenant_id/oauth2/v2.0/token"
+            ),
         )
         self.assertEqual(expected_settings, settings)
 
@@ -101,6 +104,7 @@ class TestSettings(unittest.TestCase):
         )
 
         self.assertEqual(expected_error_message, repr(e.exception))
+
 
 if __name__ == "__main__":
     unittest.main()

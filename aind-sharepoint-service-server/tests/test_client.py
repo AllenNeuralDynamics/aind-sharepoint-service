@@ -1,22 +1,13 @@
 """Module to test SharePoint Client methods"""
 
-import json
-import logging
-import os
 import unittest
-from pathlib import Path
-from typing import List, Tuple
 from unittest.mock import MagicMock, call, patch
 
 import requests
-from fastapi.responses import JSONResponse
 from pydantic import SecretStr
 
 from aind_sharepoint_service_server.client import SharePointClient
 from aind_sharepoint_service_server.configs import Settings
-
-
-from tests import PYD_VERSION
 
 
 class TestSharepointClient(unittest.TestCase):
@@ -41,7 +32,7 @@ class TestSharepointClient(unittest.TestCase):
         )
         cls.client = SharePointClient.from_settings(cls.settings)
         cls.client.get_access_token = MagicMock(return_value="fake-token")
-        
+
     def test_get_access_token_success(self):
         """Test that get_access_token returns and caches the access token."""
 

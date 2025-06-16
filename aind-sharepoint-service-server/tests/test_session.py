@@ -12,8 +12,9 @@ class TestSession:
         """Tests get_session method"""
 
         session = next(get_session())
-        base_url = session.base_url
-        assert "example" == base_url
+        assert "aind_site_id" == session.aind_site_id
+        assert "las_site_id" == session.las_site_id
+        assert "https://graph.microsoft.com/v1.0" == session.graph_api_url
 
 
 if __name__ == "__main__":

@@ -2,14 +2,12 @@
 
 from datetime import datetime
 from enum import Enum
-from typing import Annotated, Optional, Literal
+from typing import Annotated, Literal, Optional
 
 from pydantic import BaseModel, Field, WrapValidator
 
-from aind_sharepoint_service_server.client import optional_enum
-
-
 from aind_sharepoint_service_server import __version__
+from aind_sharepoint_service_server.client import optional_enum
 
 
 class HealthCheck(BaseModel):
@@ -18,14 +16,18 @@ class HealthCheck(BaseModel):
     status: Literal["OK"] = "OK"
     service_version: str = __version__
 
+
 class LASBctype(str, Enum):
     """Enum class for LASBctype"""
+
     SUBMANDIBULAR = "Submandibular"
     SUBMANDIBULAR_IMMUNOLOGY = "Submandibular - Immunology"
     TERMINAL = "Terminal"
 
+
 class LASDoseroute(str, Enum):
     """Enum class for LASDoseroute"""
+
     INTRAMUSCULAR_IM = "Intramuscular (IM)"
     INTRAPERITONEAL_IP = "Intraperitoneal (IP)"
     INTRAVENOUS_IV = "Intravenous (IV)"
@@ -35,39 +37,50 @@ class LASDoseroute(str, Enum):
 
 class LASIcvlims(str, Enum):
     """Enum class for LASIcvlims"""
+
     NEW_STEREOTAXIC_INJECTION = "New Stereotaxic Injections"
     STEREOTAXIC_INJECTIONS = "Stereotaxic Injections"
 
+
 class LASIcvroute1(str, Enum):
     """Enum class for LASIcvroute1"""
+
     ANY_UNILATERAL = "Any, Unilateral"
     BILATERAL = "Bilateral"
     LEFT_UNILATERAL = "Left, Unilateral"
     RIGHT_UNILATERAL = "Right, Unilateral"
+
 
 class LASIcvroute2(str, Enum):
     """Enum class for LASIcvroute2"""
+
     ANY_UNILATERAL = "Any, Unilateral"
     BILATERAL = "Bilateral"
     LEFT_UNILATERAL = "Left, Unilateral"
     RIGHT_UNILATERAL = "Right, Unilateral"
+
 
 class LASIcvroute3(str, Enum):
     """Enum class for LASIcvroute3"""
+
     ANY_UNILATERAL = "Any, Unilateral"
     BILATERAL = "Bilateral"
     LEFT_UNILATERAL = "Left, Unilateral"
     RIGHT_UNILATERAL = "Right, Unilateral"
+
 
 class LASIcvroute4(str, Enum):
     """Enum class for LASIcvroute4"""
+
     ANY_UNILATERAL = "Any, Unilateral"
     BILATERAL = "Bilateral"
     LEFT_UNILATERAL = "Left, Unilateral"
     RIGHT_UNILATERAL = "Right, Unilateral"
 
+
 class LASIcvroute5(str, Enum):
     """Enum class for LASIcvroute5"""
+
     ANY_UNILATERAL = "Any, Unilateral"
     BILATERAL = "Bilateral"
     LEFT_UNILATERAL = "Left, Unilateral"
@@ -862,16 +875,16 @@ class LASList(BaseModel, extra="allow"):
     lims_entry: Optional[bool] = Field(
         default=None, alias="LIMSEntry", title="LIMSEntry"
     )
-    lims_project: Annotated[LASLimsproject, WrapValidator(optional_enum)] = Field(
-        default=None, alias="LIMSProject", title="LIMSProject"
+    lims_project: Annotated[LASLimsproject, WrapValidator(optional_enum)] = (
+        Field(default=None, alias="LIMSProject", title="LIMSProject")
     )
     lims_workflow: Annotated[LASLimsworkflow, WrapValidator(optional_enum)] = (
         Field(default=None, alias="LIMSWorkflow", title="LIMSWorkflow")
     )
-    lims_workflow_2: Annotated[LASLimsworkflow2, WrapValidator(optional_enum)] = (
-        Field(
-            default=None, alias="LIMSWorkflow_x0020_2", title="LIMSWorkflow 2"
-        )
+    lims_workflow_2: Annotated[
+        LASLimsworkflow2, WrapValidator(optional_enum)
+    ] = Field(
+        default=None, alias="LIMSWorkflow_x0020_2", title="LIMSWorkflow 2"
     )
     lt_task1: Optional[str] = Field(
         default=None, alias="LTTask1", title="LTTask1"

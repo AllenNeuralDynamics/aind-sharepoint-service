@@ -1,11 +1,12 @@
 """Module to handle endpoint responses"""
 
-from fastapi import APIRouter, Depends, HTTPException, Path, status
-from aind_sharepoint_service_server.handler import SessionHandler
-from aind_sharepoint_service_server.models import HealthCheck
-from aind_sharepoint_service_server.session import get_session
-from aind_sharepoint_service_server.models import LASList
 from typing import List
+
+from fastapi import APIRouter, Depends, HTTPException, Path, status
+
+from aind_sharepoint_service_server.handler import SessionHandler
+from aind_sharepoint_service_server.models import HealthCheck, LASList
+from aind_sharepoint_service_server.session import get_session
 
 router = APIRouter()
 
@@ -27,6 +28,7 @@ async def get_health() -> HealthCheck:
     """
     return HealthCheck()
 
+
 @router.get(
     "/las2020_procedures/{subject_id}",
     response_model=List[LASList],
@@ -37,14 +39,17 @@ async def get_las_2020_procedures(
 ):
     """
     # LAS 2020 Procedures Endpoint
-    Retrieve procedure information from the LAS 2020 list for a given subject ID.
+    Retrieve information from the LAS 2020 list for a given subject ID.
     """
-    las_procedures = SessionHandler(session=session).get_las_2020_procedures(subject_id)
+    las_procedures = SessionHandler(session=session).get_las_2020_procedures(
+        subject_id
+    )
     if not las_procedures:
         raise HTTPException(
             status_code=404,
-            detail=f"No procedures found for subject ID {subject_id} in LAS 2020.",
+            detail=(
+                f"No procedures found for subject ID {subject_id} in LAS 2020."
+            ),
         )
     else:
         return las_procedures
-

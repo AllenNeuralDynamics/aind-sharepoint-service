@@ -1,14 +1,12 @@
 """Module to create client to connect to sharepoint database"""
 
-import json
 import logging
-import os
-from typing import Iterator, List, Optional, Union, Any, Optional
+from typing import Any, Iterator, Optional
 
 import requests
-from pydantic import BaseModel, Field, SecretStr, field_validator, ValidationError, ValidatorFunctionWrapHandler
-from pydantic_settings import SettingsConfigDict
+from pydantic import SecretStr, ValidationError, ValidatorFunctionWrapHandler
 from requests import Session
+
 from aind_sharepoint_service_server.configs import Settings
 
 
@@ -34,6 +32,7 @@ def optional_enum(
         return validated_v
     except ValidationError:
         return None
+
 
 class SharePointClient:
     """This class contains the API to connect to Sharepoint Database."""
@@ -219,5 +218,3 @@ class SharePointClient:
             raise RuntimeError(
                 f"Failed to fetch list items for list {list_id}."
             )
-
-
