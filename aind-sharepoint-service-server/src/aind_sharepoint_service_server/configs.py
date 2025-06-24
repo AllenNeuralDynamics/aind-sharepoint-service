@@ -1,11 +1,12 @@
 """Module for settings to connect to backend"""
 
-from typing import Optional
+from typing import ClassVar, Optional
+from urllib.parse import urljoin
 
 from aind_settings_utils.aws import (
     ParameterStoreAppBaseSettings,
 )
-from pydantic import Field, SecretStr, field_validator
+from pydantic import Field, SecretStr
 from pydantic_settings import SettingsConfigDict
 
 
@@ -15,30 +16,21 @@ class Settings(ParameterStoreAppBaseSettings):
     model_config = SettingsConfigDict(
         env_prefix="SHAREPOINT_", case_sensitive=False
     )
-
-    aind_site_id: str = Field(
-        title="AIND Site ID",
-        description="Site ID of the AIND SharePoint site.",
-    )
     las_site_id: str = Field(
-        title="LAS Site ID",
-        description="Site ID of the LAS SharePoint site.",
+        title="Site ID",
+        description="Site ID of the SharePoint site.",
     )
-    nsb_2019_list_id: str = Field(
-        title="NSB 2019-2022 Archive List ID",
-        description="List ID for NSB 2019-2022 procedures.",
+    nsb_site_id: str = Field(
+        title="Site ID",
+        description="Site ID of the SharePoint site.",
     )
     nsb_2023_list_id: str = Field(
-        title="NSB 2023-2024 Archive List ID",
-        description="List ID for NSB 2023-2024 Archive procedures.",
-    )
-    nsb_present_list_id: str = Field(
-        title="NSB 2023-Present List ID",
-        description="List ID for NSB Present procedures.",
+        title="NSB 2023 List ID",
+        description="List ID for NSB 2023 Sharepoint List.",
     )
     las_2020_list_id: str = Field(
         title="LAS 2020 List ID",
-        description="List ID for LAS 2020 procedures.",
+        description="List ID for LAS 2020 Sharepoint List.",
     )
     client_id: str = Field(
         title="Client ID",
@@ -52,32 +44,37 @@ class Settings(ParameterStoreAppBaseSettings):
         title="Tenant ID",
         description="Tenant ID for the principal account.",
     )
-    graph_api_url: str = Field(
-        title="Graph API URL",
-        description="URL for the Microsoft Graph API.",
-        default="https://graph.microsoft.com/v1.0",
-    )
-    scope: str = Field(
-        title="Scope",
-        description="Scope for the Microsoft Graph API.",
-        default="https://graph.microsoft.com/.default",
-    )
-    token_url: Optional[str] = Field(
-        None,
-        title="Token URL",
-        description="URL for the Microsoft Identity Platform.",
-    )
+    redis_url: Optional[str] = Field(default=None)
+    graph_api_url: ClassVar[str] = "https://graph.microsoft.com"
 
-    @field_validator("token_url", mode="before")
-    def set_token_url(cls, v, info):
-        """Sets token_url from tenant_id if not provided."""
-        if v is not None:
-            return v
-        tenant_id = info.data.get("tenant_id")
-        if not tenant_id:
-            raise ValueError(
-                "tenant_id must be provided to generate token_url"
-            )
-        return (
-            f"https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token"
+    @property
+    def resource_id(self) -> str:
+        """Resource id used in Credentials scope."""
+        return urljoin(self.graph_api_url, ".default")
+
+    @property
+    def las_2020_url(self) -> str:
+        """LAS 2020 list items url"""
+        return urljoin(
+            self.graph_api_url,
+            (
+                f"v1.0/sites/{self.las_site_id}"
+                f"/lists/{self.las_2020_list_id}/items"
+            ),
         )
+
+    @property
+    def nsb_2023_url(self) -> str:
+        """NSB 2023 list items url"""
+        return urljoin(
+            self.graph_api_url,
+            (
+                f"v1.0/sites/{self.nsb_site_id}"
+                f"/lists/{self.nsb_2023_list_id}/items"
+            ),
+        )
+
+
+def get_settings() -> Settings:
+    """Return a Settings object."""
+    return Settings()

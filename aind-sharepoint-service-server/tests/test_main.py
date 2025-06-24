@@ -1,7 +1,5 @@
 """Module to test main app"""
 
-from unittest.mock import MagicMock
-
 import pytest
 from fastapi.testclient import TestClient
 
@@ -9,19 +7,15 @@ from fastapi.testclient import TestClient
 class TestMain:
     """Tests app endpoints"""
 
-    def test_get_healthcheck(self, client):
-        """Tests healthcheck"""
-        response = client.get("/healthcheck")
+    def test_app_with_redis(self, client_with_redis: TestClient):
+        """Tests client is instantiated correctly when redis_url set."""
+        response = client_with_redis.get("/healthcheck")
         assert 200 == response.status_code
 
-    def test_get_las2020_procedures(
-        self, client: TestClient, mock_las2020: MagicMock
-    ):
-        """Tests get_las2020_procedures endpoint"""
-        response = client.get("/las2020_procedures/000000")
+    def test_app_with_in_memory_cache(self, client: TestClient):
+        """Tests client is instantiated correctly when redis_url None."""
+        response = client.get("/healthcheck")
         assert 200 == response.status_code
-        data = response.json()
-        assert len(data) == 4
 
 
 if __name__ == "__main__":

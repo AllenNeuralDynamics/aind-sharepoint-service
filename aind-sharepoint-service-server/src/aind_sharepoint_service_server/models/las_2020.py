@@ -2,19 +2,15 @@
 
 from datetime import datetime
 from enum import Enum
-from typing import Annotated, Literal, Optional
+from typing import Annotated, Optional
 
-from pydantic import BaseModel, Field, WrapValidator
+from pydantic import (
+    BaseModel,
+    Field,
+    WrapValidator,
+)
 
-from aind_sharepoint_service_server import __version__
-from aind_sharepoint_service_server.client import optional_enum
-
-
-class HealthCheck(BaseModel):
-    """Response model to validate and return when performing a health check."""
-
-    status: Literal["OK"] = "OK"
-    service_version: str = __version__
+from aind_sharepoint_service_server.models.core import optional_enum
 
 
 class LASBctype(str, Enum):
@@ -686,7 +682,7 @@ class LASWheretoobtainsubstanceIcv(str, Enum):
     OTHER_SPECIFY_BELOW = "Other (Specify below)"
 
 
-class LASList(BaseModel, extra="allow"):
+class Las2020List(BaseModel, extra="allow"):
     """Fields in Sharepoint list"""
 
     accommodation_comment: Optional[str] = Field(

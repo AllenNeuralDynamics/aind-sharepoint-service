@@ -1,37 +1,47 @@
-"""Module to retrieve data from a Sharepoint using a session object"""
+"""Module to handle requesting info from Sharepoint"""
 
-import logging
+from typing import Any, Dict, List
 
-from aind_sharepoint_service_server.client import SharePointClient
-from aind_sharepoint_service_server.models import LASList
+from httpx import AsyncClient
 
 
 class SessionHandler:
-    """Handle session object to get data"""
+    """Handle pulling data from Sharepoint lists"""
 
-    def __init__(self, session: SharePointClient):
-        """Class constructor"""
-        self.session = session
-
-    def get_las_2020_procedures(self, subject_id: str):
+    def __init__(self, client: AsyncClient):
         """
-        Retrieve procedure info from LAS 2020 list for a given subject ID.
+        Class constructor.
         Parameters
         ----------
-        subject_id : str
-            Subject ID to filter the procedures.
+        client : AsyncClient
+        """
+        self.client = client
+
+    async def get_list_items(
+        self, list_items_url: str, params: Dict[str, str]
+    ) -> List[Dict[str, Any]]:
+        """
+        Paginate through a list to return all items filtered by params.
+        Parameters
+        ----------
+        list_items_url : str
+        params : Dict[str, str]
+
         Returns
         -------
-        List[LASList]
-            A list of LASList models containing the procedure information.
+        List[Dict[str, Any]]
+
         """
-        logging.info(f"Pulling data from LAS 2020 for {subject_id}")
-        all_items = self.session._fetch_all_list_items(
-            site_id=self.session.las_site_id,
-            list_id=self.session.las_2020_list_id,
-            subject_id=subject_id,
-        )
-        las_models = [
-            LASList.model_validate(item["fields"]) for item in all_items
-        ]
-        return las_models
+        all_items = []
+        response = await self.client.get(list_items_url, params=params)
+        response.raise_for_status()
+        for result in response.json().get("value", []):
+            all_items.append(result)
+        next_link = response.json().get("@odata.nextLink")
+        while next_link:
+            response = await self.client.get(next_link)
+            response.raise_for_status()
+            for result in response.json().get("value", []):
+                all_items.append(result)
+            next_link = response.json().get("@odata.nextLink")
+        return all_items
