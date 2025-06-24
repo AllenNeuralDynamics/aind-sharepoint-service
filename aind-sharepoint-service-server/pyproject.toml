@@ -20,6 +20,8 @@ dependencies = [
     'pydantic>=2.0',
     'pydantic-settings>=2.0',
     'fastapi[standard]>=0.114.0',
+    'fastapi-cache2[redis]>=0.2.2',
+    'azure-identity>=1.15.0',
     'aind-settings-utils>=0.0.3',
     'requests',
 ]
@@ -91,12 +93,10 @@ fail-under = 100
 asyncio_mode="auto"
 asyncio_default_fixture_loop_scope="function"
 env = [
-    "SHAREPOINT_AIND_SITE_ID=aind_site_id",
+    "SHAREPOINT_NSB_SITE_ID=nsb_site_id",
     "SHAREPOINT_LAS_SITE_ID=las_site_id",
-    "SHAREPOINT_NSB_2019_LIST_ID=nsb_2019_list_id",
-    "SHAREPOINT_NSB_2023_LIST_ID=nsb_2023_list_id",
-    "SHAREPOINT_NSB_PRESENT_LIST_ID=nsb_present_list_id",
     "SHAREPOINT_LAS_2020_LIST_ID=las_2020_list_id",
+    "SHAREPOINT_NSB_2023_LIST_ID=nsb_2023_list_id",
     "SHAREPOINT_CLIENT_ID=client_id",
     "SHAREPOINT_CLIENT_SECRET=client_secret",
     "SHAREPOINT_TENANT_ID=tenant_id"
