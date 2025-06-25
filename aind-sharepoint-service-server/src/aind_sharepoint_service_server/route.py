@@ -12,6 +12,7 @@ from aind_sharepoint_service_server.configs import Settings, get_settings
 from aind_sharepoint_service_server.handler import SessionHandler
 from aind_sharepoint_service_server.models.core import HealthCheck
 from aind_sharepoint_service_server.models.las_2020 import Las2020List
+from aind_sharepoint_service_server.models.nsb_2023 import NSB2023List
 
 router = APIRouter()
 
@@ -35,8 +36,7 @@ async def get_access_token(settings: Settings) -> str:
     return credentials.token
 
 
-# Cache for a day since the list doesn't change very often
-@cache(expire=86400)
+@cache(expire=3600)
 async def get_las_2020_list(settings: Settings) -> List[Dict[str, Any]]:
     """Get the LAS_2020 list items"""
     bearer_token = await get_access_token(settings=settings)
@@ -101,7 +101,7 @@ async def get_health() -> HealthCheck:
     response_model=List[Las2020List],
 )
 async def get_las_2020(
-    subject_id: str = Path(..., examples=["805811"]),
+    subject_id: str = Path(..., example="805811"),
     settings=Depends(get_settings),
 ):
     """
@@ -125,10 +125,10 @@ async def get_las_2020(
 
 @router.get(
     "/nsb_2023/{subject_id}",
-    response_model=List[Dict[str, Any]],
+    response_model=List[NSB2023List],
 )
 async def get_nsb_2023(
-    subject_id: str = Path(..., examples=["657849"]),
+    subject_id: str = Path(..., example="657849"),
     settings=Depends(get_settings),
 ):
     """
@@ -139,11 +139,13 @@ async def get_nsb_2023(
     nsb_2023_list = await get_nsb_2023_list(
         subject_id=subject_id, settings=settings
     )
-    # TODO: Map to models
-    if not nsb_2023_list:
+    nsb_2023_models = [
+        NSB2023List.model_validate(item["fields"]) for item in nsb_2023_list
+    ]
+    if not nsb_2023_models:
         raise HTTPException(
             status_code=404,
             detail="Not found",
         )
     else:
-        return nsb_2023_list
+        return nsb_2023_models

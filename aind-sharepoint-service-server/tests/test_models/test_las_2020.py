@@ -1,4 +1,4 @@
-"""Tests methods in models module"""
+"""Tests methods in LAS 2020 models module"""
 
 import json
 import os
@@ -12,22 +12,22 @@ RESOURCES_DIR = (
 )
 
 
-class TestLASList(unittest.TestCase):
-    """Tests methods in LASList class"""
+class TestLAS2020List(unittest.TestCase):
+    """Tests methods in LAS2020List class"""
 
     @classmethod
     def setUpClass(cls):
         """Load json files before running tests."""
         with open(RESOURCES_DIR / "las_2020_second_response.json") as f:
-            nsb_2020_list = json.load(f)
+            las_2020_list = json.load(f)
 
-        cls.nsb_2020_list = nsb_2020_list["value"]
+        cls.las_2020_list = las_2020_list["value"]
 
     def test_models_parsed(self):
         """Tests that item jsons can be parsed into models without errors."""
         models = [
             Las2020List.model_validate(list_item)
-            for list_item in self.nsb_2020_list
+            for list_item in self.las_2020_list
         ]
         self.assertIsNotNone(models)
 
