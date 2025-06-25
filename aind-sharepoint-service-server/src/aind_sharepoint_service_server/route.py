@@ -4,7 +4,7 @@ from typing import Any, Dict, List
 
 from azure.core.credentials import AccessToken
 from azure.identity import ClientSecretCredential
-from fastapi import APIRouter, Depends, HTTPException, Path, status
+from fastapi import APIRouter, Depends, HTTPException, Path, status, Body
 from fastapi_cache.decorator import cache
 from httpx import AsyncClient
 
@@ -101,7 +101,16 @@ async def get_health() -> HealthCheck:
     response_model=List[Las2020List],
 )
 async def get_las_2020(
-    subject_id: str = Path(..., example="805811"),
+    subject_id: str = Path(
+        ...,
+        openapi_examples={
+            "default": {
+                "summary": "A sample subject ID",
+                "description": "Example subject ID for LAS 2020",
+                "value": "805811"
+            }
+        }
+    ),
     settings=Depends(get_settings),
 ):
     """
@@ -128,7 +137,16 @@ async def get_las_2020(
     response_model=List[NSB2023List],
 )
 async def get_nsb_2023(
-    subject_id: str = Path(..., example="657849"),
+    subject_id: str = Path(
+        ...,
+         openapi_examples={
+            "default": {
+                "summary": "A sample subject ID",
+                "description": "Example subject ID for NSB 2023",
+                "value": "657849"
+            }
+        }
+    ),
     settings=Depends(get_settings),
 ):
     """
