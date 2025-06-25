@@ -1,0 +1,203 @@
+{
+   "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('las_site_id')/lists('las_2020_list_id')/items",
+   "@odata.nextLink": "https://graph.microsoft.com/v1.0/sites/las_site_id/lists/las_2020_list_id/items?expand=fields&$filter=fields%2fReqPro1+eq+%27Retro-Orbital+Injection%27&$skiptoken=some_skip_token",
+   "value": [
+      {
+         "@odata.etag": "\"b2e,3\"",
+         "createdDateTime": "2025-03-28T17:45:09Z",
+         "eTag": "\"b2e,3\"",
+         "id": "17246",
+         "lastModifiedDateTime": "2025-03-28T21:28:18Z",
+         "webUrl": "https://example.sharepoint.com/sites/LabAnimalServices/Lists/NSPRequest2020/17246_.000",
+         "createdBy": {
+            "user": {
+               "email": "person.w@example.com",
+               "id": "000",
+               "displayName": "Person W"
+            }
+         },
+         "lastModifiedBy": {
+            "application": {
+               "id": "111",
+               "displayName": "Microsoft Power Platform"
+            },
+            "user": {
+               "email": "person.l@example.com",
+               "id": "222",
+               "displayName": "Person L"
+            }
+         },
+         "parentReference": {
+            "id": "a71",
+            "siteId": "example.sharepoint.com,las_site_id"
+         },
+         "contentType": {
+            "id": "A5E",
+            "name": "Item"
+         },
+         "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('las_site_id')/lists('las_2020_list_id')/items('17246')/fields/$entity",
+         "fields": {
+            "@odata.etag": "\"b2e,3\"",
+            "Title": "797822 797823 797824",
+            "LinkTitleNoMenu": "797822 797823 797824",
+            "LinkTitle": "797822 797823 797824",
+            "AuthorLookupId": "128",
+            "RequestStatus2": "Complete",
+            "Protocol": "2406 - Characterization of mouse and viral genetic tools",
+            "ProjectID": "102-01-064-10 CTY Genetic Tools",
+            "AccommodationComment": "Please inject early next week if possible to keep close to P30 injection timeframe. Thank you!",
+            "CustomCom2": "LabTracksID\tVirus ID\tVT#\tGC Del\tBox Label\tTube Label\n797822\tAiP14609|AiP15923\tVT4910C|VT8178C\t5.00E+11|5.00E+11\t03/18/25_GREEN\t9\n797823\tAiP15223|AiP15923\tVT6317C|VT8178C\t5.00E+11|5.00E+11\t03/18/25_GREEN\t10\n797824\tAiP15225|AiP15923\tVT6319C|VT8178C\t5.00E+11|5.00E+11\t03/18/25_GREEN\t11",
+            "custpresent": false,
+            "Doxycycline": false,
+            "LTaID1": "797822 797823 797824",
+            "LTaID2": "797822 797823 797824",
+            "LTdate1": "2025-03-31T07:00:00Z",
+            "LTdate2": "2025-04-28T07:00:00Z",
+            "LTTask1": "SW RO: 797822 797823 797824",
+            "LTTask2": "SW PF: 797822 797823 797824",
+            "nEnd_x0020_Date": "2025-04-28T07:00:00Z",
+            "nStart_x0020_Date": "2025-03-31T07:00:00Z",
+            "OCT": false,
+            "PostFix": "1xPBS+ 0.01%Azide",
+            "ReqAge2": "4 weeks after injection",
+            "Reqdate1": "2025-03-31T07:00:00Z",
+            "ReqPro1": "Retro-Orbital Injection",
+            "ReqPro2": "Tissue Collection",
+            "roSpinDown": true,
+            "roWhere": "LAS Drop box in Vivarium -80 freezer",
+            "TAM": false,
+            "TCPrep": [
+               "Mouse Cardiac Perfusion (SOP AF0075)"
+            ],
+            "TCTiss": [
+               "Brain"
+            ],
+            "TMP": false,
+            "LIMSEntry": true,
+            "LIMSProject": "SmartSPIM_GeneticTools",
+            "roComment": "Please see Custom Requests for injection material",
+            "ProjectLead2LookupId": "64",
+            "WellnessReport_x0028_No_x002F_Ye": false,
+            "QCDoorSheet": true,
+            "roIce": true,
+            "roSOP": "AF0139 Retro-orbital Injection of AAV Vectors for Viral Genetic Tools Pipeline",
+            "roDiscard": true,
+            "roLIMS": "New Stereotaxic Injections",
+            "Species": "Mouse",
+            "Modified": "2025-03-28T21:28:18Z",
+            "Created": "2025-03-28T17:45:09Z",
+            "AfternoonPF": false,
+            "DeliveryLocation": "440 4c",
+            "id": "17246",
+            "ContentType": "Item",
+            "EditorLookupId": "11",
+            "_UIVersionString": "3.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "9",
+            "AppEditorLookupId": "9"
+         }
+      },
+      {
+         "@odata.etag": "\"56f,3\"",
+         "createdDateTime": "2025-04-02T17:01:02Z",
+         "eTag": "\"56f,3\"",
+         "id": "17268",
+         "lastModifiedDateTime": "2025-04-04T17:25:10Z",
+         "webUrl": "https://example.sharepoint.com/sites/LabAnimalServices/Lists/NSPRequest2020/17268_.000",
+         "createdBy": {
+            "user": {
+               "email": "person.s@example.com",
+               "id": "123",
+               "displayName": "Person S"
+            }
+         },
+         "lastModifiedBy": {
+            "application": {
+               "id": "111",
+               "displayName": "Microsoft Power Platform"
+            },
+            "user": {
+               "email": "person.r@example.com",
+               "id": "854",
+               "displayName": "Person R"
+            }
+         },
+         "parentReference": {
+            "id": "a71",
+            "siteId": "example.sharepoint.com,las_site_id,aa3df130-0164-4636-b4f7-40febbef1f6f"
+         },
+         "contentType": {
+            "id": "A5E",
+            "name": "Item"
+         },
+         "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('las_site_id')/lists('las_2020_list_id')/items('17268')/fields/$entity",
+         "fields": {
+            "@odata.etag": "\"56f,3\"",
+            "Title": "794240 794241",
+            "LinkTitleNoMenu": "794240 794241",
+            "LinkTitle": "794240 794241",
+            "AuthorLookupId": "474",
+            "RequestStatus2": "Complete",
+            "Protocol": "2415 - Optophysiological analysis of brain-wide neural circuits in the mouse",
+            "ProjectID": "122-01-022-20 AIND UM1",
+            "CustomCom2": "Vial contains 40 uL of dye in DMSO. Please add 80 uL of PBS to the vial and inject the entire 120 uL volume.",
+            "custpresent": false,
+            "Doxycycline": false,
+            "LTaID1": "794240 794241",
+            "LTdate1": "2025-04-07T07:00:00Z",
+            "LTTask1": "MS RO: 794240 794241",
+            "nROID1": "794240",
+            "nROID2": "794241",
+            "nStart_x0020_Date": "2025-04-07T07:00:00Z",
+            "OCT": false,
+            "Reqdate1": "2025-04-07T07:00:00Z",
+            "ReqPro1": "Retro-Orbital Injection",
+            "roEye1": "Behind Left",
+            "roEye2": "Behind Left",
+            "roSpinDown": false,
+            "roSub1": "JF608 dye",
+            "roSub2": "JF608 dye",
+            "roVol1": "120",
+            "roVol2": "120",
+            "roWhere": "Vivarium 4c 156",
+            "TAM": false,
+            "TMP": false,
+            "LIMSEntry": false,
+            "roComment": "Vial contains 40 uL of dye in DMSO. Please add 80 uL of PBS to the vial and inject the entire 120 uL volume.",
+            "ProjectLead2LookupId": "108",
+            "WellnessReport_x0028_No_x002F_Ye": false,
+            "QCDoorSheet": true,
+            "roIce": false,
+            "roSOP": "AF0131 Retro-orbital Injection",
+            "roDiscard": true,
+            "Species": "Mouse",
+            "Modified": "2025-04-04T17:25:10Z",
+            "Created": "2025-04-02T17:01:02Z",
+            "AfternoonPF": false,
+            "roTube1": "MS-JF608",
+            "roTube2": "MS-JF608",
+            "id": "17268",
+            "ContentType": "Item",
+            "EditorLookupId": "10",
+            "_UIVersionString": "3.0",
+            "Attachments": false,
+            "Edit": "",
+            "ItemChildCount": "0",
+            "FolderChildCount": "0",
+            "_ComplianceFlags": "",
+            "_ComplianceTag": "",
+            "_ComplianceTagWrittenTime": "",
+            "_ComplianceTagUserId": "",
+            "AppAuthorLookupId": "9",
+            "AppEditorLookupId": "9"
+         }
+      }
+   ]
+}

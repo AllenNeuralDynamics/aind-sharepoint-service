@@ -1,26 +1,20 @@
 """Module to test main app"""
 
 import pytest
+from fastapi.testclient import TestClient
 
 
 class TestMain:
     """Tests app endpoints"""
 
-    def test_get_healthcheck(self, client):
-        """Tests healthcheck"""
+    def test_app_with_redis(self, client_with_redis: TestClient):
+        """Tests client is instantiated correctly when redis_url set."""
+        response = client_with_redis.get("/healthcheck")
+        assert 200 == response.status_code
+
+    def test_app_with_in_memory_cache(self, client: TestClient):
+        """Tests client is instantiated correctly when redis_url None."""
         response = client.get("/healthcheck")
-        assert 200 == response.status_code
-
-    def test_get_length(self, client, mock_get_example_response):
-        """Tests content route length"""
-        response = client.get("/length")
-        expected_json = {"info": "1244", "arg": "length"}
-        assert expected_json == response.json()
-        assert 200 == response.status_code
-
-    def test_get_raw(self, client, mock_get_example_response):
-        """Tests content route length"""
-        response = client.get("/raw")
         assert 200 == response.status_code
 
 

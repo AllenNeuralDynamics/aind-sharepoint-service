@@ -1,18 +1,80 @@
 """Module for settings to connect to backend"""
 
-from pydantic import Field
-from pydantic_settings import BaseSettings, SettingsConfigDict
+from typing import ClassVar, Optional
+from urllib.parse import urljoin
+
+from aind_settings_utils.aws import (
+    ParameterStoreAppBaseSettings,
+)
+from pydantic import Field, SecretStr
+from pydantic_settings import SettingsConfigDict
 
 
-class Settings(BaseSettings):
-    """
-    ### Settings needed to connect to a database or website.
-    We will just connect to an example website.
-    """
+class Settings(ParameterStoreAppBaseSettings):
+    """Settings needed to connect to Sharepoint database"""
 
-    model_config = SettingsConfigDict(env_prefix="MYENV_")
-    host: str = Field(
-        ...,
-        title="Host",
-        description="Host address of example.com",
+    model_config = SettingsConfigDict(
+        env_prefix="SHAREPOINT_", case_sensitive=False
     )
+    las_site_id: str = Field(
+        title="Site ID",
+        description="Site ID of the SharePoint site.",
+    )
+    nsb_site_id: str = Field(
+        title="Site ID",
+        description="Site ID of the SharePoint site.",
+    )
+    nsb_2023_list_id: str = Field(
+        title="NSB 2023 List ID",
+        description="List ID for NSB 2023 Sharepoint List.",
+    )
+    las_2020_list_id: str = Field(
+        title="LAS 2020 List ID",
+        description="List ID for LAS 2020 Sharepoint List.",
+    )
+    client_id: str = Field(
+        title="Client ID",
+        description="Client ID for the principal account.",
+    )
+    client_secret: SecretStr = Field(
+        title="Client Secret",
+        description="Client Secret for the principal account.",
+    )
+    tenant_id: str = Field(
+        title="Tenant ID",
+        description="Tenant ID for the principal account.",
+    )
+    redis_url: Optional[str] = Field(default=None)
+    graph_api_url: ClassVar[str] = "https://graph.microsoft.com"
+
+    @property
+    def resource_id(self) -> str:
+        """Resource id used in Credentials scope."""
+        return urljoin(self.graph_api_url, ".default")
+
+    @property
+    def las_2020_url(self) -> str:
+        """LAS 2020 list items url"""
+        return urljoin(
+            self.graph_api_url,
+            (
+                f"v1.0/sites/{self.las_site_id}"
+                f"/lists/{self.las_2020_list_id}/items"
+            ),
+        )
+
+    @property
+    def nsb_2023_url(self) -> str:
+        """NSB 2023 list items url"""
+        return urljoin(
+            self.graph_api_url,
+            (
+                f"v1.0/sites/{self.nsb_site_id}"
+                f"/lists/{self.nsb_2023_list_id}/items"
+            ),
+        )
+
+
+def get_settings() -> Settings:
+    """Return a Settings object."""
+    return Settings()

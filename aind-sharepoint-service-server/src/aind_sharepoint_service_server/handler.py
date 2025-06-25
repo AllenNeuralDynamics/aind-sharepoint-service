@@ -1,40 +1,47 @@
-"""Module to retrieve data from a backend using a session object"""
+"""Module to handle requesting info from Sharepoint"""
 
-import logging
+from typing import Any, Dict, List
 
-from requests_toolbelt.sessions import BaseUrlSession
-
-from aind_sharepoint_service_server.models import Content
+from httpx import AsyncClient
 
 
 class SessionHandler:
-    """Handle session object to get data"""
+    """Handle pulling data from Sharepoint lists"""
 
-    def __init__(self, session: BaseUrlSession):
-        """Class constructor"""
-        self.session = session
-
-    def get_info(self, example_arg: str) -> Content:
+    def __init__(self, client: AsyncClient):
         """
-        Get information from a backend. An example argument is added.
-
+        Class constructor.
         Parameters
         ----------
-        example_arg : str
+        client : AsyncClient
+        """
+        self.client = client
+
+    async def get_list_items(
+        self, list_items_url: str, params: Dict[str, str]
+    ) -> List[Dict[str, Any]]:
+        """
+        Paginate through a list to return all items filtered by params.
+        Parameters
+        ----------
+        list_items_url : str
+        params : Dict[str, str]
 
         Returns
         -------
-        str
-          Contents of a webpage.
+        List[Dict[str, Any]]
 
         """
-
-        logging.debug(f"Sending request for {example_arg}")
-        response = self.session.get("")
+        all_items = []
+        response = await self.client.get(list_items_url, params=params)
         response.raise_for_status()
-        logging.debug(f"Received response for {example_arg}")
-        text = response.text
-        if example_arg == "length":
-            return Content(info=str(len(text)), arg=example_arg)
-        else:
-            return Content(info=text, arg=example_arg)
+        for result in response.json().get("value", []):
+            all_items.append(result)
+        next_link = response.json().get("@odata.nextLink")
+        while next_link:
+            response = await self.client.get(next_link)
+            response.raise_for_status()
+            for result in response.json().get("value", []):
+                all_items.append(result)
+            next_link = response.json().get("@odata.nextLink")
+        return all_items
