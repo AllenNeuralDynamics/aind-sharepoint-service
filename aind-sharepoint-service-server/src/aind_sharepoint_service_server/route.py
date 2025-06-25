@@ -4,7 +4,7 @@ from typing import Any, Dict, List
 
 from azure.core.credentials import AccessToken
 from azure.identity import ClientSecretCredential
-from fastapi import APIRouter, Depends, HTTPException, Path, status, Body
+from fastapi import APIRouter, Depends, HTTPException, Path, status
 from fastapi_cache.decorator import cache
 from httpx import AsyncClient
 
@@ -139,7 +139,7 @@ async def get_las_2020(
 async def get_nsb_2023(
     subject_id: str = Path(
         ...,
-         openapi_examples={
+        openapi_examples={
             "default": {
                 "summary": "A sample subject ID",
                 "description": "Example subject ID for NSB 2023",
