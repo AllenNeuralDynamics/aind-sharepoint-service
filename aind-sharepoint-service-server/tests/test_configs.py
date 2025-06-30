@@ -3,7 +3,7 @@
 import os
 import unittest
 from unittest.mock import patch
-
+from pydantic import HttpUrl
 from aind_sharepoint_service_server.configs import Settings
 
 
@@ -40,19 +40,19 @@ class TestSettings(unittest.TestCase):
             tenant_id="tenant_id",
         )
         expected_resource_id = "https://graph.microsoft.com/.default"
-        expected_las_2020_url = (
+        expected_las_2020_url = HttpUrl(
             "https://graph.microsoft.com/v1.0"
             "/sites/las_site_456/lists/las_2020/items"
         )
-        expected_nsb_2023_url = (
+        expected_nsb_2023_url = HttpUrl(
             "https://graph.microsoft.com/v1.0"
             "/sites/nsb_site_123/lists/nsb_2023/items"
         )
-        expected_nsb_2019_url = (
+        expected_nsb_2019_url = HttpUrl(
             "https://graph.microsoft.com/v1.0"
             "/sites/nsb_site_123/lists/nsb_2019/items"
         )
-        expected_nsb_present_url = (
+        expected_nsb_present_url = HttpUrl(
             "https://graph.microsoft.com/v1.0"
             "/sites/nsb_site_123/lists/nsb_present/items"
         )

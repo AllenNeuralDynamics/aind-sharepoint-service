@@ -90,7 +90,7 @@ class TestRoute:
         mock_get_access_token: MagicMock,
         mock_get_nsb_2023_list_items: List[Dict[str, Any]],
     ):
-        """Tests get_las_2020_list method"""
+        """Tests get_nsb_2023_list method"""
         mock_get_access_token.return_value = "abc"
         mock_get_list_items.return_value = mock_get_nsb_2023_list_items
         list_items = await get_nsb_2023_list(
