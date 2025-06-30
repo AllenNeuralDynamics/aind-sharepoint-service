@@ -2,8 +2,9 @@
 
 import json
 import os
-from pathlib import Path
 import unittest
+from pathlib import Path
+
 from aind_sharepoint_service_server.models.nsb_2019 import NSB2019List
 
 RESOURCES_DIR = (

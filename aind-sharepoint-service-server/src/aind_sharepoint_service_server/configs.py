@@ -1,12 +1,11 @@
 """Module for settings to connect to backend"""
 
 from typing import ClassVar, Optional
-from urllib.parse import urljoin
 
 from aind_settings_utils.aws import (
     ParameterStoreAppBaseSettings,
 )
-from pydantic import Field, SecretStr, RedisDsn, HttpUrl
+from pydantic import Field, HttpUrl, RedisDsn, SecretStr
 from pydantic_settings import SettingsConfigDict
 
 
@@ -58,11 +57,13 @@ class Settings(ParameterStoreAppBaseSettings):
     @property
     def resource_id(self) -> str:
         """Resource id used in Credentials scope."""
-        return str(HttpUrl.build(
-            scheme=self.graph_api_url.scheme,
-            host=self.graph_api_url.host,
-            path=".default"
-        ))
+        return str(
+            HttpUrl.build(
+                scheme=self.graph_api_url.scheme,
+                host=self.graph_api_url.host,
+                path=".default",
+            )
+        )
 
     @property
     def las_2020_url(self) -> HttpUrl:
@@ -70,7 +71,10 @@ class Settings(ParameterStoreAppBaseSettings):
         return HttpUrl.build(
             scheme=self.graph_api_url.scheme,
             host=self.graph_api_url.host,
-            path=f"v1.0/sites/{self.las_site_id}/lists/{self.las_2020_list_id}/items"
+            path=(
+                f"v1.0/sites/{self.las_site_id}/"
+                f"lists/{self.las_2020_list_id}/items"
+            ),
         )
 
     @property
@@ -79,7 +83,10 @@ class Settings(ParameterStoreAppBaseSettings):
         return HttpUrl.build(
             scheme=self.graph_api_url.scheme,
             host=self.graph_api_url.host,
-            path=f"v1.0/sites/{self.nsb_site_id}/lists/{self.nsb_2019_list_id}/items"
+            path=(
+                f"v1.0/sites/{self.nsb_site_id}/"
+                f"lists/{self.nsb_2019_list_id}/items"
+            ),
         )
 
     @property
@@ -88,7 +95,10 @@ class Settings(ParameterStoreAppBaseSettings):
         return HttpUrl.build(
             scheme=self.graph_api_url.scheme,
             host=self.graph_api_url.host,
-            path=f"v1.0/sites/{self.nsb_site_id}/lists/{self.nsb_2023_list_id}/items"
+            path=(
+                f"v1.0/sites/{self.nsb_site_id}/"
+                f"lists/{self.nsb_2023_list_id}/items"
+            ),
         )
 
     @property
@@ -97,7 +107,10 @@ class Settings(ParameterStoreAppBaseSettings):
         return HttpUrl.build(
             scheme=self.graph_api_url.scheme,
             host=self.graph_api_url.host,
-            path=f"v1.0/sites/{self.nsb_site_id}/lists/{self.nsb_present_list_id}/items"
+            path=(
+                f"v1.0/sites/{self.nsb_site_id}/"
+                f"lists/{self.nsb_present_list_id}/items"
+            ),
         )
 
 
