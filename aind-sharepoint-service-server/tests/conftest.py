@@ -58,6 +58,24 @@ def mock_get_nsb_2023_list_items() -> List[Dict[str, Any]]:
 
 
 @pytest.fixture(scope="session")
+def mock_get_nsb_2019_list_items() -> List[Dict[str, Any]]:
+    """Mock NSB 2019 list items"""
+    with open(RESOURCES_DIR / "nsb_2019_first_response.json", "r") as f:
+        first_response = json.load(f)
+    all_items = first_response["value"]
+    return all_items
+
+
+@pytest.fixture(scope="session")
+def mock_get_nsb_present_list_items() -> List[Dict[str, Any]]:
+    """Mock NSB Present list items"""
+    with open(RESOURCES_DIR / "nsb_present_first_response.json", "r") as f:
+        first_response = json.load(f)
+    all_items = first_response["value"]
+    return all_items
+
+
+@pytest.fixture(scope="session")
 def client() -> Generator[TestClient, Any, None]:
     """Creating a client for testing purposes."""
 

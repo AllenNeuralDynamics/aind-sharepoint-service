@@ -1,11 +1,11 @@
 """Module for settings to connect to backend"""
 
 from typing import ClassVar, Optional
-from urllib.parse import urljoin
 
 from aind_settings_utils.aws import (
     ParameterStoreAppBaseSettings,
 )
+from urllib.parse import urljoin
 from pydantic import Field, SecretStr
 from pydantic_settings import SettingsConfigDict
 
@@ -24,9 +24,17 @@ class Settings(ParameterStoreAppBaseSettings):
         title="Site ID",
         description="Site ID of the SharePoint site.",
     )
+    nsb_2019_list_id: str = Field(
+        title="NSB 2019-2022 List ID",
+        description="List ID for NSB 2019-2022 Sharepoint List.",
+    )
     nsb_2023_list_id: str = Field(
-        title="NSB 2023 List ID",
-        description="List ID for NSB 2023 Sharepoint List.",
+        title="NSB 2023-Archive List ID",
+        description="List ID for NSB 2023-Archive Sharepoint List.",
+    )
+    nsb_present_list_id: str = Field(
+        title="NSB 2023-Present List ID",
+        description="List ID for NSB 2023-Present Sharepoint List.",
     )
     las_2020_list_id: str = Field(
         title="LAS 2020 List ID",
@@ -64,6 +72,17 @@ class Settings(ParameterStoreAppBaseSettings):
         )
 
     @property
+    def nsb_2019_url(self) -> str:
+        """NSB 2019-2022 list items url"""
+        return urljoin(
+            self.graph_api_url,
+            (
+                f"v1.0/sites/{self.nsb_site_id}"
+                f"/lists/{self.nsb_2019_list_id}/items"
+            ),
+        )
+
+    @property
     def nsb_2023_url(self) -> str:
         """NSB 2023 list items url"""
         return urljoin(
@@ -71,6 +90,17 @@ class Settings(ParameterStoreAppBaseSettings):
             (
                 f"v1.0/sites/{self.nsb_site_id}"
                 f"/lists/{self.nsb_2023_list_id}/items"
+            ),
+        )
+
+    @property
+    def nsb_present_url(self) -> str:
+        """NSB Present list items url"""
+        return urljoin(
+            self.graph_api_url,
+            (
+                f"v1.0/sites/{self.nsb_site_id}"
+                f"/lists/{self.nsb_present_list_id}/items"
             ),
         )
 

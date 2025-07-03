@@ -4,7 +4,7 @@ from typing import Any, Dict, List
 
 from azure.core.credentials import AccessToken
 from azure.identity import ClientSecretCredential
-from fastapi import APIRouter, Depends, HTTPException, Path, status
+from fastapi import APIRouter, Depends, Path, status
 from fastapi_cache.decorator import cache
 from httpx import AsyncClient
 
@@ -12,6 +12,7 @@ from aind_sharepoint_service_server.configs import Settings, get_settings
 from aind_sharepoint_service_server.handler import SessionHandler
 from aind_sharepoint_service_server.models.core import HealthCheck
 from aind_sharepoint_service_server.models.las_2020 import Las2020List
+from aind_sharepoint_service_server.models.nsb_2019 import NSB2019List
 from aind_sharepoint_service_server.models.nsb_2023 import NSB2023List
 
 router = APIRouter()
@@ -56,7 +57,28 @@ async def get_las_2020_list(settings: Settings) -> List[Dict[str, Any]]:
     return list_items
 
 
-# Not worthwhile to cache results
+# Not worthwhile to cache results for NSB lists
+async def get_nsb_2019_list(
+    subject_id: str, settings: Settings
+) -> List[Dict[str, Any]]:
+    """Get the NSB_2019 list items"""
+    bearer_token = await get_access_token(settings=settings)
+    headers = {
+        "Authorization": f"Bearer {bearer_token}",
+        "Content-Type": "application/json",
+    }
+    params = {
+        "expand": "fields",
+        "$filter": f"fields/LabTracks_x0020_ID eq '{subject_id}'",
+    }
+    async with AsyncClient(headers=headers) as client:
+        session_handler = SessionHandler(client=client)
+        list_items = await session_handler.get_list_items(
+            list_items_url=settings.nsb_2019_url, params=params
+        )
+    return list_items
+
+
 async def get_nsb_2023_list(
     subject_id: str, settings: Settings
 ) -> List[Dict[str, Any]]:
@@ -74,6 +96,27 @@ async def get_nsb_2023_list(
         session_handler = SessionHandler(client=client)
         list_items = await session_handler.get_list_items(
             list_items_url=settings.nsb_2023_url, params=params
+        )
+    return list_items
+
+
+async def get_nsb_present_list(
+    subject_id: str, settings: Settings
+) -> List[Dict[str, Any]]:
+    """Get the NSB Present list items"""
+    bearer_token = await get_access_token(settings=settings)
+    headers = {
+        "Authorization": f"Bearer {bearer_token}",
+        "Content-Type": "application/json",
+    }
+    params = {
+        "expand": "fields",
+        "$filter": f"fields/LabTracks_x0020_ID1 eq '{subject_id}'",
+    }
+    async with AsyncClient(headers=headers) as client:
+        session_handler = SessionHandler(client=client)
+        list_items = await session_handler.get_list_items(
+            list_items_url=settings.nsb_present_url, params=params
         )
     return list_items
 
@@ -107,9 +150,9 @@ async def get_las_2020(
             "default": {
                 "summary": "A sample subject ID",
                 "description": "Example subject ID for LAS 2020",
-                "value": "805811"
+                "value": "805811",
             }
-        }
+        },
     ),
     settings=Depends(get_settings),
 ):
@@ -123,13 +166,38 @@ async def get_las_2020(
         for item in las_2020_list
         if subject_id in item.get("fields", dict()).get("Title", "").split(" ")
     ]
-    if not las_2020_models:
-        raise HTTPException(
-            status_code=404,
-            detail="Not found",
-        )
-    else:
-        return las_2020_models
+    return las_2020_models
+
+
+@router.get(
+    "/nsb_2019/{subject_id}",
+    response_model=List[NSB2019List],
+)
+async def get_nsb_2019(
+    subject_id: str = Path(
+        ...,
+        openapi_examples={
+            "default": {
+                "summary": "A sample subject ID",
+                "description": "Example subject ID for NSB 2019",
+                "value": "656374",
+            }
+        },
+    ),
+    settings=Depends(get_settings),
+):
+    """
+    # NSB 2019 Endpoint
+    Retrieve information from the NSB 2019 list for a given subject ID.
+    """
+
+    nsb_2019_list = await get_nsb_2019_list(
+        subject_id=subject_id, settings=settings
+    )
+    nsb_2019_models = [
+        NSB2019List.model_validate(item["fields"]) for item in nsb_2019_list
+    ]
+    return nsb_2019_models
 
 
 @router.get(
@@ -143,15 +211,15 @@ async def get_nsb_2023(
             "default": {
                 "summary": "A sample subject ID",
                 "description": "Example subject ID for NSB 2023",
-                "value": "657849"
+                "value": "657849",
             }
-        }
+        },
     ),
     settings=Depends(get_settings),
 ):
     """
     # NSB 2023 Endpoint
-    Retrieve information from the NSB 2023 list for a given subject ID.
+    Retrieve information from the NSB 2023-Archive list for a given subject ID.
     """
 
     nsb_2023_list = await get_nsb_2023_list(
@@ -160,10 +228,35 @@ async def get_nsb_2023(
     nsb_2023_models = [
         NSB2023List.model_validate(item["fields"]) for item in nsb_2023_list
     ]
-    if not nsb_2023_models:
-        raise HTTPException(
-            status_code=404,
-            detail="Not found",
-        )
-    else:
-        return nsb_2023_models
+    return nsb_2023_models
+
+
+@router.get(
+    "/nsb_present/{subject_id}",
+    response_model=List[NSB2023List],
+)
+async def get_nsb_present(
+    subject_id: str = Path(
+        ...,
+        openapi_examples={
+            "default": {
+                "summary": "A sample subject ID",
+                "description": "Example subject ID for NSB Present",
+                "value": "790025",
+            }
+        },
+    ),
+    settings=Depends(get_settings),
+):
+    """
+    # NSB Present Endpoint
+    Retrieve information from the NSB 2023-Present list for a given subject ID.
+    """
+
+    nsb_present_list = await get_nsb_present_list(
+        subject_id=subject_id, settings=settings
+    )
+    nsb_present_models = [
+        NSB2023List.model_validate(item["fields"]) for item in nsb_present_list
+    ]
+    return nsb_present_models

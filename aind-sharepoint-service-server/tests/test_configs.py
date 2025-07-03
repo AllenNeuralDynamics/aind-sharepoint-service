@@ -15,6 +15,8 @@ class TestSettings(unittest.TestCase):
         {
             "SHAREPOINT_NSB_SITE_ID": "nsb_site_123",
             "SHAREPOINT_LAS_SITE_ID": "las_site_456",
+            "SHAREPOINT_NSB_PRESENT_LIST_ID": "nsb_present",
+            "SHAREPOINT_NSB_2019_LIST_ID": "nsb_2019",
             "SHAREPOINT_NSB_2023_LIST_ID": "nsb_2023",
             "SHAREPOINT_LAS_2020_LIST_ID": "las_2020",
             "SHAREPOINT_CLIENT_ID": "client_id",
@@ -30,6 +32,8 @@ class TestSettings(unittest.TestCase):
             nsb_site_id="nsb_site_123",
             las_site_id="las_site_456",
             nsb_2023_list_id="nsb_2023",
+            nsb_2019_list_id="nsb_2019",
+            nsb_present_list_id="nsb_present",
             las_2020_list_id="las_2020",
             client_id="client_id",
             client_secret="client_secret",
@@ -44,10 +48,20 @@ class TestSettings(unittest.TestCase):
             "https://graph.microsoft.com/v1.0"
             "/sites/nsb_site_123/lists/nsb_2023/items"
         )
+        expected_nsb_2019_url = (
+            "https://graph.microsoft.com/v1.0"
+            "/sites/nsb_site_123/lists/nsb_2019/items"
+        )
+        expected_nsb_present_url = (
+            "https://graph.microsoft.com/v1.0"
+            "/sites/nsb_site_123/lists/nsb_present/items"
+        )
         self.assertEqual(expected_settings, settings)
         self.assertEqual(expected_resource_id, settings.resource_id)
         self.assertEqual(expected_las_2020_url, settings.las_2020_url)
         self.assertEqual(expected_nsb_2023_url, settings.nsb_2023_url)
+        self.assertEqual(expected_nsb_2019_url, settings.nsb_2019_url)
+        self.assertEqual(expected_nsb_present_url, settings.nsb_present_url)
 
 
 if __name__ == "__main__":
