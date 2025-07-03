@@ -104,6 +104,7 @@ class Settings(ParameterStoreAppBaseSettings):
             ),
         )
 
+
 def get_settings() -> Settings:
     """Return a Settings object."""
     return Settings()
