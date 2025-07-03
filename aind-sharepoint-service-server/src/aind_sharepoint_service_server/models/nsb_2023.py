@@ -203,7 +203,7 @@ class IacucProtocol(Enum, metaclass=EnumMeta):
     N_2204 = "2204"
     N_2207 = "2207"
     N_2308 = "2308"
-    N_2417 = "2427"
+    N_2417 = "2417"
 
 
 class Protocol(Enum, metaclass=EnumMeta):
@@ -4690,7 +4690,7 @@ class NSB2023List(BaseModel, extra="allow"):
     author: Optional[str] = Field(
         default=None, alias="Author", title="Created By"
     )
-    # author, author id an editor id were removed. backwards compatibility
+    # author, author id and editor id were removed. backwards compatibility
     author_id: Optional[int] = Field(default=None, alias="AuthorId")
     author_lookup_id: Optional[int] = Field(
         default=None, alias="AuthorLookupId", title="Author Lookup Id"

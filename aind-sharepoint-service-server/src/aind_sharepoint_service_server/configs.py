@@ -5,7 +5,8 @@ from typing import ClassVar, Optional
 from aind_settings_utils.aws import (
     ParameterStoreAppBaseSettings,
 )
-from pydantic import Field, HttpUrl, RedisDsn, SecretStr
+from urllib.parse import urljoin
+from pydantic import Field, SecretStr
 from pydantic_settings import SettingsConfigDict
 
 
@@ -51,68 +52,57 @@ class Settings(ParameterStoreAppBaseSettings):
         title="Tenant ID",
         description="Tenant ID for the principal account.",
     )
-    redis_url: Optional[RedisDsn] = Field(default=None)
-    graph_api_url: ClassVar[HttpUrl] = HttpUrl("https://graph.microsoft.com")
+    redis_url: Optional[str] = Field(default=None)
+    graph_api_url: ClassVar[str] = "https://graph.microsoft.com"
 
     @property
     def resource_id(self) -> str:
         """Resource id used in Credentials scope."""
-        return str(
-            HttpUrl.build(
-                scheme=self.graph_api_url.scheme,
-                host=self.graph_api_url.host,
-                path=".default",
-            )
-        )
+        return urljoin(self.graph_api_url, ".default")
 
     @property
-    def las_2020_url(self) -> HttpUrl:
+    def las_2020_url(self) -> str:
         """LAS 2020 list items url"""
-        return HttpUrl.build(
-            scheme=self.graph_api_url.scheme,
-            host=self.graph_api_url.host,
-            path=(
-                f"v1.0/sites/{self.las_site_id}/"
-                f"lists/{self.las_2020_list_id}/items"
+        return urljoin(
+            self.graph_api_url,
+            (
+                f"v1.0/sites/{self.las_site_id}"
+                f"/lists/{self.las_2020_list_id}/items"
             ),
         )
 
     @property
-    def nsb_2019_url(self) -> HttpUrl:
+    def nsb_2019_url(self) -> str:
         """NSB 2019-2022 list items url"""
-        return HttpUrl.build(
-            scheme=self.graph_api_url.scheme,
-            host=self.graph_api_url.host,
-            path=(
-                f"v1.0/sites/{self.nsb_site_id}/"
-                f"lists/{self.nsb_2019_list_id}/items"
+        return urljoin(
+            self.graph_api_url,
+            (
+                f"v1.0/sites/{self.nsb_site_id}"
+                f"/lists/{self.nsb_2019_list_id}/items"
             ),
         )
 
     @property
-    def nsb_2023_url(self) -> HttpUrl:
+    def nsb_2023_url(self) -> str:
         """NSB 2023 list items url"""
-        return HttpUrl.build(
-            scheme=self.graph_api_url.scheme,
-            host=self.graph_api_url.host,
-            path=(
-                f"v1.0/sites/{self.nsb_site_id}/"
-                f"lists/{self.nsb_2023_list_id}/items"
+        return urljoin(
+            self.graph_api_url,
+            (
+                f"v1.0/sites/{self.nsb_site_id}"
+                f"/lists/{self.nsb_2023_list_id}/items"
             ),
         )
 
     @property
-    def nsb_present_url(self) -> HttpUrl:
+    def nsb_present_url(self) -> str:
         """NSB Present list items url"""
-        return HttpUrl.build(
-            scheme=self.graph_api_url.scheme,
-            host=self.graph_api_url.host,
-            path=(
-                f"v1.0/sites/{self.nsb_site_id}/"
-                f"lists/{self.nsb_present_list_id}/items"
+        return urljoin(
+            self.graph_api_url,
+            (
+                f"v1.0/sites/{self.nsb_site_id}"
+                f"/lists/{self.nsb_present_list_id}/items"
             ),
         )
-
 
 def get_settings() -> Settings:
     """Return a Settings object."""
