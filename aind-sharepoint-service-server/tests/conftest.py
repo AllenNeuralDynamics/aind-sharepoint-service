@@ -8,6 +8,7 @@ from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
 from fastapi.testclient import TestClient
+from pydantic import RedisDsn
 
 from aind_sharepoint_service_server.configs import Settings
 
@@ -96,7 +97,7 @@ def client_with_redis() -> Generator[TestClient, Any, None]:
 
     settings = Settings()
     settings_with_redis = settings.model_copy(
-        update={"redis_url": "redis"}, deep=True
+        update={"redis_url": RedisDsn("redis://example.com:1234")}, deep=True
     )
     with (
         patch(
