@@ -50,8 +50,6 @@ Enum class for Implant ID/Coverslip type.
 
 * `ENUM_3001` (value: `'3001'`)
 
-* `ENUM_3004_LEFT_PARENTHESIS_25_PERCENT__PURALUBE_SLASH_SYSTANE_RIGHT_PARENTHESIS` (value: `'3004 (25% puralube/systane)'`)
-
 * `ENUM_2007` (value: `'2007'`)
 
 * `ENUM_2008` (value: `'2008'`)
