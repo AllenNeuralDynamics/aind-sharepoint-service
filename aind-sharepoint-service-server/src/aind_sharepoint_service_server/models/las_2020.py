@@ -136,7 +136,6 @@ class LASLimsproject(str, Enum):
     M_IVSCCMET = "mIVSCC-MET"
     M_IVSCCME_TX = "mIVSCC-METx"
     M_MPATC_HX = "mMPATCHx"
-    M_M_PATCHX = "mMPatchx"
     M_VISPTAXLO = "MVisp-taxl.o"
     N200 = "N200"
     N310 = "N310"
