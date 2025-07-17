@@ -291,8 +291,6 @@ class Lightcycle(Enum, metaclass=EnumMeta):
     N_249_ABSL2 = "249 (ABSL2)"
 
     # Added missing attributes
-    REVERSE_LIGHT_CYCLE_9PM_T = "Reverse Light Cycle (9pm to 9am light)"
-    STANDARD_LIGHT_CYCLE_6AM = "Standard Light Cycle (6am to 8pm light)"
     REVERSE_9PM_TO_9AM = "Reverse (9pm to 9am)"
     STANDARD_6AM_TO_8PM = "Standard (6am to 8pm)"
 
@@ -881,7 +879,6 @@ class ImplantIdCoverslipType(Enum, metaclass=EnumMeta):
     N_2004 = "2004"
     N_2010 = "2010"
     N_3001 = "3001"
-    N_3004_25_PURALUBESYSTANE = "3004 (25% puralube/systane)"
     N_2007 = "2007"
     N_2008 = "2008"
     N_2009 = "2009"
