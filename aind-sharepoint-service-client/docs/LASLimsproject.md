@@ -102,8 +102,6 @@ Enum class for LASLimsproject
 
 * `MMPATCHX` (value: `'mMPATCHx'`)
 
-* `MMPATCHX` (value: `'mMPatchx'`)
-
 * `M_VISP_MINUS_TAXL_DOT_O` (value: `'MVisp-taxl.o'`)
 
 * `N200` (value: `'N200'`)
