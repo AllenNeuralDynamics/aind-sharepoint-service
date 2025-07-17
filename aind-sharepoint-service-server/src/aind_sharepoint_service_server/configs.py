@@ -1,12 +1,12 @@
 """Module for settings to connect to backend"""
 
 from typing import ClassVar, Optional
+from urllib.parse import urljoin
 
 from aind_settings_utils.aws import (
     ParameterStoreAppBaseSettings,
 )
-from urllib.parse import urljoin
-from pydantic import Field, SecretStr
+from pydantic import Field, RedisDsn, SecretStr
 from pydantic_settings import SettingsConfigDict
 
 
@@ -52,7 +52,7 @@ class Settings(ParameterStoreAppBaseSettings):
         title="Tenant ID",
         description="Tenant ID for the principal account.",
     )
-    redis_url: Optional[str] = Field(default=None)
+    redis_url: Optional[RedisDsn] = Field(default=None)
     graph_api_url: ClassVar[str] = "https://graph.microsoft.com"
 
     @property
