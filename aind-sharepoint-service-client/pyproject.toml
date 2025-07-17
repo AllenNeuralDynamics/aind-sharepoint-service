@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aind_sharepoint_service_client"
-version = "0.0.5"
+version = "0.0.6"
 description = "aind-sharepoint-service"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
 license = "NoLicense"
