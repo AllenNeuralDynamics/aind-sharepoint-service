@@ -34,8 +34,8 @@ class NSB2023ProjectId(Enum, metaclass=EnumMeta):
         "102-01-040-20 CTY BRAIN UG3/UH3 Genetic Viral Tools"
     )
     N_102_01_043_20_CTY__OPTI = "102-01-043-20 CTY Optical interrogation"
-    N_102_01_044_10_CTY__GENO = "102-01-044-10 – CTY Genomics"
-    N_102_01_045_10_CTY_IVSCC = "102-01-045-10 – CTY IVSCC"
+    N_102_01_044_10_CTY__GENO = "102-01-044-10 - CTY Genomics"
+    N_102_01_045_10_CTY_IVSCC = "102-01-045-10 - CTY IVSCC"
     N_102_01_046_20_CTY__WEIL = (
         "102-01-046-20 - CTY Weill Neuronal Heterogeneity"
     )
@@ -423,7 +423,7 @@ class NSB2023LimsProject(Enum, metaclass=EnumMeta):
     M_IVSCC_MET = "mIVSCC-MET"
     M_IVSCC_ME_TX = "mIVSCC-METx"
     M_M_PATCHX = "mMPatchx"
-    M_MPATC_HX = "mMPATCHx"
+    # M_MPATC_HX = "mMPATCHx"
     MOUSE_BRAIN_CELL_ATLAS_CH = "MouseBrainCellAtlasCharacterizationPilot"
     MOUSE_BRAIN_CELL_ATLAS_CH_2 = "MouseBrainCellAtlasCharacterizatlon"
     MOUSE_BRAIN_CELL_ATLAS_TR = "MouseBrainCellAtlasTranssynaptic"
