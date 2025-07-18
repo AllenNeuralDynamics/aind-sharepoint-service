@@ -136,7 +136,7 @@ class LASLimsproject(str, Enum):
     M_IVSCCMET = "mIVSCC-MET"
     M_IVSCCME_TX = "mIVSCC-METx"
     M_MPATC_HX = "mMPATCHx"
-    # M_M_PATCHX = "mMPatchx"
+    M_M_PATCHX = "mMPatchx"
     M_VISPTAXLO = "MVisp-taxl.o"
     N200 = "N200"
     N310 = "N310"
@@ -367,8 +367,8 @@ class LASProjectid(str, Enum):
         "102-01-040-20 CTY BRAIN UG3/UH3 Genetic Viral Tools"
     )
     N_1020104320_CTY_OPTICAL = "102-01-043-20 CTY Optical interrogation"
-    N_1020104410_CTY_GENOMICS = "102-01-044-10 - CTY Genomics"
-    N_1020104510_CTY_IVSCC = "102-01-045-10 - CTY IVSCC"
+    N_1020104410_CTY_GENOMICS = "102-01-044-10 – CTY Genomics"
+    N_1020104510_CTY_IVSCC = "102-01-045-10 – CTY IVSCC"
     N_1020104620_CTY_WEILL_NE = (
         "102-01-046-20 - CTY Weill Neuronal Heterogeneity"
     )
