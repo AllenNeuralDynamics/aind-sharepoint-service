@@ -6,17 +6,17 @@ Enum class for LASReqpro3
 
 * `BLOOD_COLLECTION` (value: `'Blood Collection'`)
 
-* `CEREBROSPINAL_FLUID_COLLECTION_LEFT_PARENTHESIS_CSF_RIGHT_PARENTHESIS` (value: `'Cerebrospinal Fluid Collection (CSF)'`)
+* `CEREBROSPINAL_FLUID_COLLE` (value: `'Cerebrospinal Fluid Collection (CSF)'`)
 
 * `DOSING` (value: `'Dosing'`)
 
 * `INDUCTION` (value: `'Induction'`)
 
-* `INTRACEREBROVENTRICULAR_INJECTION` (value: `'Intracerebroventricular Injection'`)
+* `INTRACEREBROVENTRICULAR_I` (value: `'Intracerebroventricular Injection'`)
 
 * `OTHER` (value: `'Other'`)
 
-* `RETRO_MINUS_ORBITAL_INJECTION` (value: `'Retro-Orbital Injection'`)
+* `RETRO_ORBITAL_INJECTION` (value: `'Retro-Orbital Injection'`)
 
 * `TISSUE_COLLECTION` (value: `'Tissue Collection'`)
 

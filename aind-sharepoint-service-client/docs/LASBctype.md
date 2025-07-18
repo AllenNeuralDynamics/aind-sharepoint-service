@@ -6,7 +6,7 @@ Enum class for LASBctype
 
 * `SUBMANDIBULAR` (value: `'Submandibular'`)
 
-* `SUBMANDIBULAR_MINUS__IMMUNOLOGY` (value: `'Submandibular - Immunology'`)
+* `SUBMANDIBULAR_IMMUNOLOGY` (value: `'Submandibular - Immunology'`)
 
 * `TERMINAL` (value: `'Terminal'`)
 

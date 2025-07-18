@@ -4,7 +4,7 @@ Enum class for LASTamFrequency
 
 ## Enum
 
-* `OTHER_LEFT_PARENTHESIS_TYPE_IN_RIGHT_PARENTHESIS` (value: `'Other (Type in)'`)
+* `OTHER_TYPE_IN` (value: `'Other (Type in)'`)
 
 * `SINGLE_DOSE` (value: `'Single dose'`)
 

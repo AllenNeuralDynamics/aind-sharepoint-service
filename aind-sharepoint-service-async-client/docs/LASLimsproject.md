@@ -4,23 +4,23 @@ Enum class for LASLimsproject
 
 ## Enum
 
-* `AIND_MINUS_DISCOVERY` (value: `'aind-discovery'`)
+* `AINDDISCOVERY` (value: `'aind-discovery'`)
 
-* `AIND_MINUS_EPHYS` (value: `'aind-ephys'`)
+* `AINDEPHYS` (value: `'aind-ephys'`)
 
-* `AIND_MINUS_MSMA` (value: `'aind-msma'`)
+* `AINDMSMA` (value: `'aind-msma'`)
 
-* `AIND_MINUS_OPHYS` (value: `'aind-ophys'`)
+* `AINDOPHYS` (value: `'aind-ophys'`)
 
-* `APROX` (value: `'APROx'`)
+* `APR_OX` (value: `'APROx'`)
 
-* `AXLOX` (value: `'AXlOx'`)
+* `A_XL_OX` (value: `'AXlOx'`)
 
 * `BA_RSEQ_GENETIC_TOOLS` (value: `'BARseq_GeneticTools'`)
 
-* `BRAINTVVIRALSTRATEGIES` (value: `'BraintvViralStrategies'`)
+* `BRAINTV_VIRAL_STRATEGIES` (value: `'BraintvViralStrategies'`)
 
-* `BRAINSTIM` (value: `'BrainStim'`)
+* `BRAIN_STIM` (value: `'BrainStim'`)
 
 * `C200` (value: `'C200'`)
 
@@ -28,31 +28,31 @@ Enum class for LASLimsproject
 
 * `C600X` (value: `'C600x'`)
 
-* `C600LATERAL` (value: `'C600Lateral'`)
+* `C600_LATERAL` (value: `'C600Lateral'`)
 
-* `CELLTYPESTRANSGENICCHARACTERIZATIONGCAMP` (value: `'CelltypesTransgenicCharacterizationGCaMP'`)
+* `CELLTYPES_TRANSGENIC_CHAR` (value: `'CelltypesTransgenicCharacterizationGCaMP'`)
 
 * `CITRICACIDPILOT` (value: `'Citricacidpilot'`)
 
-* `CON_MINUS_9999` (value: `'CON-9999'`)
+* `CON9999` (value: `'CON-9999'`)
 
-* `CON_MINUS_C505` (value: `'CON-C505'`)
+* `CONC505` (value: `'CON-C505'`)
 
-* `CON_MINUS_CS04` (value: `'CON-CS04'`)
+* `CONCS04` (value: `'CON-CS04'`)
 
-* `DEEPSCOPESLMDEVELOPMENT` (value: `'DeepscopeSLMDevelopment'`)
+* `DEEPSCOPE_SLM_DEVELOPMENT` (value: `'DeepscopeSLMDevelopment'`)
 
-* `DYNAMICROUTINGBEHAVIORDEV` (value: `'DynamicRoutingBehaviorDev'`)
+* `DYNAMIC_ROUTING_BEHAVIOR` (value: `'DynamicRoutingBehaviorDev'`)
 
-* `DYNAMICROUTINGOPTODEV` (value: `'DynamicRoutingOptoDev'`)
+* `DYNAMIC_ROUTING_OPTO_DEV` (value: `'DynamicRoutingOptoDev'`)
 
-* `DYNAMICROUTINGSURGICALDEVELOPMENT` (value: `'DynamicRoutingSurgicalDevelopment'`)
+* `DYNAMIC_ROUTING_SURGICAL` (value: `'DynamicRoutingSurgicalDevelopment'`)
 
-* `DYNAMICROUTINGTASK1PRODUCTION` (value: `'DynamicRoutingTask1Production'`)
+* `DYNAMIC_ROUTING_TASK1_PRO` (value: `'DynamicRoutingTask1Production'`)
 
-* `DYNAMICROUTINGTASK2PRODUCTION` (value: `'DynamicRoutingTask2Production'`)
+* `DYNAMIC_ROUTING_TASK2_PRO` (value: `'DynamicRoutingTask2Production'`)
 
-* `DYNAMICROUTINGULTRAOPTOTAGGINGBEHAVIOR` (value: `'DynamicRoutingUltraOptotaggingBehavior'`)
+* `DYNAMIC_ROUTING_ULTRA_OPT` (value: `'DynamicRoutingUltraOptotaggingBehavior'`)
 
 * `H120` (value: `'H120'`)
 
@@ -62,323 +62,325 @@ Enum class for LASLimsproject
 
 * `H301T` (value: `'H301t'`)
 
-* `H301X` (value: `'H301X'`)
+* `H301_X` (value: `'H301X'`)
 
-* `H501X` (value: `'H501X'`)
+* `H501_X` (value: `'H501X'`)
 
 * `H504` (value: `'H504'`)
 
-* `ISIX` (value: `'ISIx'`)
+* `IS_IX` (value: `'ISIx'`)
 
-* `LARGESCALEVOLTAGE` (value: `'LargeScaleVoltage'`)
+* `LARGE_SCALE_VOLTAGE` (value: `'LargeScaleVoltage'`)
 
-* `LEARNINGMFISHDEVELOPMENT` (value: `'LearningmFISHDevelopment'`)
+* `LEARNINGM_FISH_DEVELOPMEN` (value: `'LearningmFISHDevelopment'`)
 
-* `LEARNINGMFISHTASK1A` (value: `'LearningmFISHTask1A'`)
+* `LEARNINGM_FISH_TASK1_A` (value: `'LearningmFISHTask1A'`)
 
 * `M301T` (value: `'M301t'`)
 
-* `MESOSCOPEDEVELOPMENT` (value: `'MesoscopeDevelopment'`)
+* `MESOSCOPE_DEVELOPMENT` (value: `'MesoscopeDevelopment'`)
 
-* `MINDSCOPETRANSGENICCHARACTERIZATIONGCAMP` (value: `'MindscopeTransgenicCharacterizationGCaMP'`)
+* `MINDSCOPE_TRANSGENIC_CHAR` (value: `'MindscopeTransgenicCharacterizationGCaMP'`)
 
-* `MOUSEBRAINCELLATLASCHARACTERIZATIONPILOT` (value: `'MouseBrainCellAtlasCharacterizationPilot'`)
+* `MOUSE_BRAIN_CELL_ATLAS_CH` (value: `'MouseBrainCellAtlasCharacterizationPilot'`)
 
-* `MOUSEBRAINCELLATLASTRANSSYNAPTIC` (value: `'MouseBrainCellAtlasTranssynaptic'`)
+* `MOUSE_BRAIN_CELL_ATLAS_TR` (value: `'MouseBrainCellAtlasTranssynaptic'`)
 
-* `MOUSEBRAINCELLATLASCHARACTERIZATLON` (value: `'MouseBrainCellAtlasCharacterizatlon'`)
+* `MOUSE_BRAIN_CELL_ATLA_001` (value: `'MouseBrainCellAtlasCharacterizatlon'`)
 
-* `MOUSEFULLMORPHOLOGYFMOST` (value: `'MouseFullMorphologyFmost'`)
+* `MOUSE_FULL_MORPHOLOGY_FMO` (value: `'MouseFullMorphologyFmost'`)
 
-* `MOUSEGENETICTOOLSPROJECTIONMAPPING` (value: `'MouseGeneticToolsProjectionMapping'`)
+* `MOUSE_GENETIC_TOOLS_PROJE` (value: `'MouseGeneticToolsProjectionMapping'`)
 
-* `MULTISCOPESIGNALNOISE` (value: `'MultiscopeSignalNoise'`)
+* `MULTISCOPE_SIGNAL_NOISE` (value: `'MultiscopeSignalNoise'`)
 
-* `MFISHPLATFORMDEVELOPMENT` (value: `'mFishPlatformDevelopment'`)
+* `M_FISH_PLATFORM_DEVELOPME` (value: `'mFishPlatformDevelopment'`)
 
-* `M_IVSCC_MINUS_MET` (value: `'mIVSCC-MET'`)
+* `M_IVSCCMET` (value: `'mIVSCC-MET'`)
 
-* `M_IVSCC_MINUS_METX` (value: `'mIVSCC-METx'`)
+* `M_IVSCCME_TX` (value: `'mIVSCC-METx'`)
 
-* `MMPATCHX` (value: `'mMPATCHx'`)
+* `M_MPATC_HX` (value: `'mMPATCHx'`)
 
-* `M_VISP_MINUS_TAXL_DOT_O` (value: `'MVisp-taxl.o'`)
+* `M_M_PATCHX` (value: `'mMPatchx'`)
+
+* `M_VISPTAXLO` (value: `'MVisp-taxl.o'`)
 
 * `N200` (value: `'N200'`)
 
 * `N310` (value: `'N310'`)
 
-* `NEUROPIXELVISUALBEHAVIOR` (value: `'NeuropixelVisualBehavior'`)
+* `NEUROPIXEL_VISUAL_BEHAVIO` (value: `'NeuropixelVisualBehavior'`)
 
-* `NEUROPIXELVISUALBEHAVIORDEVELOPMENT` (value: `'NeuropixelVisualBehaviorDevelopment'`)
+* `NEUROPIXEL_VISUAL_BEH_001` (value: `'NeuropixelVisualBehaviorDevelopment'`)
 
-* `NEUROPIXELVISUALCODING` (value: `'NeuropixelVisualCoding'`)
+* `NEUROPIXEL_VISUAL_CODING` (value: `'NeuropixelVisualCoding'`)
 
-* `ENUM_0200` (value: `'0200'`)
+* `N_0200` (value: `'0200'`)
 
-* `ENUM_0309` (value: `'0309'`)
+* `N_0309` (value: `'0309'`)
 
-* `ENUM_0310` (value: `'0310'`)
+* `N_0310` (value: `'0310'`)
 
-* `ENUM_0311` (value: `'0311'`)
+* `N_0311` (value: `'0311'`)
 
-* `ENUM_0312` (value: `'0312'`)
+* `N_0312` (value: `'0312'`)
 
-* `ENUM_0314` (value: `'0314'`)
+* `N_0314` (value: `'0314'`)
 
-* `ENUM_0316` (value: `'0316'`)
+* `N_0316` (value: `'0316'`)
 
-* `ENUM_0319` (value: `'0319'`)
+* `N_0319` (value: `'0319'`)
 
-* `ENUM_0320` (value: `'0320'`)
+* `N_0320` (value: `'0320'`)
 
-* `ENUM_0321` (value: `'0321'`)
+* `N_0321` (value: `'0321'`)
 
-* `ENUM_03212` (value: `'03212'`)
+* `N_03212` (value: `'03212'`)
 
-* `ENUM_03213` (value: `'03213'`)
+* `N_03213` (value: `'03213'`)
 
-* `ENUM_03214` (value: `'03214'`)
+* `N_03214` (value: `'03214'`)
 
-* `ENUM_0322` (value: `'0322'`)
+* `N_0322` (value: `'0322'`)
 
-* `ENUM_0324` (value: `'0324'`)
+* `N_0324` (value: `'0324'`)
 
-* `ENUM_0325` (value: `'0325'`)
+* `N_0325` (value: `'0325'`)
 
-* `ENUM_0326` (value: `'0326'`)
+* `N_0326` (value: `'0326'`)
 
-* `ENUM_0327` (value: `'0327'`)
+* `N_0327` (value: `'0327'`)
 
-* `ENUM_03272` (value: `'03272'`)
+* `N_03272` (value: `'03272'`)
 
-* `ENUM_0328` (value: `'0328'`)
+* `N_0328` (value: `'0328'`)
 
-* `ENUM_0329` (value: `'0329'`)
+* `N_0329` (value: `'0329'`)
 
-* `ENUM_0331` (value: `'0331'`)
+* `N_0331` (value: `'0331'`)
 
-* `ENUM_0334` (value: `'0334'`)
+* `N_0334` (value: `'0334'`)
 
-* `ENUM_03342` (value: `'03342'`)
+* `N_03342` (value: `'03342'`)
 
-* `ENUM_0335` (value: `'0335'`)
+* `N_0335` (value: `'0335'`)
 
-* `ENUM_0336` (value: `'0336'`)
+* `N_0336` (value: `'0336'`)
 
-* `ENUM_0338` (value: `'0338'`)
+* `N_0338` (value: `'0338'`)
 
-* `ENUM_0339` (value: `'0339'`)
+* `N_0339` (value: `'0339'`)
 
-* `ENUM_03392` (value: `'03392'`)
+* `N_03392` (value: `'03392'`)
 
-* `ENUM_0340` (value: `'0340'`)
+* `N_0340` (value: `'0340'`)
 
-* `ENUM_0342` (value: `'0342'`)
+* `N_0342` (value: `'0342'`)
 
-* `ENUM_03422` (value: `'03422'`)
+* `N_03422` (value: `'03422'`)
 
-* `ENUM_0343` (value: `'0343'`)
+* `N_0343` (value: `'0343'`)
 
-* `ENUM_0344` (value: `'0344'`)
+* `N_0344` (value: `'0344'`)
 
-* `ENUM_0345` (value: `'0345'`)
+* `N_0345` (value: `'0345'`)
 
-* `ENUM_0346` (value: `'0346'`)
+* `N_0346` (value: `'0346'`)
 
-* `ENUM_0350` (value: `'0350'`)
+* `N_0350` (value: `'0350'`)
 
-* `ENUM_0350X` (value: `'0350x'`)
+* `N_0350X` (value: `'0350x'`)
 
-* `ENUM_0351` (value: `'0351'`)
+* `N_0351` (value: `'0351'`)
 
-* `ENUM_0351X` (value: `'0351x'`)
+* `N_0351X` (value: `'0351x'`)
 
-* `ENUM_0354` (value: `'0354'`)
+* `N_0354` (value: `'0354'`)
 
-* `ENUM_0355` (value: `'0355'`)
+* `N_0355` (value: `'0355'`)
 
-* `ENUM_0357` (value: `'0357'`)
+* `N_0357` (value: `'0357'`)
 
-* `ENUM_0358` (value: `'0358'`)
+* `N_0358` (value: `'0358'`)
 
-* `ENUM_0359` (value: `'0359'`)
+* `N_0359` (value: `'0359'`)
 
-* `ENUM_0360` (value: `'0360'`)
+* `N_0360` (value: `'0360'`)
 
-* `ENUM_03602` (value: `'03602'`)
+* `N_03602` (value: `'03602'`)
 
-* `ENUM_0362` (value: `'0362'`)
+* `N_0362` (value: `'0362'`)
 
-* `ENUM_0363` (value: `'0363'`)
+* `N_0363` (value: `'0363'`)
 
-* `ENUM_0364` (value: `'0364'`)
+* `N_0364` (value: `'0364'`)
 
-* `ENUM_0365` (value: `'0365'`)
+* `N_0365` (value: `'0365'`)
 
-* `ENUM_0365X` (value: `'0365x'`)
+* `N_0365X` (value: `'0365x'`)
 
-* `ENUM_0366` (value: `'0366'`)
+* `N_0366` (value: `'0366'`)
 
-* `ENUM_0366X` (value: `'0366x'`)
+* `N_0366X` (value: `'0366x'`)
 
-* `ENUM_0367` (value: `'0367'`)
+* `N_0367` (value: `'0367'`)
 
-* `ENUM_0369` (value: `'0369'`)
+* `N_0369` (value: `'0369'`)
 
-* `ENUM_0371` (value: `'0371'`)
+* `N_0371` (value: `'0371'`)
 
-* `ENUM_0372` (value: `'0372'`)
+* `N_0372` (value: `'0372'`)
 
-* `ENUM_0372X` (value: `'0372x'`)
+* `N_0372X` (value: `'0372x'`)
 
-* `ENUM_0374` (value: `'0374'`)
+* `N_0374` (value: `'0374'`)
 
-* `ENUM_0376` (value: `'0376'`)
+* `N_0376` (value: `'0376'`)
 
-* `ENUM_0376A` (value: `'0376a'`)
+* `N_0376A` (value: `'0376a'`)
 
-* `ENUM_0376X` (value: `'0376x'`)
+* `N_0376X` (value: `'0376x'`)
 
-* `ENUM_0378` (value: `'0378'`)
+* `N_0378` (value: `'0378'`)
 
-* `ENUM_0378X` (value: `'0378x'`)
+* `N_0378X` (value: `'0378x'`)
 
-* `ENUM_0380` (value: `'0380'`)
+* `N_0380` (value: `'0380'`)
 
-* `ENUM_0384` (value: `'0384'`)
+* `N_0384` (value: `'0384'`)
 
-* `ENUM_0386` (value: `'0386'`)
+* `N_0386` (value: `'0386'`)
 
-* `ENUM_0388` (value: `'0388'`)
+* `N_0388` (value: `'0388'`)
 
 * `OLVSX` (value: `'OLVSX'`)
 
-* `OMFISHROBINJECTIONVIRUSPILOT` (value: `'omFISHROBinjectionviruspilot'`)
+* `OM_FISHRO_BINJECTIONVIRUS` (value: `'omFISHROBinjectionviruspilot'`)
 
-* `OMFISHCUX2MESO` (value: `'omFISHCux2Meso'`)
+* `OM_FISH_CUX2_MESO` (value: `'omFISHCux2Meso'`)
 
-* `OMFISHGAD2MESO` (value: `'omFISHGad2Meso'`)
+* `OM_FISH_GAD2_MESO` (value: `'omFISHGad2Meso'`)
 
-* `OMFISHGAD2PILOT` (value: `'omFISHGad2Pilot'`)
+* `OM_FISH_GAD2_PILOT` (value: `'omFISHGad2Pilot'`)
 
-* `OMFISHRBP4MESO` (value: `'omFISHRbp4Meso'`)
+* `OM_FISH_RBP4_MESO` (value: `'omFISHRbp4Meso'`)
 
-* `OMFISHRORBPILOT` (value: `'omFISHRorbPilot'`)
+* `OM_FISH_RORB_PILOT` (value: `'omFISHRorbPilot'`)
 
-* `OMFISHSSTMESO` (value: `'omFISHSstMeso'`)
+* `OM_FISH_SST_MESO` (value: `'omFISHSstMeso'`)
 
-* `OMFISHVIPMESO` (value: `'omFISHVipMeso'`)
+* `OM_FISH_VIP_MESO` (value: `'omFISHVipMeso'`)
 
-* `OMFISHCOREGISTRATIONPILOT` (value: `'omFISHcoregistrationpilot'`)
+* `OM_FIS_HCOREGISTRATIONPIL` (value: `'omFISHcoregistrationpilot'`)
 
-* `OPENSCOPELNJECTIONPILOT` (value: `'OpenscopelnjectionPilot'`)
+* `OPENSCOPELNJECTION_PILOT` (value: `'OpenscopelnjectionPilot'`)
 
-* `OPENSCOPEDEVELOPMENT` (value: `'OpenscopeDevelopment'`)
+* `OPENSCOPE_DEVELOPMENT` (value: `'OpenscopeDevelopment'`)
 
-* `OPENSCOPEGAMMAPILOT` (value: `'OpenscopeGammaPilot'`)
+* `OPENSCOPE_GAMMA_PILOT` (value: `'OpenscopeGammaPilot'`)
 
-* `OPENSCOPEGAMMAPRODUCTLON` (value: `'OpenscopeGammaProductlon'`)
+* `OPENSCOPE_GAMMA_PRODUCTLO` (value: `'OpenscopeGammaProductlon'`)
 
-* `OPENSCOPEMOTIONPLLOT` (value: `'OpenscopeMotionPllot'`)
+* `OPENSCOPE_MOTION_PLLOT` (value: `'OpenscopeMotionPllot'`)
 
-* `OPENSCOPEMOTIONPRODUCTION` (value: `'OpenscopeMotionProduction'`)
+* `OPENSCOPE_MOTION_PRODUCTI` (value: `'OpenscopeMotionProduction'`)
 
-* `OPENSCOPEMULTIPLEXPILOT` (value: `'OpenscopeMultiplexPilot'`)
+* `OPENSCOPE_MULTIPLEX_PILOT` (value: `'OpenscopeMultiplexPilot'`)
 
-* `OPENSCOPEMULTIPLEXPRODUCTION` (value: `'OpenscopeMultiplexProduction'`)
+* `OPENSCOPE_MULTIPLEX_PRODU` (value: `'OpenscopeMultiplexProduction'`)
 
-* `OPENSCOPEDENDRITECOUPLING` (value: `'OpenScopeDendriteCoupling'`)
+* `OPEN_SCOPE_DENDRITE_COUPL` (value: `'OpenScopeDendriteCoupling'`)
 
-* `OPENSCOPEGLOBALLOCALODDBALL` (value: `'OpenScopeGlobalLocalOddball'`)
+* `OPEN_SCOPE_GLOBAL_LOCAL_O` (value: `'OpenScopeGlobalLocalOddball'`)
 
-* `OPENSCOPEILLUSION` (value: `'OpenScopeIllusion'`)
+* `OPEN_SCOPE_ILLUSION` (value: `'OpenScopeIllusion'`)
 
-* `OPENSCOPELOOP` (value: `'OpenScopeLoop'`)
+* `OPEN_SCOPE_LOOP` (value: `'OpenScopeLoop'`)
 
-* `OPENSCOPEPSYCODE` (value: `'OpenScopePsycode'`)
+* `OPEN_SCOPE_PSYCODE` (value: `'OpenScopePsycode'`)
 
-* `OPENSCOPESEQUENCELEARNING` (value: `'OpenScopeSequenceLearning'`)
+* `OPEN_SCOPE_SEQUENCE_LEARN` (value: `'OpenScopeSequenceLearning'`)
 
-* `OPENSCOPETEMPORALBARCODE` (value: `'OpenScopeTemporalBarcode'`)
+* `OPEN_SCOPE_TEMPORAL_BARCO` (value: `'OpenScopeTemporalBarcode'`)
 
-* `OPENSCOPETEXTURE` (value: `'OpenScopeTexture'`)
+* `OPEN_SCOPE_TEXTURE` (value: `'OpenScopeTexture'`)
 
-* `OPENSCOPEVISION2HIPPOCAMPUS` (value: `'OpenScopeVision2Hippocampus'`)
+* `OPEN_SCOPE_VISION2_HIPPOC` (value: `'OpenScopeVision2Hippocampus'`)
 
-* `OPENSCOPEVISMO` (value: `'OpenScopeVismo'`)
+* `OPEN_SCOPE_VISMO` (value: `'OpenScopeVismo'`)
 
-* `OPH5X` (value: `'OPH5X'`)
+* `OPH5_X` (value: `'OPH5X'`)
 
-* `SLC6A1NEUROPIXEL` (value: `'SLC6A1Neuropixel'`)
+* `SLC6_A1_NEUROPIXEL` (value: `'SLC6A1Neuropixel'`)
 
 * `SMART_SPIM_GENETIC_TOOLS` (value: `'SmartSPIM_GeneticTools'`)
 
-* `SURGERYX` (value: `'SurgeryX'`)
+* `SURGERY_X` (value: `'SurgeryX'`)
 
 * `T301` (value: `'T301'`)
 
 * `T301T` (value: `'T301t'`)
 
-* `T301X` (value: `'T301X'`)
+* `T301_X` (value: `'T301X'`)
 
 * `T503` (value: `'T503'`)
 
-* `T503X` (value: `'T503X'`)
+* `T503_X` (value: `'T503X'`)
 
 * `T504` (value: `'T504'`)
 
-* `T504X` (value: `'T504X'`)
+* `T504_X` (value: `'T504X'`)
 
 * `T600` (value: `'T600'`)
 
 * `T601` (value: `'T601'`)
 
-* `T601X` (value: `'T601X'`)
+* `T601_X` (value: `'T601X'`)
 
-* `TASKTRAINEDNETWORKSMULTISCOPE` (value: `'TaskTrainedNetworksMultiscope'`)
+* `TASK_TRAINED_NETWORKS_MUL` (value: `'TaskTrainedNetworksMultiscope'`)
 
-* `TASKTRAINEDNETWORKSNEUROPIXEL` (value: `'TaskTrainedNetworksNeuropixel'`)
+* `TASK_TRAINED_NETWORKS_NEU` (value: `'TaskTrainedNetworksNeuropixel'`)
 
 * `TCYTX` (value: `'TCYTX'`)
 
-* `TEMPLETONPSYCHEDELICS` (value: `'TempletonPsychedelics'`)
+* `TEMPLETON_PSYCHEDELICS` (value: `'TempletonPsychedelics'`)
 
 * `TEMPLETON_TTOC` (value: `'Templeton TTOC'`)
 
-* `TINYBLUEDOTBEHAVIOR` (value: `'TinyBlueDotBehavior'`)
+* `TINY_BLUE_DOT_BEHAVIOR` (value: `'TinyBlueDotBehavior'`)
 
-* `U01BFCT` (value: `'U01BFCT'`)
+* `U01_BFCT` (value: `'U01BFCT'`)
 
-* `VARIABILITYAIM1` (value: `'VariabilityAim1'`)
+* `VARIABILITY_AIM1` (value: `'VariabilityAim1'`)
 
-* `VARIABILITYAIM1PILOT` (value: `'VariabilityAim1Pilot'`)
+* `VARIABILITY_AIM1_PILOT` (value: `'VariabilityAim1Pilot'`)
 
-* `VARIABILITYSPONTANEOUS` (value: `'VariabilitySpontaneous'`)
+* `VARIABILITY_SPONTANEOUS` (value: `'VariabilitySpontaneous'`)
 
-* `VIPAXONALV1PHASE1` (value: `'VipAxonalV1Phase1'`)
+* `VIP_AXONAL_V1_PHASE1` (value: `'VipAxonalV1Phase1'`)
 
-* `VIPSOMATICV1MESO` (value: `'VIPSomaticV1Meso'`)
+* `VIP_SOMATIC_V1_MESO` (value: `'VIPSomaticV1Meso'`)
 
-* `VIPSOMATICV1PHASE1` (value: `'VipSomaticV1Phase1'`)
+* `VIP_SOMATIC_V1_PHASE1` (value: `'VipSomaticV1Phase1'`)
 
-* `VIPSOMATICV1PHASE2` (value: `'VipSomaticV1Phase2'`)
+* `VIP_SOMATIC_V1_PHASE2` (value: `'VipSomaticV1Phase2'`)
 
-* `VISUALBEHAVIOR` (value: `'VisualBehavior'`)
+* `VISUAL_BEHAVIOR` (value: `'VisualBehavior'`)
 
-* `VISUALBEHAVIORDEVELOPMENT` (value: `'VisualBehaviorDevelopment'`)
+* `VISUAL_BEHAVIOR_DEVELOPME` (value: `'VisualBehaviorDevelopment'`)
 
-* `VISUALBEHAVIORMULTISCOPE` (value: `'VisualBehaviorMultiscope'`)
+* `VISUAL_BEHAVIOR_MULTISCOP` (value: `'VisualBehaviorMultiscope'`)
 
-* `VISUALBEHAVIORMULTISCOPE4AREASX2D` (value: `'VisualBehaviorMultiscope4areasx2d'`)
+* `VISUAL_BEHAVIOR_MULTI_001` (value: `'VisualBehaviorMultiscope4areasx2d'`)
 
-* `VISUALBEHAVIORTASK1B` (value: `'VisualBehaviorTask1B'`)
+* `VISUAL_BEHAVIOR_TASK1_B` (value: `'VisualBehaviorTask1B'`)
 
-* `VISUALBEHAVIORMULTISCOPETASK1G` (value: `'VisualBehavIorMultiscopeTask1G'`)
+* `VISUAL_BEHAV_IOR_MULTISCO` (value: `'VisualBehavIorMultiscopeTask1G'`)
 
-* `VIDEEPDLVEDEEPSCOPEPIEZO` (value: `'VIDeepdlveDeepscopePiezo'`)
+* `VI_DEEPDLVE_DEEPSCOPE_PIE` (value: `'VIDeepdlveDeepscopePiezo'`)
 
-* `VIDEEPDIVEEMVOLUME` (value: `'VIDeepDiveEMVolume'`)
+* `VI_DEEP_DIVE_EM_VOLUME` (value: `'VIDeepDiveEMVolume'`)
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

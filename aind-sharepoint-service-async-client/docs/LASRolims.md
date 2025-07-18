@@ -4,7 +4,7 @@ Enum class for LASRolims
 
 ## Enum
 
-* `NEW_STEREOTAXIC_INJECTIONS` (value: `'New Stereotaxic Injections'`)
+* `NEW_STEREOTAXIC_INJECTION` (value: `'New Stereotaxic Injections'`)
 
 * `STEREOTAXIC_INJECTIONS` (value: `'Stereotaxic Injections'`)
 

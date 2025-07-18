@@ -4,71 +4,71 @@ Enum class for LASProtocol
 
 ## Enum
 
-* `ENUM_2103_MINUS__OPTICAL_PHYSIOLOGY_MINDSCOPE_PHASE_4` (value: `'2103 - Optical Physiology Mindscope Phase 4'`)
+* `N_2103_OPTICAL_PHYSIOLOGY` (value: `'2103 - Optical Physiology Mindscope Phase 4'`)
 
-* `ENUM_2104_MINUS__ELECTROPHYSIOLOGY_MINDSCOPE_PHASE_4` (value: `'2104 - Electrophysiology Mindscope Phase 4'`)
+* `N_2104_ELECTROPHYSIOLOGY` (value: `'2104 - Electrophysiology Mindscope Phase 4'`)
 
-* `ENUM_2105_MINUS__CHARACTERIZATION_OF_MOUSE_GENETIC_TOOLS` (value: `'2105 - Characterization of mouse genetic tools'`)
+* `N_2105_CHARACTERIZATION_O` (value: `'2105 - Characterization of mouse genetic tools'`)
 
-* `ENUM_2106_MINUS__ANALYSIS_OF_INTEGRATED_NEURONAL_PHENOTYPES` (value: `'2106 - Analysis of Integrated Neuronal Phenotypes'`)
+* `N_2106_ANALYSIS_OF_INTEGR` (value: `'2106 - Analysis of Integrated Neuronal Phenotypes'`)
 
-* `ENUM_2107_MINUS__CIRCUIT_TRACING_AND_OPTICAL_PHYSIOLOGY_OF_MOUSE_CORTEX` (value: `'2107 - Circuit tracing and optical physiology of mouse cortex'`)
+* `N_2107_CIRCUIT_TRACING_AN` (value: `'2107 - Circuit tracing and optical physiology of mouse cortex'`)
 
-* `ENUM_2109_MINUS__ANALYSIS_OF_BRAIN_MINUS__WIDE_NEURAL_CIRCUITS_IN_THE_MOUSE` (value: `'2109 - Analysis of brain - wide neural circuits in the mouse'`)
+* `N_2109_ANALYSIS_OF_BRAIN` (value: `'2109 - Analysis of brain - wide neural circuits in the mouse'`)
 
-* `ENUM_2110_MINUS__SPECIFICITY_AND_STRENGTH_OF_SYNAPTIC_SIGNALING_WITHIN_AND_BETWEEN_BRAIN_AREAS` (value: `'2110 - Specificity and Strength of Synaptic Signaling Within and Between Brain Areas'`)
+* `N_2110_SPECIFICITY_AND_ST` (value: `'2110 - Specificity and Strength of Synaptic Signaling Within and Between Brain Areas'`)
 
-* `ENUM_2112_MINUS__CHARACTERIZATION_OF_THE_CELL_MINUS__TYPE_MINUS__SPECIFIC_MOLECULAR_ADAPTATIONS_THAT_OCCUR_DURING_OPIOID_USE` (value: `'2112 - Characterization of the cell - type - specific molecular adaptations that occur during opioid use'`)
+* `N_2112_CHARACTERIZATION_O` (value: `'2112 - Characterization of the cell - type - specific molecular adaptations that occur during opioid use'`)
 
-* `ENUM_2113_MINUS__IN_VITRO_SINGLE_CELL_CHARACTERIZATION` (value: `'2113 - In Vitro Single Cell Characterization'`)
+* `N_2113_IN_VITRO_SINGLE_CE` (value: `'2113 - In Vitro Single Cell Characterization'`)
 
-* `ENUM_2114_MINUS__CHARACTERIZATION_OF_TRANSCRIPTOMIC_CELL_TYPES_AND_MOLECULAR_ADAPTATIONS_THAT_OCCUR_DURING_PSYCHEDELIC_DRUG_USE` (value: `'2114 - Characterization of transcriptomic cell types and molecular adaptations that occur during psychedelic drug use'`)
+* `N_2114_CHARACTERIZATION_O` (value: `'2114 - Characterization of transcriptomic cell types and molecular adaptations that occur during psychedelic drug use'`)
 
-* `ENUM_2115_MINUS__OPTICAL_PHYSIOLOGY_OF_MOUSE_BRAIN_CIRCUITS` (value: `'2115 - Optical Physiology of Mouse Brain Circuits'`)
+* `N_2115_OPTICAL_PHYSIOLOGY` (value: `'2115 - Optical Physiology of Mouse Brain Circuits'`)
 
-* `ENUM_2116_MINUS__MOUSE_BREEDING` (value: `'2116 - Mouse Breeding'`)
+* `N_2116_MOUSE_BREEDING` (value: `'2116 - Mouse Breeding'`)
 
-* `ENUM_2117_MINUS__OPEN_SCOPE_MINDSCOPE_ANIMAL_PROTOCOL_FOR_OPTICAL_PHYSIOLOGY_AND_NEUROPIXEL` (value: `'2117 - OpenScope Mindscope animal protocol for Optical Physiology and Neuropixel'`)
+* `N_2117_OPEN_SCOPE_MINDSCO` (value: `'2117 - OpenScope Mindscope animal protocol for Optical Physiology and Neuropixel'`)
 
-* `ENUM_2118_MINUS__ANIMAL_HOLDING_AND_PROCEDURES` (value: `'2118 - Animal Holding and Procedures'`)
+* `N_2118_ANIMAL_HOLDING_AND` (value: `'2118 - Animal Holding and Procedures'`)
 
-* `ENUM_2119_MINUS__TRAINING_AND_QUALIFICATION_OF_ANIMAL_USERS` (value: `'2119 - Training and qualification of animal users'`)
+* `N_2119_TRAINING_AND_QUALI` (value: `'2119 - Training and qualification of animal users'`)
 
-* `ENUM_2120_MINUS__ANALYSIS_OF_GENE_EXPRESSION_MINUS__FUNCTION_AND_STRUCTURE_IN_THE_MOUSE_BRAIN` (value: `'2120 - Analysis of Gene Expression - Function and Structure in the Mouse Brain'`)
+* `N_2120_ANALYSIS_OF_GENE_E` (value: `'2120 - Analysis of Gene Expression - Function and Structure in the Mouse Brain'`)
 
-* `ENUM_2201_MINUS__INTERROGATING_PROJECTIONS_AND_GENE_EXPRESSION_OF_NEURONS_BY_IN_SITU_SEQUENCING` (value: `'2201 - Interrogating projections and gene expression of neurons by in situ sequencing'`)
+* `N_2201_INTERROGATING_PROJ` (value: `'2201 - Interrogating projections and gene expression of neurons by in situ sequencing'`)
 
-* `ENUM_2202_MINUS__TESTING_AAVS_IN_PARKINSON_BACK_SLASH_QUOTE_S_MOUSE_MODELS` (value: `'2202 - Testing AAVs in Parkinson\'s mouse models'`)
+* `N_2202_TESTING_AA_VS_IN_P` (value: `'2202 - Testing AAVs in Parkinson\'s mouse models'`)
 
-* `ENUM_2204_MINUS__PRIMARY_NEURON_AND_BRAIN_SLICE_CULTURE_FROM_POSTNATAL_RODENT_BRAIN` (value: `'2204 - Primary neuron and brain slice culture from postnatal rodent brain'`)
+* `N_2204_PRIMARY_NEURON_AND` (value: `'2204 - Primary neuron and brain slice culture from postnatal rodent brain'`)
 
-* `ENUM_2205_MINUS__OPTIMIZATION_AND_VALIDATION_OF_VIRAL_VECTORS` (value: `'2205 - Optimization and validation of viral vectors'`)
+* `N_2205_OPTIMIZATION_AND_V` (value: `'2205 - Optimization and validation of viral vectors'`)
 
-* `ENUM_2207_MINUS__IN_VITRO_BRAIN_STIMULATION` (value: `'2207 - In Vitro Brain Stimulation'`)
+* `N_2207_IN_VITRO_BRAIN_STI` (value: `'2207 - In Vitro Brain Stimulation'`)
 
-* `ENUM_2212_MINUS__INVESTIGATING_BRAIN_STATES` (value: `'2212 - Investigating Brain States'`)
+* `N_2212_INVESTIGATING_BRAI` (value: `'2212 - Investigating Brain States'`)
 
-* `ENUM_2301_MINUS__TESTING_OF_ENHANCERS_AND_AAV_GENE_THERAPY_VECTORS` (value: `'2301 - Testing of enhancers and AAV gene therapy vectors'`)
+* `N_2301_TESTING_OF_ENHANCE` (value: `'2301 - Testing of enhancers and AAV gene therapy vectors'`)
 
-* `ENUM_2304_MINUS__NEUROSURGERY_AMPERSAND__BEHAVIOR_TRAINING_PROTOCOL` (value: `'2304 - Neurosurgery & Behavior Training Protocol'`)
+* `N_2304_NEUROSURGERY_BEHAV` (value: `'2304 - Neurosurgery & Behavior Training Protocol'`)
 
-* `ENUM_2305_MINUS__IN_VIVO_BRAIN_STIMULATION` (value: `'2305 - In Vivo Brain Stimulation'`)
+* `N_2305_IN_VIVO_BRAIN_STIM` (value: `'2305 - In Vivo Brain Stimulation'`)
 
-* `ENUM_2306_MINUS__PATCH_MINUS_SEQ_CHARACTERIZATION_OF_MOUSE_NEURONS_IN_ACUTE_BRAIN_SLICES_FOR_CROSS_MINUS_SPECIES_COMPARISON_STUDIES` (value: `'2306 - Patch-seq characterization of mouse neurons in acute brain slices for cross-species comparison studies'`)
+* `N_2306_PATCHSEQ_CHARACTER` (value: `'2306 - Patch-seq characterization of mouse neurons in acute brain slices for cross-species comparison studies'`)
 
-* `ENUM_2307_MINUS__DISSECTING_THE_NEURAL_CIRCUITS_OF_ADAPTIVE_CONTROL_OF_BEHAVIOR` (value: `'2307 - Dissecting the neural circuits of adaptive control of behavior'`)
+* `N_2307_DISSECTING_THE_NEU` (value: `'2307 - Dissecting the neural circuits of adaptive control of behavior'`)
 
-* `ENUM_2308_MINUS__INDUCTION_OF_IMMUNE_MEMORY` (value: `'2308 - Induction of Immune Memory'`)
+* `N_2308_INDUCTION_OF_IMMUN` (value: `'2308 - Induction of Immune Memory'`)
 
-* `ENUM_2401_MINUS__THE_USE_OF_MICE_FOR_THE_DEVELOPMENT_OF_BIOLOGICAL_RECORDERS` (value: `'2401 - The use of mice for the development of biological recorders'`)
+* `N_2401_THE_USE_OF_MICE_FO` (value: `'2401 - The use of mice for the development of biological recorders'`)
 
-* `ENUM_2402_MINUS__BRAIN_OBSERVATORY_OPTICAL_PHYSIOLOGY` (value: `'2402 - Brain Observatory Optical Physiology'`)
+* `N_2402_BRAIN_OBSERVATORY` (value: `'2402 - Brain Observatory Optical Physiology'`)
 
-* `ENUM_2405_MINUS__ANALYSIS_OF_INTEGRATED_NEURONAL_PHENOTYPES` (value: `'2405 - Analysis of Integrated Neuronal Phenotypes'`)
+* `N_2405_ANALYSIS_OF_INTEGR` (value: `'2405 - Analysis of Integrated Neuronal Phenotypes'`)
 
-* `ENUM_2406_MINUS__CHARACTERIZATION_OF_MOUSE_AND_VIRAL_GENETIC_TOOLS` (value: `'2406 - Characterization of mouse and viral genetic tools'`)
+* `N_2406_CHARACTERIZATION_OF_MOUS` (value: `'2406 - Characterization of mouse and viral genetic tools'`)
 
-* `ENUM_2412_MINUS__CIRCUIT_TRACING_AND_OPTICAL_PHYSIOLOGY_OF_MOUSE_CORTEX` (value: `'2412 - Circuit tracing and optical physiology of mouse cortex'`)
+* `N_2412_CIRCUIT_TRACING_AND_OPT` (value: `'2412 - Circuit tracing and optical physiology of mouse cortex'`)
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

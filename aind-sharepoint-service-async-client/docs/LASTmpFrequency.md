@@ -4,7 +4,7 @@ Enum class for LASTmpFrequency
 
 ## Enum
 
-* `OTHER_LEFT_PARENTHESIS_TYPE_MINUS_IN_RIGHT_PARENTHESIS` (value: `'Other (Type-in)'`)
+* `OTHER_TYPEIN` (value: `'Other (Type-in)'`)
 
 * `SINGLE_DOSE` (value: `'Single dose'`)
 
