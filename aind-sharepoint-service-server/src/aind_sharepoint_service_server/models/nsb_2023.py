@@ -34,8 +34,8 @@ class NSB2023ProjectId(Enum, metaclass=EnumMeta):
         "102-01-040-20 CTY BRAIN UG3/UH3 Genetic Viral Tools"
     )
     N_102_01_043_20_CTY__OPTI = "102-01-043-20 CTY Optical interrogation"
-    N_102_01_044_10_CTY__GENO = "102-01-044-10 - CTY Genomics"
-    N_102_01_045_10_CTY_IVSCC = "102-01-045-10 - CTY IVSCC"
+    N_102_01_044_10_CTY__GENO = "102-01-044-10 – CTY Genomics"
+    N_102_01_045_10_CTY_IVSCC = "102-01-045-10 – CTY IVSCC"
     N_102_01_046_20_CTY__WEIL = (
         "102-01-046-20 - CTY Weill Neuronal Heterogeneity"
     )
@@ -283,7 +283,7 @@ class NSB2023Protocol(Enum, metaclass=EnumMeta):
     )
 
 
-class NSB2023LightCycle(Enum, metaclass=EnumMeta):
+class Lightcycle(Enum, metaclass=EnumMeta):
     """Enum class for NSB2023LightCycle."""
 
     STANDARD__LIGHT__CYCLE_6A = "Standard Light Cycle (6am to 8pm light)"
@@ -423,7 +423,7 @@ class NSB2023LimsProject(Enum, metaclass=EnumMeta):
     M_IVSCC_MET = "mIVSCC-MET"
     M_IVSCC_ME_TX = "mIVSCC-METx"
     M_M_PATCHX = "mMPatchx"
-    # M_MPATC_HX = "mMPATCHx"
+    M_MPATC_HX = "mMPATCHx"
     MOUSE_BRAIN_CELL_ATLAS_CH = "MouseBrainCellAtlasCharacterizationPilot"
     MOUSE_BRAIN_CELL_ATLAS_CH_2 = "MouseBrainCellAtlasCharacterizatlon"
     MOUSE_BRAIN_CELL_ATLAS_TR = "MouseBrainCellAtlasTranssynaptic"
@@ -528,7 +528,9 @@ class NSB2023LimsTaskflow(Enum, metaclass=EnumMeta):
         "Brain Observatory Transgenic Characterization"
     )
     BRAIN_OBSERVATORY_V1_DD = "Brain Observatory V1DD"
-    BRAIN_OBSERVATORY_VISUAL_BEHAVIOR = "Brain Observatory Visual NSB2023Behavior"
+    BRAIN_OBSERVATORY_VISUAL_BEHAVIOR = (
+        "Brain Observatory Visual NSB2023Behavior"
+    )
     BRAIN_OBSERVATORY_VISUAL_BEHAVIOR_1B = (
         "Brain Observatory Visual NSB2023Behavior 1B"
     )
@@ -744,13 +746,17 @@ class NSB2023Procedure(Enum, metaclass=EnumMeta):
     SX_9__GRID_INJ_6_OR_9__MO = "Sx-09 Grid INJ (6 or 9) + Motor Ctx 2P"
     SX_11_19_HP__ONLY = "Sx-11&19 HP Only"
     SX_11_19_HP__TRANSCRANIAL = "Sx-11&19 HP Transcranial"
-    SX_12__STEREOTAXIC__INJEC = "Sx-12 Stereotaxic Injection (with NSB2023Headpost)"
+    SX_12__STEREOTAXIC__INJEC = (
+        "Sx-12 Stereotaxic Injection (with NSB2023Headpost)"
+    )
     SX_14__VISUAL__CTX_NP = "Sx-14 Visual Ctx NP"
     SX_15_WHC_NP = "Sx-15 WHC NP"
     SX_16_INJ_WHC_NP = "Sx-16 INJ + WHC NP"
     SX_17_DHC = "Sx-17 DHC"
     SX_18_INJ_DHC = "Sx-18 INJ+DHC"
-    SX_21__FIBER__OPTIC__IMPL = "Sx-21 Fiber Optic Implant (with NSB2023Headpost)"
+    SX_21__FIBER__OPTIC__IMPL = (
+        "Sx-21 Fiber Optic Implant (with NSB2023Headpost)"
+    )
     SX_21__INJECTION__FIBER = (
         "Sx-21 Injection + Fiber Optic Implant (with NSB2023Headpost)"
     )
@@ -758,7 +764,9 @@ class NSB2023Procedure(Enum, metaclass=EnumMeta):
     SX_25__STEREOTAXIC_INJECT = (
         "Sx-25 Stereotaxic injections: 2+ INJ materials"
     )
-    SX_26_ISI_GUIDED__INJECTI = "Sx-26 ISI-guided Injection (with NSB2023Headpost)"
+    SX_26_ISI_GUIDED__INJECTI = (
+        "Sx-26 ISI-guided Injection (with NSB2023Headpost)"
+    )
     SX__SPINAL__CORD_INJ = "Sx- Spinal Cord INJ"
     SX_EMG__ARRAY = "Sx- EMG Array"
     SX__TESTES__INJECTION = "Sx- Testes Injection"
@@ -771,7 +779,9 @@ class NSB2023Procedure(Enum, metaclass=EnumMeta):
     FRONTAL_CTX_2_P = "Frontal Ctx 2P"
     HP_ONLY = "HP Only"
     HP_TRANSCRANIAL = "HP Transcranial"
-    INJECTION_FIBER_OPTIC_IMP = "Injection+Fiber Optic Implant (with NSB2023Headpost)"
+    INJECTION_FIBER_OPTIC_IMP = (
+        "Injection+Fiber Optic Implant (with NSB2023Headpost)"
+    )
     INJ_MOTOR_CTX = "INJ + Motor Ctx"
     INJ_VISUAL_CTX_2_P = "INJ + Visual Ctx 2P"
     INJ_WHC_NP_1_INJECTION_LO = "INJ + WHC NP (1 Injection Location)"
@@ -4761,12 +4771,12 @@ class NSB2023List(BaseModel, extra="allow"):
         alias="Behavior_x0020_Platform",
         title="NSB2023Behavior Platform",
     )
-    behavior_type: Annotated[NSB2023BehaviorType, WrapValidator(optional_enum)] = (
-        Field(
-            default=None,
-            alias="Behavior_x0020_Type",
-            title="NSB2023Behavior Type",
-        )
+    behavior_type: Annotated[
+        NSB2023BehaviorType, WrapValidator(optional_enum)
+    ] = Field(
+        default=None,
+        alias="Behavior_x0020_Type",
+        title="NSB2023Behavior Type",
     )
     behavior_fip_mode: Annotated[
         NSB2023BehaviorFipMode, WrapValidator(optional_enum)
@@ -4775,9 +4785,9 @@ class NSB2023List(BaseModel, extra="allow"):
         alias="Behavior_x0020_FIP_x0020_Mode",
         title="NSB2023Behavior FIP Mode",
     )
-    black_cement: Annotated[NSB2023BlackCement, WrapValidator(optional_enum)] = Field(
-        default=None, alias="Black_x0020_Cement", title="Black Cement"
-    )
+    black_cement: Annotated[
+        NSB2023BlackCement, WrapValidator(optional_enum)
+    ] = Field(default=None, alias="Black_x0020_Cement", title="Black Cement")
     breg2_lamb: Optional[float] = Field(
         default=None, alias="Breg2Lamb", title="Bregma to Lambda"
     )
@@ -4820,9 +4830,9 @@ class NSB2023List(BaseModel, extra="allow"):
         alias="Burr2_x0020_Perform_x0020_During",
         title="Burr2 Perform During",
     )
-    burr2_status: Annotated[NSB2023Burr2Status, WrapValidator(optional_enum)] = Field(
-        default=None, alias="Burr2_x0020_Status", title="Burr2 Status"
-    )
+    burr2_status: Annotated[
+        NSB2023Burr2Status, WrapValidator(optional_enum)
+    ] = Field(default=None, alias="Burr2_x0020_Status", title="Burr2 Status")
     burr2_virus_biosafte: Annotated[
         NSB2023Burr2VirusBiosafteyLevelBsl, WrapValidator(optional_enum)
     ] = Field(
@@ -4848,9 +4858,9 @@ class NSB2023List(BaseModel, extra="allow"):
         alias="Burr3_x0020_Perform_x0020_During",
         title="Burr3 Perform During",
     )
-    burr3_status: Annotated[NSB2023Burr3Status, WrapValidator(optional_enum)] = Field(
-        default=None, alias="Burr3_x0020_Status", title="Burr3 Status"
-    )
+    burr3_status: Annotated[
+        NSB2023Burr3Status, WrapValidator(optional_enum)
+    ] = Field(default=None, alias="Burr3_x0020_Status", title="Burr3 Status")
     burr3_virus_biosafet: Annotated[
         NSB2023Burr3VirusBiosafetyLevelBsl, WrapValidator(optional_enum)
     ] = Field(
@@ -4885,9 +4895,9 @@ class NSB2023List(BaseModel, extra="allow"):
         alias="Burr4_x0020_Perform_x0020_During",
         title="Burr4 Perform During",
     )
-    burr4_status: Annotated[NSB2023Burr4Status, WrapValidator(optional_enum)] = Field(
-        default=None, alias="Burr4_x0020_Status", title="Burr4 Status"
-    )
+    burr4_status: Annotated[
+        NSB2023Burr4Status, WrapValidator(optional_enum)
+    ] = Field(default=None, alias="Burr4_x0020_Status", title="Burr4 Status")
     burr4_virus_biosafte: Annotated[
         NSB2023Burr4VirusBiosafteyLevelBsl, WrapValidator(optional_enum)
     ] = Field(
@@ -4922,9 +4932,9 @@ class NSB2023List(BaseModel, extra="allow"):
         alias="Burr5_x0020_Perform_x0020_During",
         title="Burr5 Perform During",
     )
-    burr5_status: Annotated[NSB2023Burr5Status, WrapValidator(optional_enum)] = Field(
-        default=None, alias="Burr5_x0020_Status", title="Burr5 Status"
-    )
+    burr5_status: Annotated[
+        NSB2023Burr5Status, WrapValidator(optional_enum)
+    ] = Field(default=None, alias="Burr5_x0020_Status", title="Burr5 Status")
     burr5_virus_biosafte: Annotated[
         NSB2023Burr5VirusBiosafteyLevelBsl, WrapValidator(optional_enum)
     ] = Field(
@@ -4947,9 +4957,9 @@ class NSB2023List(BaseModel, extra="allow"):
         title="Burr6 Perform During",
         description="",
     )
-    burr6_status: Annotated[NSB2023Burr6Status, WrapValidator(optional_enum)] = Field(
-        default=None, alias="Burr6_x0020_Status", title="Burr6 Status"
-    )
+    burr6_status: Annotated[
+        NSB2023Burr6Status, WrapValidator(optional_enum)
+    ] = Field(default=None, alias="Burr6_x0020_Status", title="Burr6 Status")
     burr6_virus_biosafte: Annotated[
         NSB2023Burr6VirusBiosafteyLevelBsl, WrapValidator(optional_enum)
     ] = Field(
@@ -4957,12 +4967,12 @@ class NSB2023List(BaseModel, extra="allow"):
         alias="Burr6_x0020_Virus_x0020_Biosafte",
         title="Burr6 Virus Biosaftey Level (BSL)",
     )
-    burr_1_fiber_t: Annotated[NSB2023Burr1FiberType, WrapValidator(optional_enum)] = (
-        Field(
-            default=None,
-            alias="Burr_x0020_1_x0020_Fiber_x0020_t",
-            title="Burr 1 Fiber type",
-        )
+    burr_1_fiber_t: Annotated[
+        NSB2023Burr1FiberType, WrapValidator(optional_enum)
+    ] = Field(
+        default=None,
+        alias="Burr_x0020_1_x0020_Fiber_x0020_t",
+        title="Burr 1 Fiber type",
     )
     burr_1_grid_sp: Optional[float] = Field(
         default=None,
@@ -5062,12 +5072,12 @@ class NSB2023List(BaseModel, extra="allow"):
         alias="Burr_x0020_1_x0020_intended_x0023",
         title="Burr 1 intended measurement isosbestic",
     )
-    burr_2_fiber_t: Annotated[NSB2023Burr2FiberType, WrapValidator(optional_enum)] = (
-        Field(
-            default=None,
-            alias="Burr_x0020_2_x0020_Fiber_x0020_T",
-            title="Burr 2 Fiber Type",
-        )
+    burr_2_fiber_t: Annotated[
+        NSB2023Burr2FiberType, WrapValidator(optional_enum)
+    ] = Field(
+        default=None,
+        alias="Burr_x0020_2_x0020_Fiber_x0020_T",
+        title="Burr 2 Fiber Type",
     )
     burr_2_injectable_x00: Optional[str] = Field(
         default=None,
@@ -5164,12 +5174,12 @@ class NSB2023List(BaseModel, extra="allow"):
     burr_3_angle: Optional[float] = Field(
         default=None, alias="Burr_x0020_3_x0020_Angle", title="Burr 3 Angle"
     )
-    burr_3_fiber_t: Annotated[NSB2023Burr3FiberType, WrapValidator(optional_enum)] = (
-        Field(
-            default=None,
-            alias="Burr_x0020_3_x0020_Fiber_x0020_T",
-            title="Burr 3 Fiber Type",
-        )
+    burr_3_fiber_t: Annotated[
+        NSB2023Burr3FiberType, WrapValidator(optional_enum)
+    ] = Field(
+        default=None,
+        alias="Burr_x0020_3_x0020_Fiber_x0020_T",
+        title="Burr 3 Fiber Type",
     )
     burr_3_hemisphere: Annotated[
         NSB2023Burr3Hemisphere, WrapValidator(optional_enum)
@@ -5266,12 +5276,12 @@ class NSB2023List(BaseModel, extra="allow"):
     burr_4_angle: Optional[float] = Field(
         default=None, alias="Burr_x0020_4_x0020_Angle", title="Burr 4 Angle"
     )
-    burr_4_fiber_t: Annotated[NSB2023Burr4FiberType, WrapValidator(optional_enum)] = (
-        Field(
-            default=None,
-            alias="Burr_x0020_4_x0020_Fiber_x0020_T",
-            title="Burr 4 Fiber Type",
-        )
+    burr_4_fiber_t: Annotated[
+        NSB2023Burr4FiberType, WrapValidator(optional_enum)
+    ] = Field(
+        default=None,
+        alias="Burr_x0020_4_x0020_Fiber_x0020_T",
+        title="Burr 4 Fiber Type",
     )
     burr_4_hemisphere: Annotated[
         NSB2023Burr4Hemisphere, WrapValidator(optional_enum)
@@ -5368,12 +5378,12 @@ class NSB2023List(BaseModel, extra="allow"):
     burr_5_angle: Optional[float] = Field(
         default=None, alias="Burr_x0020_5_x0020_Angle", title="Burr 5 Angle"
     )
-    burr_5_fiber_t: Annotated[NSB2023Burr5FiberType, WrapValidator(optional_enum)] = (
-        Field(
-            default=None,
-            alias="Burr_x0020_5_x0020_Fiber_x0020_t",
-            title="Burr 5 Fiber type",
-        )
+    burr_5_fiber_t: Annotated[
+        NSB2023Burr5FiberType, WrapValidator(optional_enum)
+    ] = Field(
+        default=None,
+        alias="Burr_x0020_5_x0020_Fiber_x0020_t",
+        title="Burr 5 Fiber type",
     )
     burr_5_hemisphere: Annotated[
         NSB2023Burr5Hemisphere, WrapValidator(optional_enum)
@@ -5481,12 +5491,12 @@ class NSB2023List(BaseModel, extra="allow"):
     burr_6_angle: Optional[float] = Field(
         default=None, alias="Burr_x0020_6_x0020_Angle", title="Burr 6 Angle"
     )
-    burr_6_fiber_t: Annotated[NSB2023Burr6FiberType, WrapValidator(optional_enum)] = (
-        Field(
-            default=None,
-            alias="Burr_x0020_6_x0020_Fiber_x0020_t",
-            title="Burr 6 Fiber type",
-        )
+    burr_6_fiber_t: Annotated[
+        NSB2023Burr6FiberType, WrapValidator(optional_enum)
+    ] = Field(
+        default=None,
+        alias="Burr_x0020_6_x0020_Fiber_x0020_t",
+        title="Burr 6 Fiber type",
     )
     burr_6_hemisphere: Annotated[
         NSB2023Burr6Hemisphere, WrapValidator(optional_enum)
@@ -5591,44 +5601,58 @@ class NSB2023List(BaseModel, extra="allow"):
     burr_6_m_l: Optional[float] = Field(
         default=None, alias="Burr_x0020_6_x0020_M_x002f_L", title="Burr 6 M/L"
     )
-    burr_hole_1_st: Annotated[NSB2023Burr1Status, WrapValidator(optional_enum)] = (
+    burr_hole_1_st: Annotated[
+        NSB2023Burr1Status, WrapValidator(optional_enum)
+    ] = Field(
+        default=None,
+        alias="Burr_x0020_Hole_x0020_1_x0020_st",
+        title="Burr1 Status",
+    )
+    burr_hole_1: Annotated[NSB2023BurrHole1, WrapValidator(optional_enum)] = (
         Field(
             default=None,
-            alias="Burr_x0020_Hole_x0020_1_x0020_st",
-            title="Burr1 Status",
+            alias="Burr_x0020_hole_x0020_1",
+            title="Burr hole 1",
         )
     )
-    burr_hole_1: Annotated[NSB2023BurrHole1, WrapValidator(optional_enum)] = Field(
-        default=None,
-        alias="Burr_x0020_hole_x0020_1",
-        title="Burr hole 1",
+    burr_hole_2: Annotated[NSB2023BurrHole2, WrapValidator(optional_enum)] = (
+        Field(
+            default=None,
+            alias="Burr_x0020_hole_x0020_2",
+            title="Burr hole 2",
+        )
     )
-    burr_hole_2: Annotated[NSB2023BurrHole2, WrapValidator(optional_enum)] = Field(
-        default=None,
-        alias="Burr_x0020_hole_x0020_2",
-        title="Burr hole 2",
+    burr_hole_3: Annotated[NSB2023BurrHole3, WrapValidator(optional_enum)] = (
+        Field(
+            default=None,
+            alias="Burr_x0020_hole_x0020_3",
+            title="Burr hole 3",
+        )
     )
-    burr_hole_3: Annotated[NSB2023BurrHole3, WrapValidator(optional_enum)] = Field(
-        default=None,
-        alias="Burr_x0020_hole_x0020_3",
-        title="Burr hole 3",
+    burr_hole_4: Annotated[NSB2023BurrHole4, WrapValidator(optional_enum)] = (
+        Field(
+            default=None,
+            alias="Burr_x0020_hole_x0020_4",
+            title="Burr hole 4",
+        )
     )
-    burr_hole_4: Annotated[NSB2023BurrHole4, WrapValidator(optional_enum)] = Field(
-        default=None,
-        alias="Burr_x0020_hole_x0020_4",
-        title="Burr hole 4",
+    burr_hole_5: Annotated[NSB2023BurrHole5, WrapValidator(optional_enum)] = (
+        Field(
+            default=None,
+            alias="Burr_x0020_hole_x0020_5",
+            title="Burr hole 5",
+        )
     )
-    burr_hole_5: Annotated[NSB2023BurrHole5, WrapValidator(optional_enum)] = Field(
-        default=None,
-        alias="Burr_x0020_hole_x0020_5",
-        title="Burr hole 5",
+    burr_hole_6: Annotated[NSB2023BurrHole6, WrapValidator(optional_enum)] = (
+        Field(
+            default=None,
+            alias="Burr_x0020_hole_x0020_6",
+            title="Burr hole 6",
+        )
     )
-    burr_hole_6: Annotated[NSB2023BurrHole6, WrapValidator(optional_enum)] = Field(
-        default=None,
-        alias="Burr_x0020_hole_x0020_6",
-        title="Burr hole 6",
-    )
-    care_moduele: Annotated[NSB2023CareModuele, WrapValidator(optional_enum)] = Field(
+    care_moduele: Annotated[
+        NSB2023CareModuele, WrapValidator(optional_enum)
+    ] = Field(
         default=None,
         alias="Care_x0020_Moduele",
         title="Care Moduele",
@@ -5636,24 +5660,24 @@ class NSB2023List(BaseModel, extra="allow"):
     color_tag: Optional[str] = Field(
         default=None, alias="_ColorTag", title="Color Tag"
     )
-    com_coplanar: Annotated[NSB2023Laceration, WrapValidator(optional_enum)] = Field(
-        default=None, alias="ComCoplanar", title="NSB2023Laceration"
-    )
-    com_sinusbleed: Annotated[NSB2023SinusBleed, WrapValidator(optional_enum)] = (
-        Field(default=None, alias="ComSinusbleed", title="Sinus Bleed")
-    )
-    com_swelling: Annotated[NSB2023EdemaSwelling, WrapValidator(optional_enum)] = (
-        Field(default=None, alias="ComSwelling", title="Edema (Swelling)")
-    )
+    com_coplanar: Annotated[
+        NSB2023Laceration, WrapValidator(optional_enum)
+    ] = Field(default=None, alias="ComCoplanar", title="NSB2023Laceration")
+    com_sinusbleed: Annotated[
+        NSB2023SinusBleed, WrapValidator(optional_enum)
+    ] = Field(default=None, alias="ComSinusbleed", title="Sinus Bleed")
+    com_swelling: Annotated[
+        NSB2023EdemaSwelling, WrapValidator(optional_enum)
+    ] = Field(default=None, alias="ComSwelling", title="Edema (Swelling)")
     compliance_asset_id: Optional[str] = Field(
         default=None, alias="ComplianceAssetId", title="Compliance Asset Id"
     )
     content_type: Optional[str] = Field(
         default=None, alias="ContentType", title="Content Type"
     )
-    contusion: Annotated[NSB2023ContusionHematoma, WrapValidator(optional_enum)] = (
-        Field(default=None, alias="Contusion", title="Contusion/Hematoma")
-    )
+    contusion: Annotated[
+        NSB2023ContusionHematoma, WrapValidator(optional_enum)
+    ] = Field(default=None, alias="Contusion", title="Contusion/Hematoma")
     craniotomy_perform_d: Annotated[
         NSB2023CraniotomyPerformDuring, WrapValidator(optional_enum)
     ] = Field(
@@ -5663,7 +5687,9 @@ class NSB2023List(BaseModel, extra="allow"):
     )
     craniotomy_type: Annotated[
         NSB2023CraniotomyType, WrapValidator(optional_enum)
-    ] = Field(default=None, alias="NSB2023CraniotomyType", title="Craniotomy Type")
+    ] = Field(
+        default=None, alias="NSB2023CraniotomyType", title="Craniotomy Type"
+    )
     created: Optional[datetime] = Field(
         default=None, alias="Created", title="Created"
     )
@@ -5792,8 +5818,8 @@ class NSB2023List(BaseModel, extra="allow"):
         alias="Headpost_x0020_Perform_x0020_Dur",
         title="NSB2023Headpost Perform During",
     )
-    headpost_type: Annotated[NSB2023Well, WrapValidator(optional_enum)] = Field(
-        default=None, alias="HeadpostType", title="NSB2023Well"
+    headpost_type: Annotated[NSB2023Well, WrapValidator(optional_enum)] = (
+        Field(default=None, alias="HeadpostType", title="NSB2023Well")
     )
     hemisphere2nd_inj: Annotated[
         NSB2023Burr2Hemisphere, WrapValidator(optional_enum)
@@ -5818,15 +5844,15 @@ class NSB2023List(BaseModel, extra="allow"):
         alias="HpWorkStation",
         title="Initial Work Station",
     )
-    iacuc_protocol: Annotated[NSB2023IacucProtocol, WrapValidator(optional_enum)] = (
-        Field(
-            default="Select...",
-            alias="IACUC_x0020_Protocol_x0020__x002",
-            title="IACUC NSB2023Protocol",
-            description=(
-                "Create a secondary List for Protocols and link to drugs"
-            ),
-        )
+    iacuc_protocol: Annotated[
+        NSB2023IacucProtocol, WrapValidator(optional_enum)
+    ] = Field(
+        default="Select...",
+        alias="IACUC_x0020_Protocol_x0020__x002",
+        title="IACUC NSB2023Protocol",
+        description=(
+            "Create a secondary List for Protocols and link to drugs"
+        ),
     )
     id: Optional[float] = Field(default=None, alias="ID", title="ID")
     implant_id_coverslip_type: Annotated[
@@ -5851,8 +5877,8 @@ class NSB2023List(BaseModel, extra="allow"):
     inj1_storage_location: Optional[str] = Field(
         default=None, alias="Inj1StorageLocation", title="Inj1StorageLocation"
     )
-    inj1_type: Annotated[NSB2023Inj1Type, WrapValidator(optional_enum)] = Field(
-        default=None, alias="NSB2023Inj1Type", title="NSB2023Inj1Type"
+    inj1_type: Annotated[NSB2023Inj1Type, WrapValidator(optional_enum)] = (
+        Field(default=None, alias="NSB2023Inj1Type", title="NSB2023Inj1Type")
     )
     inj1_virus_strain_rt: Optional[str] = Field(
         default=None, alias="Inj1VirusStrain_rt", title="Inj1VirusStrain_rt"
@@ -5875,8 +5901,8 @@ class NSB2023List(BaseModel, extra="allow"):
     inj2_storage_location: Optional[str] = Field(
         default=None, alias="Inj2StorageLocation", title="Inj2StorageLocation"
     )
-    inj2_type: Annotated[NSB2023Inj2Type, WrapValidator(optional_enum)] = Field(
-        default=None, alias="NSB2023Inj2Type", title="NSB2023Inj2Type"
+    inj2_type: Annotated[NSB2023Inj2Type, WrapValidator(optional_enum)] = (
+        Field(default=None, alias="NSB2023Inj2Type", title="NSB2023Inj2Type")
     )
     inj2_virus_strain_rt: Optional[str] = Field(
         default=None, alias="Inj2VirusStrain_rt", title="Inj2VirusStrain_rt"
@@ -5896,8 +5922,8 @@ class NSB2023List(BaseModel, extra="allow"):
     inj3_storage_location: Optional[str] = Field(
         default=None, alias="Inj3StorageLocation", title="Inj3StorageLocation"
     )
-    inj3_type: Annotated[NSB2023Inj3Type, WrapValidator(optional_enum)] = Field(
-        default=None, alias="NSB2023Inj3Type", title="NSB2023Inj3Type"
+    inj3_type: Annotated[NSB2023Inj3Type, WrapValidator(optional_enum)] = (
+        Field(default=None, alias="NSB2023Inj3Type", title="NSB2023Inj3Type")
     )
     inj3ret_setting: Annotated[
         NSB2023Inj3Retsetting, WrapValidator(optional_enum)
@@ -5917,8 +5943,8 @@ class NSB2023List(BaseModel, extra="allow"):
     inj4_storage_location: Optional[str] = Field(
         default=None, alias="Inj4StorageLocation", title="Inj4StorageLocation"
     )
-    inj4_type: Annotated[NSB2023Inj4Type, WrapValidator(optional_enum)] = Field(
-        default=None, alias="NSB2023Inj4Type", title="NSB2023Inj4Type"
+    inj4_type: Annotated[NSB2023Inj4Type, WrapValidator(optional_enum)] = (
+        Field(default=None, alias="NSB2023Inj4Type", title="NSB2023Inj4Type")
     )
     inj4_virus_strain_rt: Optional[str] = Field(
         default=None, alias="Inj4VirusStrain_rt", title="Inj4VirusStrain_rt"
@@ -5941,8 +5967,8 @@ class NSB2023List(BaseModel, extra="allow"):
     inj5_storage_location: Optional[str] = Field(
         default=None, alias="Inj5StorageLocation", title="Inj5StorageLocation"
     )
-    inj5_type: Annotated[NSB2023Inj5Type, WrapValidator(optional_enum)] = Field(
-        default=None, alias="NSB2023Inj5Type", title="NSB2023Inj5Type"
+    inj5_type: Annotated[NSB2023Inj5Type, WrapValidator(optional_enum)] = (
+        Field(default=None, alias="NSB2023Inj5Type", title="NSB2023Inj5Type")
     )
     inj5_virus_strain_rt: Optional[str] = Field(
         default=None, alias="Inj5VirusStrain_rt", title="Inj5VirusStrain_rt"
@@ -5965,8 +5991,8 @@ class NSB2023List(BaseModel, extra="allow"):
     inj6_storage_location: Optional[str] = Field(
         default=None, alias="Inj6StorageLocation", title="Inj6StorageLocation"
     )
-    inj6_type: Annotated[NSB2023Inj6Type, WrapValidator(optional_enum)] = Field(
-        default=None, alias="NSB2023Inj6Type", title="NSB2023Inj6Type"
+    inj6_type: Annotated[NSB2023Inj6Type, WrapValidator(optional_enum)] = (
+        Field(default=None, alias="NSB2023Inj6Type", title="NSB2023Inj6Type")
     )
     inj6_virus_strain_rt: Optional[str] = Field(
         default=None, alias="Inj6VirusStrain_rt", title="Inj6VirusStrain_rt"
@@ -6015,23 +6041,23 @@ class NSB2023List(BaseModel, extra="allow"):
     lab_tracks_id1: Optional[str] = Field(
         default=None, alias="LabTracks_x0020_ID1", title="LabTracks ID"
     )
-    li_ms_required: Annotated[NSB2023LimsRequired, WrapValidator(optional_enum)] = (
-        Field(
-            default="Select...",
-            alias="LIMs_x0020_Required",
-            title="LIMS Required",
-            description="Is LIMS or SLIMS Entry required",
-        )
+    li_ms_required: Annotated[
+        NSB2023LimsRequired, WrapValidator(optional_enum)
+    ] = Field(
+        default="Select...",
+        alias="LIMs_x0020_Required",
+        title="LIMS Required",
+        description="Is LIMS or SLIMS Entry required",
     )
-    light_cycle: Annotated[NSB2023LightCycle, WrapValidator(optional_enum)] = Field(
+    light_cycle: Annotated[Lightcycle, WrapValidator(optional_enum)] = Field(
         default=None, alias="NSB2023LightCycle", title="NSB2023LightCycle"
     )
-    lims_project: Annotated[NSB2023LimsProject, WrapValidator(optional_enum)] = Field(
-        default=None, alias="LIMSProject", title="LIMSProject"
-    )
-    lims_taskflow: Annotated[NSB2023LimsTaskflow, WrapValidator(optional_enum)] = (
-        Field(default=None, alias="LIMSTaskflow", title="LIMSTaskflow")
-    )
+    lims_project: Annotated[
+        NSB2023LimsProject, WrapValidator(optional_enum)
+    ] = Field(default=None, alias="LIMSProject", title="LIMSProject")
+    lims_taskflow: Annotated[
+        NSB2023LimsTaskflow, WrapValidator(optional_enum)
+    ] = Field(default=None, alias="LIMSTaskflow", title="LIMSTaskflow")
     link_title: Optional[str] = Field(
         default=None, alias="LinkTitle", title="Title"
     )
@@ -6069,10 +6095,12 @@ class NSB2023List(BaseModel, extra="allow"):
             "Is this surgery going to be performed by NSB or someone else?"
         ),
     )
-    of_burr: Annotated[NSB2023OfBurrHoles, WrapValidator(optional_enum)] = Field(
-        default=None,
-        alias="_x0023__x0020_of_x0020_Burr_x002",
-        title="# of Burr Holes",
+    of_burr: Annotated[NSB2023OfBurrHoles, WrapValidator(optional_enum)] = (
+        Field(
+            default=None,
+            alias="_x0023__x0020_of_x0020_Burr_x002",
+            title="# of Burr Holes",
+        )
     )
     pedigree_name: Optional[str] = Field(
         default=None, alias="PedigreeName", title="Pedigree Name"
@@ -6083,11 +6111,13 @@ class NSB2023List(BaseModel, extra="allow"):
         title="PI",
         description="Requesting Investigator",
     )
-    procedure: Annotated[NSB2023Procedure, WrapValidator(optional_enum)] = Field(
-        default=None,
-        alias="NSB2023Procedure",
-        title="NSB2023Procedure",
-        description="NSB2023Procedure, Specific T3",
+    procedure: Annotated[NSB2023Procedure, WrapValidator(optional_enum)] = (
+        Field(
+            default=None,
+            alias="NSB2023Procedure",
+            title="NSB2023Procedure",
+            description="NSB2023Procedure, Specific T3",
+        )
     )
     procedure_family: Annotated[
         NSB2023ProcedureCategory, WrapValidator(optional_enum)
@@ -6105,34 +6135,36 @@ class NSB2023List(BaseModel, extra="allow"):
         title="NSB2023Procedure Slots",
         description="Sinlge or mutpile surgical slots",
     )
-    procedure_t2: Annotated[NSB2023PhysiologyType, WrapValidator(optional_enum)] = (
-        Field(
-            default=None,
-            alias="Procedure_x0020_T2",
-            title="Physiology Type",
-            description="NSB2023Procedure Imaging paradigm T2",
-        )
+    procedure_t2: Annotated[
+        NSB2023PhysiologyType, WrapValidator(optional_enum)
+    ] = Field(
+        default=None,
+        alias="Procedure_x0020_T2",
+        title="Physiology Type",
+        description="NSB2023Procedure Imaging paradigm T2",
     )
-    project_id: Annotated[NSB2023ProjectId, WrapValidator(optional_enum)] = Field(
-        default=None, alias="ProjectID", title="ProjectID"
+    project_id: Annotated[NSB2023ProjectId, WrapValidator(optional_enum)] = (
+        Field(default=None, alias="ProjectID", title="ProjectID")
     )
     protocol: Annotated[NSB2023Protocol, WrapValidator(optional_enum)] = Field(
         default=None, alias="NSB2023Protocol", title="NSB2023Protocol"
     )
-    ret_setting0: Annotated[NSB2023Inj1Retsetting, WrapValidator(optional_enum)] = (
-        Field(default="Off", alias="retSetting0", title="Inj1retSetting")
-    )
-    ret_setting1: Annotated[NSB2023Inj2Retsetting, WrapValidator(optional_enum)] = (
-        Field(default="Off", alias="retSetting1", title="Inj2retSetting")
-    )
+    ret_setting0: Annotated[
+        NSB2023Inj1Retsetting, WrapValidator(optional_enum)
+    ] = Field(default="Off", alias="retSetting0", title="Inj1retSetting")
+    ret_setting1: Annotated[
+        NSB2023Inj2Retsetting, WrapValidator(optional_enum)
+    ] = Field(default="Off", alias="retSetting1", title="Inj2retSetting")
     round1_inj_isolevel: Optional[float] = Field(
         default=None, alias="Round1InjIsolevel", title="Follow up Iso Level"
     )
     sex: Annotated[NSB2023Sex, WrapValidator(optional_enum)] = Field(
         default=None, alias="NSB2023Sex", title="NSB2023Sex"
     )
-    surgery_status: Annotated[NSB2023SurgeryStatus, WrapValidator(optional_enum)] = (
-        Field(default=None, alias="NSB2023SurgeryStatus", title="Surgery Status")
+    surgery_status: Annotated[
+        NSB2023SurgeryStatus, WrapValidator(optional_enum)
+    ] = Field(
+        default=None, alias="NSB2023SurgeryStatus", title="Surgery Status"
     )
     test1: Optional[str] = Field(
         default=None, alias="Test1", title="Initial Surgeon"
@@ -6142,8 +6174,10 @@ class NSB2023List(BaseModel, extra="allow"):
         alias="TEST_x0020_1st_x0020_Round_x0020",
         title="Follow up Surgeon",
     )
-    thermistor: Annotated[NSB2023Thermistor, WrapValidator(optional_enum)] = Field(
-        default=None, alias="NSB2023Thermistor", title="NSB2023Thermistor"
+    thermistor: Annotated[NSB2023Thermistor, WrapValidator(optional_enum)] = (
+        Field(
+            default=None, alias="NSB2023Thermistor", title="NSB2023Thermistor"
+        )
     )
     title: Optional[str] = Field(default=None, alias="Title", title="Title")
     ui_version_string: Optional[str] = Field(

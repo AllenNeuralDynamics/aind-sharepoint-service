@@ -78,7 +78,6 @@ def fix_enum_schemas(openapi_schema: Dict[str, Any]) -> Dict[str, Any]:
                                    .replace(".", "")
                                    .upper())
                         x_enum_varnames.append(safe_name)
-                
                 schema["x-enum-varnames"] = x_enum_varnames
     
     return openapi_schema
