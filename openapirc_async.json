@@ -2,5 +2,5 @@
    "packageName": "aind_sharepoint_service_async_client",
    "projectName": "aind-sharepoint-service-async-client",
    "library": "asyncio",
-   "packageVersion": "0.0.9"
+   "packageVersion": "0.0.10"
 }
