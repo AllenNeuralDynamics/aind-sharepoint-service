@@ -6,7 +6,7 @@ Enum class for LIMSTaskflow.
 
 * `AIND_EPHYS_SURGERY_ONLY` (value: `'AIND Ephys (Surgery only)'`)
 
-* `AIND_EPHYS_PASSIVE_BEHAVIOR` (value: `'AIND Ephys (Passive NSB2023Behavior)'`)
+* `AIND_EPHYS_PASSIVE_BEHAVIOR` (value: `'AIND Ephys (Passive Behavior)'`)
 
 * `AIND_U19_AAV_RETROGRADE` (value: `'AIND U19 AAV Retrograde'`)
 
@@ -36,11 +36,11 @@ Enum class for LIMSTaskflow.
 
 * `BRAIN_OBSERVATORY_V1_DD` (value: `'Brain Observatory V1DD'`)
 
-* `BRAIN_OBSERVATORY_VISUAL_BEHAVIOR` (value: `'Brain Observatory Visual NSB2023Behavior'`)
+* `BRAIN_OBSERVATORY_VISUAL_BEHAVIOR` (value: `'Brain Observatory Visual Behavior'`)
 
-* `BRAIN_OBSERVATORY_VISUAL_BEHAVIOR_1B` (value: `'Brain Observatory Visual NSB2023Behavior 1B'`)
+* `BRAIN_OBSERVATORY_VISUAL_BEHAVIOR_1B` (value: `'Brain Observatory Visual Behavior 1B'`)
 
-* `BRAIN_OBSERVATORY_VISUAL_BEHAVIOR_NEUROPIXEL` (value: `'Brain Observatory Visual NSB2023Behavior Neuropixel'`)
+* `BRAIN_OBSERVATORY_VISUAL_BEHAVIOR_NEUROPIXEL` (value: `'Brain Observatory Visual Behavior Neuropixel'`)
 
 * `BRAIN_OBSERVATORY_VISUAL_CODING` (value: `'Brain Observatory Visual Coding'`)
 
@@ -48,9 +48,9 @@ Enum class for LIMSTaskflow.
 
 * `CITRIC_ACID_PILOT` (value: `'Citric Acid Pilot'`)
 
-* `EPHYS_DEV_VISUAL_BEHAVIOR` (value: `'Ephys Dev Visual NSB2023Behavior'`)
+* `EPHYS_DEV_VISUAL_BEHAVIOR` (value: `'Ephys Dev Visual Behavior'`)
 
-* `EPHYS_DEV_VISUAL_BEHAVIOR_2` (value: `'Ephys Dev Visual NSB2023Behavior 2'`)
+* `EPHYS_DEV_VISUAL_BEHAVIOR_2` (value: `'Ephys Dev Visual Behavior 2'`)
 
 * `EPHYS_TASK_DEV_DYNAMIC_ROUTING_DOC_LEFT_EYE` (value: `'Ephys Task Dev Dynamic Routing DOC Left Eye'`)
 
@@ -70,13 +70,13 @@ Enum class for LIMSTaskflow.
 
 * `MINDSCOPE_2P_TESTING` (value: `'Mindscope 2P Testing'`)
 
-* `MSP_DYNAMIC_ROUTING_BEHAVIOR_DEVELOPMENT` (value: `'MSP Dynamic Routing NSB2023Behavior Development'`)
+* `MSP_DYNAMIC_ROUTING_BEHAVIOR_DEVELOPMENT` (value: `'MSP Dynamic Routing Behavior Development'`)
 
 * `MSP_DYNAMIC_ROUTING_OPTO_DEV` (value: `'MSP Dynamic Routing Opto Dev'`)
 
 * `MSP_DYNAMIC_ROUTING_SURGICAL_DEVELOPMENT` (value: `'MSP Dynamic Routing Surgical Development'`)
 
-* `MSP_DYNAMIC_ROUTING_ULTRA_OPTOTAGGING_BEHAVIOR` (value: `'MSP Dynamic Routing Ultra Optotagging NSB2023Behavior'`)
+* `MSP_DYNAMIC_ROUTING_ULTRA_OPTOTAGGING_BEHAVIOR` (value: `'MSP Dynamic Routing Ultra Optotagging Behavior'`)
 
 * `MSP_DYNAMIC_ROUTING_TASK_1_PRODUCTION` (value: `'MSP Dynamic Routing Task 1 Production'`)
 
@@ -180,7 +180,7 @@ Enum class for LIMSTaskflow.
 
 * `TILTY_MOUSE` (value: `'Tilty Mouse'`)
 
-* `TINY_BLUE_DOT_BEHAVIOR` (value: `'Tiny Blue Dot NSB2023Behavior'`)
+* `TINY_BLUE_DOT_BEHAVIOR` (value: `'Tiny Blue Dot Behavior'`)
 
 * `TRANSGENIC_CHARACTERIZATION_PASSIVE` (value: `'Transgenic Characterization (Passive)'`)
 

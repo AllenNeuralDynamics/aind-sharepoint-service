@@ -12,7 +12,7 @@ Enum class for NSB2023Procedure Category.
 
 * `FIBER_OPTIC_IMPLANT` (value: `'Fiber Optic Implant'`)
 
-* `HEADPOST_ONLY` (value: `'NSB2023Headpost only'`)
+* `HEADPOST_ONLY` (value: `'Headpost only'`)
 
 * `TRAINING` (value: `'Training'`)
 

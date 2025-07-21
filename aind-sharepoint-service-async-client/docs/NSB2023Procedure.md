@@ -28,7 +28,7 @@ Enum class for NSB2023Procedure.
 
 * `SX_11_19_HP__TRANSCRANIAL` (value: `'Sx-11&19 HP Transcranial'`)
 
-* `SX_12__STEREOTAXIC__INJEC` (value: `'Sx-12 Stereotaxic Injection (with NSB2023Headpost)'`)
+* `SX_12__STEREOTAXIC__INJEC` (value: `'Sx-12 Stereotaxic Injection (with Headpost)'`)
 
 * `SX_14__VISUAL__CTX_NP` (value: `'Sx-14 Visual Ctx NP'`)
 
@@ -40,15 +40,15 @@ Enum class for NSB2023Procedure.
 
 * `SX_18_INJ_DHC` (value: `'Sx-18 INJ+DHC'`)
 
-* `SX_21__FIBER__OPTIC__IMPL` (value: `'Sx-21 Fiber Optic Implant (with NSB2023Headpost)'`)
+* `SX_21__FIBER__OPTIC__IMPL` (value: `'Sx-21 Fiber Optic Implant (with Headpost)'`)
 
-* `SX_21__INJECTION__FIBER` (value: `'Sx-21 Injection + Fiber Optic Implant (with NSB2023Headpost)'`)
+* `SX_21__INJECTION__FIBER` (value: `'Sx-21 Injection + Fiber Optic Implant (with Headpost)'`)
 
 * `SX_24__STEREOTAXIC_INJECT` (value: `'Sx-24 Stereotaxic injections: 1 INJ material'`)
 
 * `SX_25__STEREOTAXIC_INJECT` (value: `'Sx-25 Stereotaxic injections: 2+ INJ materials'`)
 
-* `SX_26_ISI_GUIDED__INJECTI` (value: `'Sx-26 ISI-guided Injection (with NSB2023Headpost)'`)
+* `SX_26_ISI_GUIDED__INJECTI` (value: `'Sx-26 ISI-guided Injection (with Headpost)'`)
 
 * `SX__SPINAL__CORD_INJ` (value: `'Sx- Spinal Cord INJ'`)
 
@@ -62,7 +62,7 @@ Enum class for NSB2023Procedure.
 
 * `DHC` (value: `'DHC'`)
 
-* `FIBER_OPTIC_IMPLANT_WITH` (value: `'Fiber Optic Implant (with NSB2023Headpost)'`)
+* `FIBER_OPTIC_IMPLANT_WITH` (value: `'Fiber Optic Implant (with Headpost)'`)
 
 * `FRONTAL_CTX_2_P` (value: `'Frontal Ctx 2P'`)
 
@@ -70,7 +70,7 @@ Enum class for NSB2023Procedure.
 
 * `HP_TRANSCRANIAL` (value: `'HP Transcranial'`)
 
-* `INJECTION_FIBER_OPTIC_IMP` (value: `'Injection+Fiber Optic Implant (with NSB2023Headpost)'`)
+* `INJECTION_FIBER_OPTIC_IMP` (value: `'Injection+Fiber Optic Implant (with Headpost)'`)
 
 * `INJ_MOTOR_CTX` (value: `'INJ + Motor Ctx'`)
 
@@ -78,13 +78,13 @@ Enum class for NSB2023Procedure.
 
 * `INJ_WHC_NP_1_INJECTION_LO` (value: `'INJ + WHC NP (1 Injection Location)'`)
 
-* `ISIGUIDED_INJECTION_WITH` (value: `'ISI-guided Injection (with NSB2023Headpost)'`)
+* `ISIGUIDED_INJECTION_WITH` (value: `'ISI-guided Injection (with Headpost)'`)
 
 * `MOTOR_CTX` (value: `'Motor Ctx'`)
 
 * `STEREOTAXIC_INJECTION` (value: `'Stereotaxic Injection'`)
 
-* `STEREOTAXIC_INJECTION_WIT` (value: `'Stereotaxic Injection (with NSB2023Headpost)'`)
+* `STEREOTAXIC_INJECTION_WIT` (value: `'Stereotaxic Injection (with Headpost)'`)
 
 * `VISUAL_CTX_2_P` (value: `'Visual Ctx 2P'`)
 
@@ -106,7 +106,7 @@ Enum class for NSB2023Procedure.
 
 * `INJ_DHC` (value: `'INJ+DHC'`)
 
-* `INJECTION_FIBER_OPTIC_IMP_` (value: `'Injection + Fiber Optic Implant (with NSB2023Headpost)'`)
+* `INJECTION_FIBER_OPTIC_IMP_` (value: `'Injection + Fiber Optic Implant (with Headpost)'`)
 
 * `STEREOTAXIC_INJECTIONS_1` (value: `'Stereotaxic injections: 1 INJ material'`)
 
