@@ -60,7 +60,7 @@ class NSB2023ProjectId(Enum, metaclass=EnumMeta):
         "102-01-079-20 AIBS CONNECTS TransNeuronal Tools"
     )
     N_102_01_999_10_CTY__PROG = "102-01-999-10 CTY Program Admin"
-    N_102_02_004_10_BTV__VISU = "102-02-004-10 BTV Visual NSB2023Behavior"
+    N_102_02_004_10_BTV__VISU = "102-02-004-10 BTV Visual Behavior"
     N_102_02_012_20_BTV_BRAIN = "102-02-012-20 BTV BRAIN Viral Strategies"
     N_102_04_004_10_OTH__MERI = (
         "102-04-004-10 OTH Meritorious Scholar Directed Research"
@@ -229,7 +229,7 @@ class NSB2023Protocol(Enum, metaclass=EnumMeta):
         "2301 - Testing of enhancers and AAV gene therapy vectors"
     )
     N_2304__NEUROSURGERY__BEH = (
-        "2304 - Neurosurgery & NSB2023Behavior Training NSB2023Protocol"
+        "2304 - Neurosurgery & Behavior Training Protocol"
     )
     N_2305__IN__VIVO__BRAIN = "2305 - In Vivo Brain Stimulation"
     N_2306__PATCH_SEQ_CHARACT = (
@@ -509,7 +509,7 @@ class NSB2023LimsTaskflow(Enum, metaclass=EnumMeta):
     """Enum class for LIMSTaskflow."""
 
     AIND_EPHYS_SURGERY_ONLY = "AIND Ephys (Surgery only)"
-    AIND_EPHYS_PASSIVE_BEHAVIOR = "AIND Ephys (Passive NSB2023Behavior)"
+    AIND_EPHYS_PASSIVE_BEHAVIOR = "AIND Ephys (Passive Behavior)"
     AIND_U19_AAV_RETROGRADE = "AIND U19 AAV Retrograde"
     AIND_U19_RAB_V_RETROGRADE = "AIND U19 RabV Retrograde"
     AIND_U19_THALAMUS = "AIND U19 Thalamus"
@@ -529,19 +529,19 @@ class NSB2023LimsTaskflow(Enum, metaclass=EnumMeta):
     )
     BRAIN_OBSERVATORY_V1_DD = "Brain Observatory V1DD"
     BRAIN_OBSERVATORY_VISUAL_BEHAVIOR = (
-        "Brain Observatory Visual NSB2023Behavior"
+        "Brain Observatory Visual Behavior"
     )
     BRAIN_OBSERVATORY_VISUAL_BEHAVIOR_1B = (
-        "Brain Observatory Visual NSB2023Behavior 1B"
+        "Brain Observatory Visual Behavior 1B"
     )
     BRAIN_OBSERVATORY_VISUAL_BEHAVIOR_NEUROPIXEL = (
-        "Brain Observatory Visual NSB2023Behavior Neuropixel"
+        "Brain Observatory Visual Behavior Neuropixel"
     )
     BRAIN_OBSERVATORY_VISUAL_CODING = "Brain Observatory Visual Coding"
     BTV_BRAIN_VIRAL_STRATEGIES = "BTV BRAIN Viral Strategies"
     CITRIC_ACID_PILOT = "Citric Acid Pilot"
-    EPHYS_DEV_VISUAL_BEHAVIOR = "Ephys Dev Visual NSB2023Behavior"
-    EPHYS_DEV_VISUAL_BEHAVIOR_2 = "Ephys Dev Visual NSB2023Behavior 2"
+    EPHYS_DEV_VISUAL_BEHAVIOR = "Ephys Dev Visual Behavior"
+    EPHYS_DEV_VISUAL_BEHAVIOR_2 = "Ephys Dev Visual Behavior 2"
     EPHYS_TASK_DEV_DYNAMIC_ROUTING_DOC_LEFT_EYE = (
         "Ephys Task Dev Dynamic Routing DOC Left Eye"
     )
@@ -558,14 +558,14 @@ class NSB2023LimsTaskflow(Enum, metaclass=EnumMeta):
     MGT_TISSUECYTE = "MGT TissueCyte"
     MINDSCOPE_2P_TESTING = "Mindscope 2P Testing"
     MSP_DYNAMIC_ROUTING_BEHAVIOR_DEVELOPMENT = (
-        "MSP Dynamic Routing NSB2023Behavior Development"
+        "MSP Dynamic Routing Behavior Development"
     )
     MSP_DYNAMIC_ROUTING_OPTO_DEV = "MSP Dynamic Routing Opto Dev"
     MSP_DYNAMIC_ROUTING_SURGICAL_DEVELOPMENT = (
         "MSP Dynamic Routing Surgical Development"
     )
     MSP_DYNAMIC_ROUTING_ULTRA_OPTOTAGGING_BEHAVIOR = (
-        "MSP Dynamic Routing Ultra Optotagging NSB2023Behavior"
+        "MSP Dynamic Routing Ultra Optotagging Behavior"
     )
     MSP_DYNAMIC_ROUTING_TASK_1_PRODUCTION = (
         "MSP Dynamic Routing Task 1 Production"
@@ -640,7 +640,7 @@ class NSB2023LimsTaskflow(Enum, metaclass=EnumMeta):
     OPENSCOPE_WHC_2P_DEV = "OpenScope WHC 2P Dev"
     TEMPLETON_PSYCHEDELICS = "Templeton Psychedelics"
     TILTY_MOUSE = "Tilty Mouse"
-    TINY_BLUE_DOT_BEHAVIOR = "Tiny Blue Dot NSB2023Behavior"
+    TINY_BLUE_DOT_BEHAVIOR = "Tiny Blue Dot Behavior"
     TRANSGENIC_CHARACTERIZATION_PASSIVE = (
         "Transgenic Characterization (Passive)"
     )
@@ -716,7 +716,7 @@ class NSB2023ProcedureCategory(Enum, metaclass=EnumMeta):
     INJECTION = "Injection"
     CRANIAL_WINDOW = "Cranial Window"
     FIBER_OPTIC_IMPLANT = "Fiber Optic Implant"
-    HEADPOST_ONLY = "NSB2023Headpost only"
+    HEADPOST_ONLY = "Headpost only"
     TRAINING = "Training"
     CUSTOM = "Custom"
     DEVELOPMENT = "Development"
@@ -747,7 +747,7 @@ class NSB2023Procedure(Enum, metaclass=EnumMeta):
     SX_11_19_HP__ONLY = "Sx-11&19 HP Only"
     SX_11_19_HP__TRANSCRANIAL = "Sx-11&19 HP Transcranial"
     SX_12__STEREOTAXIC__INJEC = (
-        "Sx-12 Stereotaxic Injection (with NSB2023Headpost)"
+        "Sx-12 Stereotaxic Injection (with Headpost)"
     )
     SX_14__VISUAL__CTX_NP = "Sx-14 Visual Ctx NP"
     SX_15_WHC_NP = "Sx-15 WHC NP"
@@ -755,17 +755,17 @@ class NSB2023Procedure(Enum, metaclass=EnumMeta):
     SX_17_DHC = "Sx-17 DHC"
     SX_18_INJ_DHC = "Sx-18 INJ+DHC"
     SX_21__FIBER__OPTIC__IMPL = (
-        "Sx-21 Fiber Optic Implant (with NSB2023Headpost)"
+        "Sx-21 Fiber Optic Implant (with Headpost)"
     )
     SX_21__INJECTION__FIBER = (
-        "Sx-21 Injection + Fiber Optic Implant (with NSB2023Headpost)"
+        "Sx-21 Injection + Fiber Optic Implant (with Headpost)"
     )
     SX_24__STEREOTAXIC_INJECT = "Sx-24 Stereotaxic injections: 1 INJ material"
     SX_25__STEREOTAXIC_INJECT = (
         "Sx-25 Stereotaxic injections: 2+ INJ materials"
     )
     SX_26_ISI_GUIDED__INJECTI = (
-        "Sx-26 ISI-guided Injection (with NSB2023Headpost)"
+        "Sx-26 ISI-guided Injection (with Headpost)"
     )
     SX__SPINAL__CORD_INJ = "Sx- Spinal Cord INJ"
     SX_EMG__ARRAY = "Sx- EMG Array"
@@ -775,20 +775,20 @@ class NSB2023Procedure(Enum, metaclass=EnumMeta):
     # Added missing attributes
     CUSTOM = "Custom"
     DHC = "DHC"
-    FIBER_OPTIC_IMPLANT_WITH = "Fiber Optic Implant (with NSB2023Headpost)"
+    FIBER_OPTIC_IMPLANT_WITH = "Fiber Optic Implant (with Headpost)"
     FRONTAL_CTX_2_P = "Frontal Ctx 2P"
     HP_ONLY = "HP Only"
     HP_TRANSCRANIAL = "HP Transcranial"
     INJECTION_FIBER_OPTIC_IMP = (
-        "Injection+Fiber Optic Implant (with NSB2023Headpost)"
+        "Injection+Fiber Optic Implant (with Headpost)"
     )
     INJ_MOTOR_CTX = "INJ + Motor Ctx"
     INJ_VISUAL_CTX_2_P = "INJ + Visual Ctx 2P"
     INJ_WHC_NP_1_INJECTION_LO = "INJ + WHC NP (1 Injection Location)"
-    ISIGUIDED_INJECTION_WITH = "ISI-guided Injection (with NSB2023Headpost)"
+    ISIGUIDED_INJECTION_WITH = "ISI-guided Injection (with Headpost)"
     MOTOR_CTX = "Motor Ctx"
     STEREOTAXIC_INJECTION = "Stereotaxic Injection"
-    STEREOTAXIC_INJECTION_WIT = "Stereotaxic Injection (with NSB2023Headpost)"
+    STEREOTAXIC_INJECTION_WIT = "Stereotaxic Injection (with Headpost)"
     VISUAL_CTX_2_P = "Visual Ctx 2P"
     VISUAL_CTX_NP = "Visual Ctx NP"
     WHC_2_P = "WHC 2P"
@@ -802,7 +802,7 @@ class NSB2023Procedure(Enum, metaclass=EnumMeta):
     INJ_WHC_NP = "INJ + WHC NP"
     INJ_DHC = "INJ+DHC"
     INJECTION_FIBER_OPTIC_IMP_ = (
-        "Injection + Fiber Optic Implant (with NSB2023Headpost)"
+        "Injection + Fiber Optic Implant (with Headpost)"
     )
     STEREOTAXIC_INJECTIONS_1 = "Stereotaxic injections: 1 INJ material"
     STEREOTAXIC_INJECTIONS_2 = "Stereotaxic injections: 2+ INJ materials"
@@ -833,7 +833,7 @@ class NSB2023Well(Enum, metaclass=EnumMeta):
     """Enum class for NSB2023Well."""
 
     SELECT = "Select..."
-    NO_WELL = "No NSB2023Well"
+    NO_WELL = "No Well"
     SCIENTIFICA_CAM = "Scientifica (CAM)"
     MESOSCOPE = "Mesoscope"
     NEUROPIXEL = "Neuropixel"
@@ -4722,68 +4722,68 @@ class NSB2023List(BaseModel, extra="allow"):
     ] = Field(
         default=None,
         alias="Behavior_x0020_Autotrain_x0020_C",
-        title="NSB2023Behavior Autotrain Curriculum",
+        title="Behavior Autotrain Curriculum",
     )
     behavior_complete: Optional[str] = Field(
         default=None,
         alias="Behavior_x0020_Complete",
-        title="NSB2023Behavior Complete",
+        title="Behavior Complete",
     )
     behavior_curriculum: Annotated[
         NSB2023BehaviorCurriculumVersion, WrapValidator(optional_enum)
     ] = Field(
         default=None,
         alias="Behavior_x0020_Curriculum_x0020_",
-        title="NSB2023Behavior Curriculum Version",
+        title="Behavior Curriculum Version",
     )
     behavior_destination: Annotated[
         NSB2023BehaviorDestination, WrapValidator(optional_enum)
     ] = Field(
         default=None,
         alias="behavior_x0020_Destination",
-        title="NSB2023Behavior Destination",
+        title="Behavior Destination",
     )
     behavior_fiber_photo: Annotated[
         NSB2023BehaviorFiberPhotometry, WrapValidator(optional_enum)
     ] = Field(
         default=None,
         alias="Behavior_x0020_Fiber_x0020_Photo",
-        title="NSB2023Behavior Fiber Photometry",
+        title="Behavior Fiber Photometry",
     )
     behavior_first_video: Annotated[
         NSB2023BehaviorFirstVideoRecordingStage, WrapValidator(optional_enum)
     ] = Field(
         default=None,
         alias="Behavior_x0020_First_x0020_Video",
-        title="NSB2023Behavior First Video Recording Stage",
+        title="Behavior First Video Recording Stage",
     )
     behavior_first_fip_x: Annotated[
         NSB2023BehaviorFirstFipStage, WrapValidator(optional_enum)
     ] = Field(
         default=None,
         alias="Behavior_x0020_First_x0020_FIP_x",
-        title="NSB2023Behavior First FIP Stage",
+        title="Behavior First FIP Stage",
     )
     behavior_platform: Annotated[
         NSB2023BehaviorPlatform, WrapValidator(optional_enum)
     ] = Field(
         default=None,
         alias="Behavior_x0020_Platform",
-        title="NSB2023Behavior Platform",
+        title="Behavior Platform",
     )
     behavior_type: Annotated[
         NSB2023BehaviorType, WrapValidator(optional_enum)
     ] = Field(
         default=None,
         alias="Behavior_x0020_Type",
-        title="NSB2023Behavior Type",
+        title="Behavior Type",
     )
     behavior_fip_mode: Annotated[
         NSB2023BehaviorFipMode, WrapValidator(optional_enum)
     ] = Field(
         default=None,
         alias="Behavior_x0020_FIP_x0020_Mode",
-        title="NSB2023Behavior FIP Mode",
+        title="Behavior FIP Mode",
     )
     black_cement: Annotated[
         NSB2023BlackCement, WrapValidator(optional_enum)
@@ -5816,10 +5816,10 @@ class NSB2023List(BaseModel, extra="allow"):
     ] = Field(
         default=None,
         alias="Headpost_x0020_Perform_x0020_Dur",
-        title="NSB2023Headpost Perform During",
+        title="Headpost Perform During",
     )
     headpost_type: Annotated[NSB2023Well, WrapValidator(optional_enum)] = (
-        Field(default=None, alias="HeadpostType", title="NSB2023Well")
+        Field(default=None, alias="HeadpostType", title="Well")
     )
     hemisphere2nd_inj: Annotated[
         NSB2023Burr2Hemisphere, WrapValidator(optional_enum)
@@ -5849,7 +5849,7 @@ class NSB2023List(BaseModel, extra="allow"):
     ] = Field(
         default="Select...",
         alias="IACUC_x0020_Protocol_x0020__x002",
-        title="IACUC NSB2023Protocol",
+        title="IACUC Protocol",
         description=(
             "Create a secondary List for Protocols and link to drugs"
         ),
@@ -6116,7 +6116,7 @@ class NSB2023List(BaseModel, extra="allow"):
             default=None,
             alias="Procedure",
             title="Procedure",
-            description="NSB2023Procedure, Specific T3",
+            description="Procedure, Specific T3",
         )
     )
     procedure_family: Annotated[
@@ -6124,15 +6124,15 @@ class NSB2023List(BaseModel, extra="allow"):
     ] = Field(
         default=None,
         alias="Procedure_x0020_Family",
-        title="NSB2023Procedure Category",
-        description="NSB2023Procedure Family T1",
+        title="Procedure Category",
+        description="Procedure Family T1",
     )
     procedure_slots: Annotated[
         NSB2023ProcedureSlots, WrapValidator(optional_enum)
     ] = Field(
         default=None,
         alias="Procedure_x0020_Slots",
-        title="NSB2023Procedure Slots",
+        title="Procedure Slots",
         description="Sinlge or mutpile surgical slots",
     )
     procedure_t2: Annotated[
@@ -6141,7 +6141,7 @@ class NSB2023List(BaseModel, extra="allow"):
         default=None,
         alias="Procedure_x0020_T2",
         title="Physiology Type",
-        description="NSB2023Procedure Imaging paradigm T2",
+        description="Procedure Imaging paradigm T2",
     )
     project_id: Annotated[NSB2023ProjectId, WrapValidator(optional_enum)] = (
         Field(default=None, alias="ProjectID", title="ProjectID")
