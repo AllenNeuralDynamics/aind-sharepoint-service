@@ -7,7 +7,6 @@ import pytest
 from azure.core.credentials import AccessToken
 from fastapi.testclient import TestClient
 
-from aind_sharepoint_service_server.configs import Settings
 from aind_sharepoint_service_server.route import (
     get_access_token,
     get_las_2020_list,
@@ -33,7 +32,7 @@ class TestRoute:
         mock_azure_credentials.return_value.get_token.return_value = (
             AccessToken(token="abc", expires_on=100)
         )
-        token = await get_access_token(settings=Settings())
+        token = await get_access_token()
         mock_azure_credentials.assert_has_calls(
             [
                 call(
@@ -61,7 +60,7 @@ class TestRoute:
         """Tests get_las_2020_list method"""
         mock_get_access_token.return_value = "abc"
         mock_get_list_items.return_value = mock_get_las_2020_list_items
-        list_items = await get_las_2020_list(settings=Settings())
+        list_items = await get_las_2020_list()
         mock_client.assert_called_once()
         assert 4 == len(list_items)
 
@@ -93,9 +92,7 @@ class TestRoute:
         """Tests get_nsb_2023_list method"""
         mock_get_access_token.return_value = "abc"
         mock_get_list_items.return_value = mock_get_nsb_2023_list_items
-        list_items = await get_nsb_2023_list(
-            settings=Settings(), subject_id="657849"
-        )
+        list_items = await get_nsb_2023_list(subject_id="657849")
         mock_client.assert_called_once()
         assert 1 == len(list_items)
 
@@ -127,9 +124,7 @@ class TestRoute:
         """Tests get_nsb_2019_list method"""
         mock_get_access_token.return_value = "abc"
         mock_get_list_items.return_value = mock_get_nsb_2019_list_items
-        list_items = await get_nsb_2019_list(
-            settings=Settings(), subject_id="656374"
-        )
+        list_items = await get_nsb_2019_list(subject_id="656374")
         mock_client.assert_called_once()
         assert 1 == len(list_items)
 
@@ -161,9 +156,7 @@ class TestRoute:
         """Tests get_nsb_present_list method"""
         mock_get_access_token.return_value = "abc"
         mock_get_list_items.return_value = mock_get_nsb_present_list_items
-        list_items = await get_nsb_present_list(
-            settings=Settings(), subject_id="790025"
-        )
+        list_items = await get_nsb_present_list(subject_id="790025")
         mock_client.assert_called_once()
         assert 1 == len(list_items)
 

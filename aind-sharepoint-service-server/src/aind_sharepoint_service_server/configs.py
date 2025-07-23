@@ -3,14 +3,12 @@
 from typing import ClassVar, Optional
 from urllib.parse import urljoin
 
-from aind_settings_utils.aws import (
-    ParameterStoreAppBaseSettings,
-)
+from aind_settings_utils.aws import SecretsManagerBaseSettings
 from pydantic import Field, RedisDsn, SecretStr
 from pydantic_settings import SettingsConfigDict
 
 
-class Settings(ParameterStoreAppBaseSettings):
+class Settings(SecretsManagerBaseSettings):
     """Settings needed to connect to Sharepoint database"""
 
     model_config = SettingsConfigDict(
@@ -105,6 +103,4 @@ class Settings(ParameterStoreAppBaseSettings):
         )
 
 
-def get_settings() -> Settings:
-    """Return a Settings object."""
-    return Settings()
+settings = Settings()
