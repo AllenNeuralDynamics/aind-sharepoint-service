@@ -528,9 +528,7 @@ class NSB2023LimsTaskflow(Enum, metaclass=EnumMeta):
         "Brain Observatory Transgenic Characterization"
     )
     BRAIN_OBSERVATORY_V1_DD = "Brain Observatory V1DD"
-    BRAIN_OBSERVATORY_VISUAL_BEHAVIOR = (
-        "Brain Observatory Visual Behavior"
-    )
+    BRAIN_OBSERVATORY_VISUAL_BEHAVIOR = "Brain Observatory Visual Behavior"
     BRAIN_OBSERVATORY_VISUAL_BEHAVIOR_1B = (
         "Brain Observatory Visual Behavior 1B"
     )
@@ -746,17 +744,13 @@ class NSB2023Procedure(Enum, metaclass=EnumMeta):
     SX_9__GRID_INJ_6_OR_9__MO = "Sx-09 Grid INJ (6 or 9) + Motor Ctx 2P"
     SX_11_19_HP__ONLY = "Sx-11&19 HP Only"
     SX_11_19_HP__TRANSCRANIAL = "Sx-11&19 HP Transcranial"
-    SX_12__STEREOTAXIC__INJEC = (
-        "Sx-12 Stereotaxic Injection (with Headpost)"
-    )
+    SX_12__STEREOTAXIC__INJEC = "Sx-12 Stereotaxic Injection (with Headpost)"
     SX_14__VISUAL__CTX_NP = "Sx-14 Visual Ctx NP"
     SX_15_WHC_NP = "Sx-15 WHC NP"
     SX_16_INJ_WHC_NP = "Sx-16 INJ + WHC NP"
     SX_17_DHC = "Sx-17 DHC"
     SX_18_INJ_DHC = "Sx-18 INJ+DHC"
-    SX_21__FIBER__OPTIC__IMPL = (
-        "Sx-21 Fiber Optic Implant (with Headpost)"
-    )
+    SX_21__FIBER__OPTIC__IMPL = "Sx-21 Fiber Optic Implant (with Headpost)"
     SX_21__INJECTION__FIBER = (
         "Sx-21 Injection + Fiber Optic Implant (with Headpost)"
     )
@@ -764,9 +758,7 @@ class NSB2023Procedure(Enum, metaclass=EnumMeta):
     SX_25__STEREOTAXIC_INJECT = (
         "Sx-25 Stereotaxic injections: 2+ INJ materials"
     )
-    SX_26_ISI_GUIDED__INJECTI = (
-        "Sx-26 ISI-guided Injection (with Headpost)"
-    )
+    SX_26_ISI_GUIDED__INJECTI = "Sx-26 ISI-guided Injection (with Headpost)"
     SX__SPINAL__CORD_INJ = "Sx- Spinal Cord INJ"
     SX_EMG__ARRAY = "Sx- EMG Array"
     SX__TESTES__INJECTION = "Sx- Testes Injection"
@@ -779,9 +771,7 @@ class NSB2023Procedure(Enum, metaclass=EnumMeta):
     FRONTAL_CTX_2_P = "Frontal Ctx 2P"
     HP_ONLY = "HP Only"
     HP_TRANSCRANIAL = "HP Transcranial"
-    INJECTION_FIBER_OPTIC_IMP = (
-        "Injection+Fiber Optic Implant (with Headpost)"
-    )
+    INJECTION_FIBER_OPTIC_IMP = "Injection+Fiber Optic Implant (with Headpost)"
     INJ_MOTOR_CTX = "INJ + Motor Ctx"
     INJ_VISUAL_CTX_2_P = "INJ + Visual Ctx 2P"
     INJ_WHC_NP_1_INJECTION_LO = "INJ + WHC NP (1 Injection Location)"
@@ -5687,9 +5677,7 @@ class NSB2023List(BaseModel, extra="allow"):
     )
     craniotomy_type: Annotated[
         NSB2023CraniotomyType, WrapValidator(optional_enum)
-    ] = Field(
-        default=None, alias="CraniotomyType", title="Craniotomy Type"
-    )
+    ] = Field(default=None, alias="CraniotomyType", title="Craniotomy Type")
     created: Optional[datetime] = Field(
         default=None, alias="Created", title="Created"
     )
@@ -6163,9 +6151,7 @@ class NSB2023List(BaseModel, extra="allow"):
     )
     surgery_status: Annotated[
         NSB2023SurgeryStatus, WrapValidator(optional_enum)
-    ] = Field(
-        default=None, alias="SurgeryStatus", title="Surgery Status"
-    )
+    ] = Field(default=None, alias="SurgeryStatus", title="Surgery Status")
     test1: Optional[str] = Field(
         default=None, alias="Test1", title="Initial Surgeon"
     )
@@ -6175,9 +6161,7 @@ class NSB2023List(BaseModel, extra="allow"):
         title="Follow up Surgeon",
     )
     thermistor: Annotated[NSB2023Thermistor, WrapValidator(optional_enum)] = (
-        Field(
-            default=None, alias="Thermistor", title="Thermistor"
-        )
+        Field(default=None, alias="Thermistor", title="Thermistor")
     )
     title: Optional[str] = Field(default=None, alias="Title", title="Title")
     ui_version_string: Optional[str] = Field(

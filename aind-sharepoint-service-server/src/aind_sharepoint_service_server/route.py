@@ -4,11 +4,11 @@ from typing import Any, Dict, List
 
 from azure.core.credentials import AccessToken
 from azure.identity import ClientSecretCredential
-from fastapi import APIRouter, Depends, Path, status
+from fastapi import APIRouter, Path, status
 from fastapi_cache.decorator import cache
 from httpx import AsyncClient
 
-from aind_sharepoint_service_server.configs import Settings, get_settings
+from aind_sharepoint_service_server.configs import settings
 from aind_sharepoint_service_server.handler import SessionHandler
 from aind_sharepoint_service_server.models.core import HealthCheck
 from aind_sharepoint_service_server.models.las_2020 import Las2020List
@@ -19,7 +19,7 @@ router = APIRouter()
 
 
 @cache(expire=3360)
-async def get_access_token(settings: Settings) -> str:
+async def get_access_token() -> str:
     """
     Get access token from either Azure or cache. Token is valid for 60 minutes.
     We set cache lifespan to 56 minutes.
@@ -38,9 +38,9 @@ async def get_access_token(settings: Settings) -> str:
 
 
 @cache(expire=3600)
-async def get_las_2020_list(settings: Settings) -> List[Dict[str, Any]]:
+async def get_las_2020_list() -> List[Dict[str, Any]]:
     """Get the LAS_2020 list items"""
-    bearer_token = await get_access_token(settings=settings)
+    bearer_token = await get_access_token()
     headers = {
         "Authorization": f"Bearer {bearer_token}",
         "Content-Type": "application/json",
@@ -58,11 +58,9 @@ async def get_las_2020_list(settings: Settings) -> List[Dict[str, Any]]:
 
 
 # Not worthwhile to cache results for NSB lists
-async def get_nsb_2019_list(
-    subject_id: str, settings: Settings
-) -> List[Dict[str, Any]]:
+async def get_nsb_2019_list(subject_id: str) -> List[Dict[str, Any]]:
     """Get the NSB_2019 list items"""
-    bearer_token = await get_access_token(settings=settings)
+    bearer_token = await get_access_token()
     headers = {
         "Authorization": f"Bearer {bearer_token}",
         "Content-Type": "application/json",
@@ -79,11 +77,9 @@ async def get_nsb_2019_list(
     return list_items
 
 
-async def get_nsb_2023_list(
-    subject_id: str, settings: Settings
-) -> List[Dict[str, Any]]:
+async def get_nsb_2023_list(subject_id: str) -> List[Dict[str, Any]]:
     """Get the NSB_2023 list items"""
-    bearer_token = await get_access_token(settings=settings)
+    bearer_token = await get_access_token()
     headers = {
         "Authorization": f"Bearer {bearer_token}",
         "Content-Type": "application/json",
@@ -100,11 +96,9 @@ async def get_nsb_2023_list(
     return list_items
 
 
-async def get_nsb_present_list(
-    subject_id: str, settings: Settings
-) -> List[Dict[str, Any]]:
+async def get_nsb_present_list(subject_id: str) -> List[Dict[str, Any]]:
     """Get the NSB Present list items"""
-    bearer_token = await get_access_token(settings=settings)
+    bearer_token = await get_access_token()
     headers = {
         "Authorization": f"Bearer {bearer_token}",
         "Content-Type": "application/json",
@@ -153,14 +147,13 @@ async def get_las_2020(
                 "value": "805811",
             }
         },
-    ),
-    settings=Depends(get_settings),
+    )
 ):
     """
     # LAS 2020 Endpoint
     Retrieve information from the LAS 2020 list for a given subject ID.
     """
-    las_2020_list = await get_las_2020_list(settings=settings)
+    las_2020_list = await get_las_2020_list()
     las_2020_models = [
         Las2020List.model_validate(item["fields"])
         for item in las_2020_list
@@ -183,17 +176,14 @@ async def get_nsb_2019(
                 "value": "656374",
             }
         },
-    ),
-    settings=Depends(get_settings),
+    )
 ):
     """
     # NSB 2019 Endpoint
     Retrieve information from the NSB 2019 list for a given subject ID.
     """
 
-    nsb_2019_list = await get_nsb_2019_list(
-        subject_id=subject_id, settings=settings
-    )
+    nsb_2019_list = await get_nsb_2019_list(subject_id=subject_id)
     nsb_2019_models = [
         NSB2019List.model_validate(item["fields"]) for item in nsb_2019_list
     ]
@@ -214,17 +204,14 @@ async def get_nsb_2023(
                 "value": "657849",
             }
         },
-    ),
-    settings=Depends(get_settings),
+    )
 ):
     """
     # NSB 2023 Endpoint
     Retrieve information from the NSB 2023-Archive list for a given subject ID.
     """
 
-    nsb_2023_list = await get_nsb_2023_list(
-        subject_id=subject_id, settings=settings
-    )
+    nsb_2023_list = await get_nsb_2023_list(subject_id=subject_id)
     nsb_2023_models = [
         NSB2023List.model_validate(item["fields"]) for item in nsb_2023_list
     ]
@@ -245,17 +232,14 @@ async def get_nsb_present(
                 "value": "790025",
             }
         },
-    ),
-    settings=Depends(get_settings),
+    )
 ):
     """
     # NSB Present Endpoint
     Retrieve information from the NSB 2023-Present list for a given subject ID.
     """
 
-    nsb_present_list = await get_nsb_present_list(
-        subject_id=subject_id, settings=settings
-    )
+    nsb_present_list = await get_nsb_present_list(subject_id=subject_id)
     nsb_present_models = [
         NSB2023List.model_validate(item["fields"]) for item in nsb_present_list
     ]
