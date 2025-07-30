@@ -13,216 +13,33 @@ from pydantic import (
 from aind_sharepoint_service_server.models.core import optional_enum
 
 
-class LASRequeststatus2(Enum, metaclass=EnumMeta):
-    """Enum class for RequestStatus2."""
+class LASBctype(Enum, metaclass=EnumMeta):
+    """Enum class for BCType."""
 
-    NEW = "New"
-    IN_PROGRESS = "In Progress"
-    COMPLETE = "Complete"
-    CANCELLED = "Cancelled"
-
-
-class LASProtocol(Enum, metaclass=EnumMeta):
-    """Enum class for Protocol."""
-
-    N_2207_IN_VITRO_BRAIN = "2207 - In Vitro Brain Stimulation"
-    N_2212_INVESTIGATING_BR = "2212 - Investigating Brain States"
-    N_2301_TESTING_OF_ENHANC = (
-        "2301 - Testing of enhancers and AAV gene therapy vectors"
-    )
-    N_2304_NEUROSURGERY_BEH = (
-        "2304 - Neurosurgery & Behavior Training Protocol"
-    )
-    N_2305_IN_VIVO_BRAIN = "2305 - In Vivo Brain Stimulation"
-    N_2306_PATCH_SEQ_CHARACT = (
-        "2306 - Patch-seq characterization of mouse neurons in acute brain"
-        " slices for cross-species comparison studies"
-    )
-    N_2307_DISSECTING_THE_NE = (
-        "2307 - Dissecting the neural circuits of adaptive control of behavior"
-    )
-    N_2308_INDUCTION_OF_IMM = "2308 - Induction of Immune Memory"
-    N_2401_THE_USE_OF_MICE_F = (
-        "2401 - The use of mice for the development of biological recorders"
-    )
-    N_2402_BRAIN_OBSERVATOR = "2402 - Brain Observatory Optical Physiology"
-    N_2403_ELECTROPHYSIOLOGY = "2403 - Electrophysiology Mindscope Phase 4"
-    N_2405_ANALYSIS_OF_INTE = (
-        "2405 - Analysis of Integrated Neuronal Phenotypes"
-    )
-    N_2406_CHARACTERIZATION = (
-        "2406 - Characterization of mouse and viral genetic tools"
-    )
-    N_2410_VALIDATION_OF_BRA = (
-        "2410 - Validation of brain cell type enhancer AAV vectors in rats"
-    )
-    N_2412_CIRCUIT_TRACING_A = (
-        "2412 - Circuit tracing and optical physiology of mouse cortex"
-    )
-    N_2413_NEUROPHYSIOLOGY_O = (
-        "2413 - Neurophysiology of Naturalistic Learning"
-    )
-    N_2414_ELECTROPHYSIOLOGI = (
-        "2414 - Electrophysiological and optical interrogation of brain-wide"
-        " neural circuits in the mouse"
-    )
-    N_2415_OPTOPHYSIOLOGICAL = (
-        "2415 - Optophysiological analysis of brain-wide neural circuits "
-        "in the mouse"
-    )
-    N_2416_ANATOMICAL_ANALYS = (
-        "2416 - Anatomical analysis of brain-wide neural circuits in the mouse"
-    )
-    N_2417_CHARACTERIZATION = (
-        "2417 - Characterization of transcriptomic cell type activation and "
-        "their molecular adaptations that occur during psychedelic, "
-        "antidepressants, and antipsychotic drug use"
-    )
-    N_2418_IN_VITRO_SINGLE = "2418 - In Vitro Single Cell Characterization"
-    N_2427_OPEN_SCOPE_MINDS = (
-        "2427 - OpenScope Mindscope animal protocol for Optical Physiology and"
-        " Neuropixel"
-    )
-    N_2453_MOUSE_BREEDING = "2453 - Mouse Breeding"
-    N_2457_TRAINING_AND_QUAL = (
-        "2457 - Training and qualification of animal users"
-    )
-    N_2459_SPATIAL_CONNECTOM = (
-        "2459 - Spatial, connectomic and molecular characterization "
-        "of spinal cord and sympathetic nervous system"
-    )
-    N_2505_TESTING_AA_VS_IN = "2505 - Testing AAVs in Parkinson's mouse models"
-    N_2511_DISSECTING_THE_NE = (
-        "2511 - Dissecting the neural circuits of motor learning and control"
-    )
-    N_2530_DEVELOPMENT_OF_T = (
-        "2530 - Development of Transgenic Technologies & Methodologies"
-    )
-    N_2538_INTERROGATING_PRO = (
-        "2538 - Interrogating projections and gene expression of neurons"
-        " by in situ sequencing"
-    )
-    N_2547_PROTEOMIC_EXPLORA = "2547 - Proteomic exploration of cell types"
-    N_2577_IN_VITRO_BRAIN = "2577 - In Vitro Brain Stimulation"
-    N_2580_OPTIMIZATION_AND = (
-        "2580 - Optimization and validation of viral vectors"
-    )
+    SUBMANDIBULAR_IMMUNOLOGY = "Submandibular - Immunology"
+    SUBMANDIBULAR = "Submandibular"
+    TERMINAL = "Terminal"
 
 
-class LASProjectid(Enum, metaclass=EnumMeta):
-    """Enum class for ProjectID."""
+class LASDeliverylocation(Enum, metaclass=EnumMeta):
+    """Enum class for DeliveryLocation."""
 
-    N_101_03_001_10_COSTA_PG = "101-03-001-10 Costa PGA Lab Research (Direct)"
-    N_102_01_007_10_CTY_M_FIS = "102-01-007-10 CTY mFISH"
-    N_102_01_009_10_CTY_MORP = "102-01-009-10 CTY Morphology"
-    N_102_01_011_10_CTY_CONN = "102-01-011-10 CTY Connectome EM"
-    N_102_01_012_10_CTY_CONN = "102-01-012-10 CTY Connectome Meso"
-    N_102_01_016_10_CTY_TAXO = "102-01-016-10 CTY Taxonomy"
-    N_102_01_029_20_CTY_BRAIN = (
-        "102-01-029-20 CTY BRAIN Cell-type Specific Enhancer Viruses"
-    )
-    N_102_01_031_20_W4_CTY_EU = (
-        "102-01-031-20 W4 - CTY EU Horizon 2020 BRAINTIME"
-    )
-    N_102_01_031_20_W5_CTY_EU = (
-        "102-01-031-20 W5 - CTY EU Horizon 2020 BRAINTIME"
-    )
-    N_102_01_032_20_CTY_MOUS = "102-01-032-20 CTY Mouse Aging"
-    N_102_01_036_20_CTY_DISS = (
-        "102-01-036-20 CTY Dissemination of 3-Photon Imaging"
-    )
-    N_102_01_040_20_CTY_BRAIN = (
-        "102-01-040-20 CTY BRAIN UG3/UH3 Genetic Viral Tools"
-    )
-    N_102_01_043_20_CTY_OPTI = "102-01-043-20 CTY Optical interrogation"
-    N_102_01_044_10_CTY_GENO = "102-01-044-10 – CTY Genomics"
-    N_102_01_045_10_CTY_IVSCC = "102-01-045-10 – CTY IVSCC"
-    N_102_01_046_20_CTY_WEIL = (
-        "102-01-046-20 - CTY Weill Neuronal Heterogeneity"
-    )
-    N_102_01_048_10_CTY_BARC = "102-01-048-10 CTY Barcoded Connectomics"
-    N_102_01_049_20_CTY_OPIO = "102-01-049-20 - CTY Opioid Transcriptomics"
-    N_102_01_054_20_CTY_PFAC = "102-01-054-20 CTY PFAC"
-    N_102_01_055_20_CTY_EM_M = "102-01-055-20 CTY EM Motor Cortex"
-    N_102_01_059_20_CTY_SCORC = "102-01-059-20 CTY SCORCH"
-    N_102_01_060_20_CTY_BRAI = "102-01-060-20 CTY Brain Drain"
-    N_102_01_061_20_CTY_BICAN = "102-01-061-20 CTY BICAN Human and NHP Atlas"
-    N_102_01_062_10_AIBS_BICA = (
-        "102-01-062-10 AIBS BICAN Mouse Developmental Atlas"
-    )
-    N_102_01_064_10_CTY_GENE = "102-01-064-10 CTY Genetic Tools"
-    N_102_01_066_20_AIBS_CTY = "102-01-066-20 AIBS CTY CONNECTS HIVE"
-    N_102_01_066_20_AIND_CTY = "102-01-066-20 AIND CTY CONNECTS HIVE"
-    N_102_01_068_20_CTY_CONNE = "102-01-068-20 CTY CONNECTS Patchlink"
-    N_102_01_069_20_PRE_SPE = "102-01-069-20 Pre-Spend"
-    N_102_01_070_20_CTY_CONNE = "102-01-070-20 CTY CONNECTS MouseConnects"
-    N_102_01_073_20_CTY_CT_P = "102-01-073-20 CTY CT Projectome"
-    N_102_01_078_20_AIBS_VOC = "102-01-078-20 AIBS Vocal Circuit"
-    N_102_01_079_20_AIBS_CONN = (
-        "102-01-079-20 AIBS CONNECTS TransNeuronal Tools"
-    )
-    N_102_01_083_20_AIBS_WB_A = "102-01-083-20 AIBS WB AAV Toolbox"
-    N_102_01_999_10_CTY_PROG = "102-01-999-10 CTY Program Admin"
-    N_102_02_004_10_BTV_VISU = "102-02-004-10 BTV Visual Behavior"
-    N_102_02_012_20_BTV_BRAIN = "102-02-012-20 BTV BRAIN Viral Strategies"
-    N_102_04_004_10_OTH_MERI = (
-        "102-04-004-10 OTH Meritorious Scholar Directed Research"
-    )
-    N_102_04_006_20_OTH_MEAS = (
-        "102-04-006-20 OTH Measuring Consciousness Ph2 (TBD)"
-    )
-    N_102_04_007_10_APLD_TAR = "102-04-007-10 APLD Targeted CNS Gene Therapy"
-    N_102_04_011_10_CTY_SR_SY = "102-04-011-10 CTY SR: SYNGAP1"
-    N_102_04_012_10_CTY_SR_F = "102-04-012-10 : CTY SR: Friedreich Ataxia"
-    N_102_04_016_20_CTY_DRAV = "102-04-016-20 CTY Dravet Phase 3 WRF"
-    N_102_04_017_10_AIBS_EPI = "102-04-017-10 AIBS Epilepsy"
-    N_102_04_019_20_AIBS_DSF = "102-04-019-20 AIBS DSF Dravet"
-    N_102_88_001_10_XPG_CORE = "102-88-001-10 XPG Core Imaging: BARseq"
-    N_102_88_001_10_XPG_CORE_2 = (
-        "102-88-001-10 XPG Core Imaging: Methods Development"
-    )
-    N_122_88_002_10_XPG_CORE = "122-88-002-10 XPG Core NSB Behavior"
-    N_102_88_003_10_ANIMAL = "102-88-003-10 Animal Care Team"
-    N_102_88_005_10_TRANSGEN = "102-88-005-10 Transgenic Colony Management"
-    N_102_88_008_10_LAB_ANI = "102-88-008-10 Lab Animal Services"
-    N_106_09_001_10_TISSUE = "106-09-001-10 Tissue Immunity"
-    N_110_01_001_10_PG_PROTE = "110-01-001-10 PG Proteomics"
-    N_121_01_016_20_MSP_BRAIN = "121-01-016-20 MSP BRAIN OpenScope"
-    N_121_01_018_20_MSP_EPHA = "121-01-018-20 MSP Ephaptic Cell Typ"
-    N_121_01_023_20_MSP_TEMP = (
-        "121-01-023-20 MSP Templeton - Testing Theories of Consciousness"
-    )
-    N_121_01_025_20_MSP_U01 = (
-        "121-01-025-20 MSP U01 Bridging Function, Connectivity,"
-        " & Transcriptomics"
-    )
-    N_121_01_026_20_MSP_TEMP = (
-        "121-01-026-20 MSP Templeton Measuring Distinct Conscious State"
-    )
-    N_122_01_001_10_AIND_SCI = "122-01-001-10 AIND Scientific Activities"
-    N_122_01_002_20_MOLECULA = "122-01-002-20 Molecular Core"
-    N_122_01_004_20_AIND_BRA = "122-01-004-20 AIND Brainstem RF1"
-    N_122_01_010_20_AIND_POO = "122-01-010-20 - AIND Poo Simons BTI"
-    N_122_01_011_20_AIND_COH = (
-        "122-01-011-20 - AIND Cohen JHU R01 Transferred Subaward"
-    )
-    N_122_01_012_20_AIND_RF1 = (
-        "122-01-012-20 - AIND RF1 Functions of locus coeruleus"
-    )
-    N_122_01_013_10_MSP_SCIE = "122-01-013-10 MSP Scientific Activities"
-    N_122_01_014_20_AIND_SIE = "122-01-014-20 - AIND Siegle U01 NPOpto"
-    N_122_01_019_20_AIND_CZI = "122-01-019-20 AIND CZI Collaborative Pairs"
-    N_122_01_020_20_AIBS_COH = "122-01-020-20 AIBS Cohen BICAN R01"
-    N_122_01_020_20_AIND_COH = "122-01-020-20 AIND Cohen BICAN R01"
-    N_122_01_022_20_AIND_POD = "122-01-022-20 AIND Podgorski UM1"
-    N_123_01_003_20_MOTOR_C = "123-01-003-20 Motor Circuit Dysfunction in PD"
-    N_124_01_001_10_BRAIN_C = "124-01-001-10 Brain & Consciousness (Direct)"
-    N_125_01_001_10_SEA_HUB = (
-        "125-01-001-10 - SeaHub Scientific Activities (Direct)"
-    )
-    N_127_01_001_10_CELL_CI = "127-01-001-10 Cell & Circuit Therapeutics"
-    AAV_PRODUCTION_102_88_004 = "AAV production 102-88-004-10"
-    R_D_102_88_004_10 = "R&D 102-88-004-10"
+    N_156_4C = "156 4c"
+    N_139_80 = "139 -80"
+    N_220_4C_IM = "220 4c(IM)"
+    N_270_4C = "270 4c"
+    N_270_80_B_SHELF_3_LEFT = "270 -80B Shelf 3 (Left)"
+    N_320_AIND_4C = "320 AIND 4c"
+    N_320_80_SHELF_6 = "320 -80 Shelf 6"
+    N_340_4C = "340 4c"
+    N_340_80_B_SHELF_1 = "340 -80B Shelf 1"
+    N_370_WALK_IN_4C = "370 Walk-in 4c"
+    N_379_20_A_SHELF_2 = "379 -20A Shelf 2"
+    N_373_80_A_SHELF_2 = "373 -80A Shelf 2"
+    N_420_4C = "420 4c"
+    N_440_4C = "440 4c"
+    N_470_4C = "470 4c"
+    N_473_80_E_SHELF_3 = "473 -80E Shelf 3"
 
 
 class LASDoseroute(Enum, metaclass=EnumMeta):
@@ -235,162 +52,56 @@ class LASDoseroute(Enum, metaclass=EnumMeta):
     SUBCUTANEOUS_SC = "Subcutaneous (SC)"
 
 
-class LASPostfix(Enum, metaclass=EnumMeta):
-    """Enum class for PostFix."""
+class LASIcvlims(Enum, metaclass=EnumMeta):
+    """Enum class for icvLIMS."""
 
-    N_30_SUCROSE = "30% Sucrose"
-    N_30_SUCROSE_FOIL_WRAPPE = "30% Sucrose (foil-wrapped tube)"
-    N_1X_PBS = "1xPBS"
-    N_1X_PBS_FOIL_WRAPPED_TUB = "1xPBS (foil-wrapped tube)"
-    N_1X_PBS_0_01_AZIDE = "1xPBS+ 0.01%Azide"
-    N_1X_PBS_0_01_AZIDE_5M_L = "1xPBS+ 0.01%Azide (5mL tubes)"
-    N_1X_PBS_0_01_AZIDE_FOIL = "1xPBS+ 0.01%Azide (foil-wrapped tube)"
-    N_4_PFA_TO_1X_PBS = "4%PFA to 1xPBS"
-    NUCLEASE_FREE_1X_PBS_OM_F = "Nuclease-free 1xPBS (omFISH)"
-    NUCLEASE_FREE_30_SUCROSE = "Nuclease-free 30% Sucrose"
-    NUCLEASE_FREE_30_SUCROSE_2 = "Nuclease-free 30% Sucrose(FOIL)"
-    DPBS_NUCLEASE_FREE = "DPBS(Nuclease-free)"
-    OTHER_SPECIFY_BELOW = "Other (Specify below)"
+    STEREOTAXIC_INJECTIONS = "Stereotaxic Injections"
+    NEW_STEREOTAXIC_INJECTI = "New Stereotaxic Injections"
 
 
-class LASReqpro1(Enum, metaclass=EnumMeta):
-    """Enum class for ReqPro1."""
+class LASIcvroute1(Enum, metaclass=EnumMeta):
+    """Enum class for icvRoute1."""
 
-    TISSUE_COLLECTION = "Tissue Collection"
-    INDUCTION = "Induction"
-    DOSING = "Dosing"
-    RETRO_ORBITAL_INJECTION = "Retro-Orbital Injection"
-    INTRACEREBROVENTRICULAR = "Intracerebroventricular Injection"
-    BLOOD_COLLECTION = "Blood Collection"
-    CEREBROSPINAL_FLUID_COL = "Cerebrospinal Fluid Collection (CSF)"
-    OTHER = "Other"
+    BILATERAL = "Bilateral"
+    ANY_UNILATERAL = "Any, Unilateral"
+    LEFT_UNILATERAL = "Left, Unilateral"
+    RIGHT_UNILATERAL = "Right, Unilateral"
 
 
-class LASReqpro2(Enum, metaclass=EnumMeta):
-    """Enum class for ReqPro2."""
+class LASIcvroute2(Enum, metaclass=EnumMeta):
+    """Enum class for icvRoute2."""
 
-    TISSUE_COLLECTION = "Tissue Collection"
-    INDUCTION = "Induction"
-    DOSING = "Dosing"
-    RETRO_ORBITAL_INJECTION = "Retro-Orbital Injection"
-    INTRACEREBROVENTRICULAR = "Intracerebroventricular Injection"
-    BLOOD_COLLECTION = "Blood Collection"
-    CEREBROSPINAL_FLUID_COL = "Cerebrospinal Fluid Collection (CSF)"
-    OTHER = "Other"
+    BILATERAL = "Bilateral"
+    ANY_UNILATERAL = "Any, Unilateral"
+    LEFT_UNILATERAL = "Left, Unilateral"
+    RIGHT_UNILATERAL = "Right, Unilateral"
 
 
-class LASReqpro3(Enum, metaclass=EnumMeta):
-    """Enum class for ReqPro3."""
+class LASIcvroute3(Enum, metaclass=EnumMeta):
+    """Enum class for icvRoute3."""
 
-    TISSUE_COLLECTION = "Tissue Collection"
-    INDUCTION = "Induction"
-    DOSING = "Dosing"
-    RETRO_ORBITAL_INJECTION = "Retro-Orbital Injection"
-    INTRACEREBROVENTRICULAR = "Intracerebroventricular Injection"
-    BLOOD_COLLECTION = "Blood Collection"
-    CEREBROSPINAL_FLUID_COL = "Cerebrospinal Fluid Collection (CSF)"
-    OTHER = "Other"
+    BILATERAL = "Bilateral"
+    ANY_UNILATERAL = "Any, Unilateral"
+    LEFT_UNILATERAL = "Left, Unilateral"
+    RIGHT_UNILATERAL = "Right, Unilateral"
 
 
-class LASRoeye1(Enum, metaclass=EnumMeta):
-    """Enum class for roEye1."""
+class LASIcvroute4(Enum, metaclass=EnumMeta):
+    """Enum class for icvRoute4."""
 
-    BEHIND_EITHER = "Behind Either"
-    BEHIND_RIGHT = "Behind Right"
-    BEHIND_LEFT = "Behind Left"
-
-
-class LASRoeye2(Enum, metaclass=EnumMeta):
-    """Enum class for roEye2."""
-
-    BEHIND_EITHER = "Behind Either"
-    BEHIND_RIGHT = "Behind Right"
-    BEHIND_LEFT = "Behind Left"
+    BILATERAL = "Bilateral"
+    ANY_UNILATERAL = "Any, Unilateral"
+    LEFT_UNILATERAL = "Left, Unilateral"
+    RIGHT_UNILATERAL = "Right, Unilateral"
 
 
-class LASRoeye3(Enum, metaclass=EnumMeta):
-    """Enum class for roEye3."""
+class LASIcvroute5(Enum, metaclass=EnumMeta):
+    """Enum class for icvRoute5."""
 
-    BEHIND_EITHER = "Behind Either"
-    BEHIND_RIGHT = "Behind Right"
-    BEHIND_LEFT = "Behind Left"
-
-
-class LASRoeye4(Enum, metaclass=EnumMeta):
-    """Enum class for roEye4."""
-
-    BEHIND_EITHER = "Behind Either"
-    BEHIND_RIGHT = "Behind Right"
-    BEHIND_LEFT = "Behind Left"
-
-
-class LASRoeye5(Enum, metaclass=EnumMeta):
-    """Enum class for roEye5."""
-
-    BEHIND_EITHER = "Behind Either"
-    BEHIND_RIGHT = "Behind Right"
-    BEHIND_LEFT = "Behind Left"
-
-
-class LASRowhere(Enum, metaclass=EnumMeta):
-    """Enum class for roWhere."""
-
-    LAS_DROP_BOX_IN_VIVARIU = "LAS Drop box in Vivarium -80 freezer"
-    VIVARIUM_4C_156 = "Vivarium 4c 156"
-    OTHER_SPECIFY_BELOW = "Other (Specify below)"
-
-
-class LASTamFrequency(Enum, metaclass=EnumMeta):
-    """Enum class for TAM Frequency."""
-
-    STANDARD_5_DAY_DOSE = "Standard 5 day dose"
-    SINGLE_DOSE = "Single dose"
-    OTHER_TYPE_IN = "Other (Type in)"
-
-
-class LASTcprep(Enum, metaclass=EnumMeta):
-    """Enum class for TCPrep."""
-
-    FRESH_BRAIN_DISSECTION = "Fresh Brain Dissection (SOP AF0061)"
-    MOUSE_CARDIAC_PERFUSION = "Mouse Cardiac Perfusion (SOP AF0075)"
-    ACSF_PERFUSION = "ACSF Perfusion"
-    MOUSE_BRAIN_PERFUSION_A = (
-        "Mouse Brain Perfusion and Flash Freezing Protocol (SOP AF0138)"
-    )
-    EMBRYO_COLLECTION = "Embryo Collection"
-    MOUSE_CARDIAC_PERFUSION_2 = (
-        "Mouse Cardiac Perfusion and Brain Hemisphere Processing "
-        "for Viral Genetic Tools Pipeline (SOP AF0140)"
-    )
-    MOUSE_CARDIAC_PERFUSION_3 = "Mouse Cardiac Perfusion with Gel"
-
-
-class LASTctiss(Enum, metaclass=EnumMeta):
-    """Enum class for TCTiss."""
-
-    BRAIN = "Brain"
-    RIGHT_EYE = "Right Eye"
-    LEFT_EYE = "Left Eye"
-    EARS = "Ears"
-    SPINAL_CORD = "Spinal Cord"
-    HEART = "Heart"
-    LIVER = "Liver"
-    EMBRYO_SPECIFY_BELOW = "Embryo (Specify below)"
-    LYMPH_NODES_SPECIFY_BELO = "Lymph nodes (Specify below)"
-    SPLEEN = "Spleen"
-    KIDNEYS = "Kidneys"
-    REPRODUCTIVE_ORGAN = "Reproductive Organ"
-    EPIDIDYMIS = "Epididymis"
-    TAIL_SNIPS = "Tail Snips"
-    OTHER_TISSUE_SPECIFY_BE = "Other Tissue (Specify below)"
-
-
-class LASTmpFrequency(Enum, metaclass=EnumMeta):
-    """Enum class for TMP Frequency."""
-
-    STANDARD_3_DAY_DOSE = "Standard 3 day dose"
-    SINGLE_DOSE = "Single dose"
-    OTHER_TYPE_IN = "Other (Type-in)"
+    BILATERAL = "Bilateral"
+    ANY_UNILATERAL = "Any, Unilateral"
+    LEFT_UNILATERAL = "Left, Unilateral"
+    RIGHT_UNILATERAL = "Right, Unilateral"
 
 
 class LASLimsproject(Enum, metaclass=EnumMeta):
@@ -611,89 +322,6 @@ class LASLimsworkflow(Enum, metaclass=EnumMeta):
     MGT_ANTEROGRADE_PROJECT = "MGT Anterograde Projection Mapping"
 
 
-class LASRosop(Enum, metaclass=EnumMeta):
-    """Enum class for roSOP."""
-
-    AF0131_RETRO_ORBITAL_IN = "AF0131 Retro-orbital Injection"
-    AF0139_RETRO_ORBITAL_IN = (
-        "AF0139 Retro-orbital Injection of AAV Vectors for Viral "
-        "Genetic Tools Pipeline"
-    )
-
-
-class LASRolims(Enum, metaclass=EnumMeta):
-    """Enum class for roLIMS."""
-
-    STEREOTAXIC_INJECTIONS = "Stereotaxic Injections"
-    NEW_STEREOTAXIC_INJECTI = "New Stereotaxic Injections"
-
-
-class LASIcvroute1(Enum, metaclass=EnumMeta):
-    """Enum class for icvRoute1."""
-
-    BILATERAL = "Bilateral"
-    ANY_UNILATERAL = "Any, Unilateral"
-    LEFT_UNILATERAL = "Left, Unilateral"
-    RIGHT_UNILATERAL = "Right, Unilateral"
-
-
-class LASIcvroute2(Enum, metaclass=EnumMeta):
-    """Enum class for icvRoute2."""
-
-    BILATERAL = "Bilateral"
-    ANY_UNILATERAL = "Any, Unilateral"
-    LEFT_UNILATERAL = "Left, Unilateral"
-    RIGHT_UNILATERAL = "Right, Unilateral"
-
-
-class LASIcvroute3(Enum, metaclass=EnumMeta):
-    """Enum class for icvRoute3."""
-
-    BILATERAL = "Bilateral"
-    ANY_UNILATERAL = "Any, Unilateral"
-    LEFT_UNILATERAL = "Left, Unilateral"
-    RIGHT_UNILATERAL = "Right, Unilateral"
-
-
-class LASIcvroute4(Enum, metaclass=EnumMeta):
-    """Enum class for icvRoute4."""
-
-    BILATERAL = "Bilateral"
-    ANY_UNILATERAL = "Any, Unilateral"
-    LEFT_UNILATERAL = "Left, Unilateral"
-    RIGHT_UNILATERAL = "Right, Unilateral"
-
-
-class LASIcvroute5(Enum, metaclass=EnumMeta):
-    """Enum class for icvRoute5."""
-
-    BILATERAL = "Bilateral"
-    ANY_UNILATERAL = "Any, Unilateral"
-    LEFT_UNILATERAL = "Left, Unilateral"
-    RIGHT_UNILATERAL = "Right, Unilateral"
-
-
-class LASWheretoobtainsubstanceIcv(Enum, metaclass=EnumMeta):
-    """Enum class for WheretoObtainsubstance(ICV)."""
-
-    LAS_BLUE_BIN_IN_VIVARIUM = "LAS blue bin in Vivarium –80 freezer"
-    OTHER_SPECIFY_BELOW = "Other (Specify below)"
-
-
-class LASSpecies(Enum, metaclass=EnumMeta):
-    """Enum class for Species."""
-
-    MOUSE = "Mouse"
-    RAT = "Rat"
-
-
-class LASIcvlims(Enum, metaclass=EnumMeta):
-    """Enum class for icvLIMS."""
-
-    STEREOTAXIC_INJECTIONS = "Stereotaxic Injections"
-    NEW_STEREOTAXIC_INJECTI = "New Stereotaxic Injections"
-
-
 class LASLimsworkflow2(Enum, metaclass=EnumMeta):
     """Enum class for LIMSWorkflow 2."""
 
@@ -715,33 +343,405 @@ class LASLimsworkflow2(Enum, metaclass=EnumMeta):
     MGT_ANTEROGRADE_PROJECT = "MGT Anterograde Projection Mapping"
 
 
-class LASBctype(Enum, metaclass=EnumMeta):
-    """Enum class for BCType."""
+class LASPostfix(Enum, metaclass=EnumMeta):
+    """Enum class for PostFix."""
 
-    SUBMANDIBULAR_IMMUNOLOGY = "Submandibular - Immunology"
-    SUBMANDIBULAR = "Submandibular"
-    TERMINAL = "Terminal"
+    N_30_SUCROSE = "30% Sucrose"
+    N_30_SUCROSE_FOIL_WRAPPE = "30% Sucrose (foil-wrapped tube)"
+    N_1X_PBS = "1xPBS"
+    N_1X_PBS_FOIL_WRAPPED_TUB = "1xPBS (foil-wrapped tube)"
+    N_1X_PBS_0_01_AZIDE = "1xPBS+ 0.01%Azide"
+    N_1X_PBS_0_01_AZIDE_5M_L = "1xPBS+ 0.01%Azide (5mL tubes)"
+    N_1X_PBS_0_01_AZIDE_FOIL = "1xPBS+ 0.01%Azide (foil-wrapped tube)"
+    N_4_PFA_TO_1X_PBS = "4%PFA to 1xPBS"
+    NUCLEASE_FREE_1X_PBS_OM_F = "Nuclease-free 1xPBS (omFISH)"
+    NUCLEASE_FREE_30_SUCROSE = "Nuclease-free 30% Sucrose"
+    NUCLEASE_FREE_30_SUCROSE_2 = "Nuclease-free 30% Sucrose(FOIL)"
+    DPBS_NUCLEASE_FREE = "DPBS(Nuclease-free)"
+    OTHER_SPECIFY_BELOW = "Other (Specify below)"
 
 
-class LASDeliverylocation(Enum, metaclass=EnumMeta):
-    """Enum class for DeliveryLocation."""
+class LASProjectid(Enum, metaclass=EnumMeta):
+    """Enum class for ProjectID."""
 
-    N_156_4C = "156 4c"
-    N_139_80 = "139 -80"
-    N_220_4C_IM = "220 4c(IM)"
-    N_270_4C = "270 4c"
-    N_270_80_B_SHELF_3_LEFT = "270 -80B Shelf 3 (Left)"
-    N_320_AIND_4C = "320 AIND 4c"
-    N_320_80_SHELF_6 = "320 -80 Shelf 6"
-    N_340_4C = "340 4c"
-    N_340_80_B_SHELF_1 = "340 -80B Shelf 1"
-    N_370_WALK_IN_4C = "370 Walk-in 4c"
-    N_379_20_A_SHELF_2 = "379 -20A Shelf 2"
-    N_373_80_A_SHELF_2 = "373 -80A Shelf 2"
-    N_420_4C = "420 4c"
-    N_440_4C = "440 4c"
-    N_470_4C = "470 4c"
-    N_473_80_E_SHELF_3 = "473 -80E Shelf 3"
+    N_101_03_001_10_COSTA_PG = "101-03-001-10 Costa PGA Lab Research (Direct)"
+    N_102_01_007_10_CTY_M_FIS = "102-01-007-10 CTY mFISH"
+    N_102_01_009_10_CTY_MORP = "102-01-009-10 CTY Morphology"
+    N_102_01_011_10_CTY_CONN = "102-01-011-10 CTY Connectome EM"
+    N_102_01_012_10_CTY_CONN = "102-01-012-10 CTY Connectome Meso"
+    N_102_01_016_10_CTY_TAXO = "102-01-016-10 CTY Taxonomy"
+    N_102_01_029_20_CTY_BRAIN = (
+        "102-01-029-20 CTY BRAIN Cell-type Specific Enhancer Viruses"
+    )
+    N_102_01_031_20_W4_CTY_EU = (
+        "102-01-031-20 W4 - CTY EU Horizon 2020 BRAINTIME"
+    )
+    N_102_01_031_20_W5_CTY_EU = (
+        "102-01-031-20 W5 - CTY EU Horizon 2020 BRAINTIME"
+    )
+    N_102_01_032_20_CTY_MOUS = "102-01-032-20 CTY Mouse Aging"
+    N_102_01_036_20_CTY_DISS = (
+        "102-01-036-20 CTY Dissemination of 3-Photon Imaging"
+    )
+    N_102_01_040_20_CTY_BRAIN = (
+        "102-01-040-20 CTY BRAIN UG3/UH3 Genetic Viral Tools"
+    )
+    N_102_01_043_20_CTY_OPTI = "102-01-043-20 CTY Optical interrogation"
+    N_102_01_044_10_CTY_GENO = "102-01-044-10 – CTY Genomics"
+    N_102_01_045_10_CTY_IVSCC = "102-01-045-10 – CTY IVSCC"
+    N_102_01_046_20_CTY_WEIL = (
+        "102-01-046-20 - CTY Weill Neuronal Heterogeneity"
+    )
+    N_102_01_048_10_CTY_BARC = "102-01-048-10 CTY Barcoded Connectomics"
+    N_102_01_049_20_CTY_OPIO = "102-01-049-20 - CTY Opioid Transcriptomics"
+    N_102_01_054_20_CTY_PFAC = "102-01-054-20 CTY PFAC"
+    N_102_01_055_20_CTY_EM_M = "102-01-055-20 CTY EM Motor Cortex"
+    N_102_01_059_20_CTY_SCORC = "102-01-059-20 CTY SCORCH"
+    N_102_01_060_20_CTY_BRAI = "102-01-060-20 CTY Brain Drain"
+    N_102_01_061_20_CTY_BICAN = "102-01-061-20 CTY BICAN Human and NHP Atlas"
+    N_102_01_062_10_AIBS_BICA = (
+        "102-01-062-10 AIBS BICAN Mouse Developmental Atlas"
+    )
+    N_102_01_064_10_CTY_GENE = "102-01-064-10 CTY Genetic Tools"
+    N_102_01_066_20_AIBS_CTY = "102-01-066-20 AIBS CTY CONNECTS HIVE"
+    N_102_01_066_20_AIND_CTY = "102-01-066-20 AIND CTY CONNECTS HIVE"
+    N_102_01_068_20_CTY_CONNE = "102-01-068-20 CTY CONNECTS Patchlink"
+    N_102_01_069_20_PRE_SPE = "102-01-069-20 Pre-Spend"
+    N_102_01_070_20_CTY_CONNE = "102-01-070-20 CTY CONNECTS MouseConnects"
+    N_102_01_073_20_CTY_CT_P = "102-01-073-20 CTY CT Projectome"
+    N_102_01_078_20_AIBS_VOC = "102-01-078-20 AIBS Vocal Circuit"
+    N_102_01_079_20_AIBS_CONN = (
+        "102-01-079-20 AIBS CONNECTS TransNeuronal Tools"
+    )
+    N_102_01_083_20_AIBS_WB_A = "102-01-083-20 AIBS WB AAV Toolbox"
+    N_102_01_999_10_CTY_PROG = "102-01-999-10 CTY Program Admin"
+    N_102_02_004_10_BTV_VISU = "102-02-004-10 BTV Visual Behavior"
+    N_102_02_012_20_BTV_BRAIN = "102-02-012-20 BTV BRAIN Viral Strategies"
+    N_102_04_004_10_OTH_MERI = (
+        "102-04-004-10 OTH Meritorious Scholar Directed Research"
+    )
+    N_102_04_006_20_OTH_MEAS = (
+        "102-04-006-20 OTH Measuring Consciousness Ph2 (TBD)"
+    )
+    N_102_04_007_10_APLD_TAR = "102-04-007-10 APLD Targeted CNS Gene Therapy"
+    N_102_04_011_10_CTY_SR_SY = "102-04-011-10 CTY SR: SYNGAP1"
+    N_102_04_012_10_CTY_SR_F = "102-04-012-10 : CTY SR: Friedreich Ataxia"
+    N_102_04_016_20_CTY_DRAV = "102-04-016-20 CTY Dravet Phase 3 WRF"
+    N_102_04_017_10_AIBS_EPI = "102-04-017-10 AIBS Epilepsy"
+    N_102_04_019_20_AIBS_DSF = "102-04-019-20 AIBS DSF Dravet"
+    N_102_88_001_10_XPG_CORE = "102-88-001-10 XPG Core Imaging: BARseq"
+    N_102_88_001_10_XPG_CORE_2 = (
+        "102-88-001-10 XPG Core Imaging: Methods Development"
+    )
+    N_122_88_002_10_XPG_CORE = "122-88-002-10 XPG Core NSB Behavior"
+    N_102_88_003_10_ANIMAL = "102-88-003-10 Animal Care Team"
+    N_102_88_005_10_TRANSGEN = "102-88-005-10 Transgenic Colony Management"
+    N_102_88_008_10_LAB_ANI = "102-88-008-10 Lab Animal Services"
+    N_106_09_001_10_TISSUE = "106-09-001-10 Tissue Immunity"
+    N_110_01_001_10_PG_PROTE = "110-01-001-10 PG Proteomics"
+    N_121_01_016_20_MSP_BRAIN = "121-01-016-20 MSP BRAIN OpenScope"
+    N_121_01_018_20_MSP_EPHA = "121-01-018-20 MSP Ephaptic Cell Typ"
+    N_121_01_023_20_MSP_TEMP = (
+        "121-01-023-20 MSP Templeton - Testing Theories of Consciousness"
+    )
+    N_121_01_025_20_MSP_U01 = (
+        "121-01-025-20 MSP U01 Bridging Function, Connectivity,"
+        " & Transcriptomics"
+    )
+    N_121_01_026_20_MSP_TEMP = (
+        "121-01-026-20 MSP Templeton Measuring Distinct Conscious State"
+    )
+    N_122_01_001_10_AIND_SCI = "122-01-001-10 AIND Scientific Activities"
+    N_122_01_002_20_MOLECULA = "122-01-002-20 Molecular Core"
+    N_122_01_004_20_AIND_BRA = "122-01-004-20 AIND Brainstem RF1"
+    N_122_01_010_20_AIND_POO = "122-01-010-20 - AIND Poo Simons BTI"
+    N_122_01_011_20_AIND_COH = (
+        "122-01-011-20 - AIND Cohen JHU R01 Transferred Subaward"
+    )
+    N_122_01_012_20_AIND_RF1 = (
+        "122-01-012-20 - AIND RF1 Functions of locus coeruleus"
+    )
+    N_122_01_013_10_MSP_SCIE = "122-01-013-10 MSP Scientific Activities"
+    N_122_01_014_20_AIND_SIE = "122-01-014-20 - AIND Siegle U01 NPOpto"
+    N_122_01_019_20_AIND_CZI = "122-01-019-20 AIND CZI Collaborative Pairs"
+    N_122_01_020_20_AIBS_COH = "122-01-020-20 AIBS Cohen BICAN R01"
+    N_122_01_020_20_AIND_COH = "122-01-020-20 AIND Cohen BICAN R01"
+    N_122_01_022_20_AIND_POD = "122-01-022-20 AIND Podgorski UM1"
+    N_123_01_003_20_MOTOR_C = "123-01-003-20 Motor Circuit Dysfunction in PD"
+    N_124_01_001_10_BRAIN_C = "124-01-001-10 Brain & Consciousness (Direct)"
+    N_125_01_001_10_SEA_HUB = (
+        "125-01-001-10 - SeaHub Scientific Activities (Direct)"
+    )
+    N_127_01_001_10_CELL_CI = "127-01-001-10 Cell & Circuit Therapeutics"
+    AAV_PRODUCTION_102_88_004 = "AAV production 102-88-004-10"
+    R_D_102_88_004_10 = "R&D 102-88-004-10"
+
+
+class LASProtocol(Enum, metaclass=EnumMeta):
+    """Enum class for Protocol."""
+
+    N_2207_IN_VITRO_BRAIN = "2207 - In Vitro Brain Stimulation"
+    N_2212_INVESTIGATING_BR = "2212 - Investigating Brain States"
+    N_2301_TESTING_OF_ENHANC = (
+        "2301 - Testing of enhancers and AAV gene therapy vectors"
+    )
+    N_2304_NEUROSURGERY_BEH = (
+        "2304 - Neurosurgery & Behavior Training Protocol"
+    )
+    N_2305_IN_VIVO_BRAIN = "2305 - In Vivo Brain Stimulation"
+    N_2306_PATCH_SEQ_CHARACT = (
+        "2306 - Patch-seq characterization of mouse neurons in acute brain"
+        " slices for cross-species comparison studies"
+    )
+    N_2307_DISSECTING_THE_NE = (
+        "2307 - Dissecting the neural circuits of adaptive control of behavior"
+    )
+    N_2308_INDUCTION_OF_IMM = "2308 - Induction of Immune Memory"
+    N_2401_THE_USE_OF_MICE_F = (
+        "2401 - The use of mice for the development of biological recorders"
+    )
+    N_2402_BRAIN_OBSERVATOR = "2402 - Brain Observatory Optical Physiology"
+    N_2403_ELECTROPHYSIOLOGY = "2403 - Electrophysiology Mindscope Phase 4"
+    N_2405_ANALYSIS_OF_INTE = (
+        "2405 - Analysis of Integrated Neuronal Phenotypes"
+    )
+    N_2406_CHARACTERIZATION = (
+        "2406 - Characterization of mouse and viral genetic tools"
+    )
+    N_2410_VALIDATION_OF_BRA = (
+        "2410 - Validation of brain cell type enhancer AAV vectors in rats"
+    )
+    N_2412_CIRCUIT_TRACING_A = (
+        "2412 - Circuit tracing and optical physiology of mouse cortex"
+    )
+    N_2413_NEUROPHYSIOLOGY_O = (
+        "2413 - Neurophysiology of Naturalistic Learning"
+    )
+    N_2414_ELECTROPHYSIOLOGI = (
+        "2414 - Electrophysiological and optical interrogation of brain-wide"
+        " neural circuits in the mouse"
+    )
+    N_2415_OPTOPHYSIOLOGICAL = (
+        "2415 - Optophysiological analysis of brain-wide neural circuits "
+        "in the mouse"
+    )
+    N_2416_ANATOMICAL_ANALYS = (
+        "2416 - Anatomical analysis of brain-wide neural circuits in the mouse"
+    )
+    N_2417_CHARACTERIZATION = (
+        "2417 - Characterization of transcriptomic cell type activation and "
+        "their molecular adaptations that occur during psychedelic, "
+        "antidepressants, and antipsychotic drug use"
+    )
+    N_2418_IN_VITRO_SINGLE = "2418 - In Vitro Single Cell Characterization"
+    N_2427_OPEN_SCOPE_MINDS = (
+        "2427 - OpenScope Mindscope animal protocol for Optical Physiology and"
+        " Neuropixel"
+    )
+    N_2453_MOUSE_BREEDING = "2453 - Mouse Breeding"
+    N_2457_TRAINING_AND_QUAL = (
+        "2457 - Training and qualification of animal users"
+    )
+    N_2459_SPATIAL_CONNECTOM = (
+        "2459 - Spatial, connectomic and molecular characterization "
+        "of spinal cord and sympathetic nervous system"
+    )
+    N_2505_TESTING_AA_VS_IN = "2505 - Testing AAVs in Parkinson's mouse models"
+    N_2511_DISSECTING_THE_NE = (
+        "2511 - Dissecting the neural circuits of motor learning and control"
+    )
+    N_2530_DEVELOPMENT_OF_T = (
+        "2530 - Development of Transgenic Technologies & Methodologies"
+    )
+    N_2538_INTERROGATING_PRO = (
+        "2538 - Interrogating projections and gene expression of neurons"
+        " by in situ sequencing"
+    )
+    N_2547_PROTEOMIC_EXPLORA = "2547 - Proteomic exploration of cell types"
+    N_2577_IN_VITRO_BRAIN = "2577 - In Vitro Brain Stimulation"
+    N_2580_OPTIMIZATION_AND = (
+        "2580 - Optimization and validation of viral vectors"
+    )
+
+
+class LASReqpro1(Enum, metaclass=EnumMeta):
+    """Enum class for ReqPro1."""
+
+    TISSUE_COLLECTION = "Tissue Collection"
+    INDUCTION = "Induction"
+    DOSING = "Dosing"
+    RETRO_ORBITAL_INJECTION = "Retro-Orbital Injection"
+    INTRACEREBROVENTRICULAR = "Intracerebroventricular Injection"
+    BLOOD_COLLECTION = "Blood Collection"
+    CEREBROSPINAL_FLUID_COL = "Cerebrospinal Fluid Collection (CSF)"
+    OTHER = "Other"
+
+
+class LASReqpro2(Enum, metaclass=EnumMeta):
+    """Enum class for ReqPro2."""
+
+    TISSUE_COLLECTION = "Tissue Collection"
+    INDUCTION = "Induction"
+    DOSING = "Dosing"
+    RETRO_ORBITAL_INJECTION = "Retro-Orbital Injection"
+    INTRACEREBROVENTRICULAR = "Intracerebroventricular Injection"
+    BLOOD_COLLECTION = "Blood Collection"
+    CEREBROSPINAL_FLUID_COL = "Cerebrospinal Fluid Collection (CSF)"
+    OTHER = "Other"
+
+
+class LASReqpro3(Enum, metaclass=EnumMeta):
+    """Enum class for ReqPro3."""
+
+    TISSUE_COLLECTION = "Tissue Collection"
+    INDUCTION = "Induction"
+    DOSING = "Dosing"
+    RETRO_ORBITAL_INJECTION = "Retro-Orbital Injection"
+    INTRACEREBROVENTRICULAR = "Intracerebroventricular Injection"
+    BLOOD_COLLECTION = "Blood Collection"
+    CEREBROSPINAL_FLUID_COL = "Cerebrospinal Fluid Collection (CSF)"
+    OTHER = "Other"
+
+
+class LASRequeststatus2(Enum, metaclass=EnumMeta):
+    """Enum class for RequestStatus2."""
+
+    NEW = "New"
+    IN_PROGRESS = "In Progress"
+    COMPLETE = "Complete"
+    CANCELLED = "Cancelled"
+
+
+class LASRoeye1(Enum, metaclass=EnumMeta):
+    """Enum class for roEye1."""
+
+    BEHIND_EITHER = "Behind Either"
+    BEHIND_RIGHT = "Behind Right"
+    BEHIND_LEFT = "Behind Left"
+
+
+class LASRoeye2(Enum, metaclass=EnumMeta):
+    """Enum class for roEye2."""
+
+    BEHIND_EITHER = "Behind Either"
+    BEHIND_RIGHT = "Behind Right"
+    BEHIND_LEFT = "Behind Left"
+
+
+class LASRoeye3(Enum, metaclass=EnumMeta):
+    """Enum class for roEye3."""
+
+    BEHIND_EITHER = "Behind Either"
+    BEHIND_RIGHT = "Behind Right"
+    BEHIND_LEFT = "Behind Left"
+
+
+class LASRoeye4(Enum, metaclass=EnumMeta):
+    """Enum class for roEye4."""
+
+    BEHIND_EITHER = "Behind Either"
+    BEHIND_RIGHT = "Behind Right"
+    BEHIND_LEFT = "Behind Left"
+
+
+class LASRoeye5(Enum, metaclass=EnumMeta):
+    """Enum class for roEye5."""
+
+    BEHIND_EITHER = "Behind Either"
+    BEHIND_RIGHT = "Behind Right"
+    BEHIND_LEFT = "Behind Left"
+
+
+class LASRowhere(Enum, metaclass=EnumMeta):
+    """Enum class for roWhere."""
+
+    LAS_DROP_BOX_IN_VIVARIU = "LAS Drop box in Vivarium -80 freezer"
+    VIVARIUM_4C_156 = "Vivarium 4c 156"
+    OTHER_SPECIFY_BELOW = "Other (Specify below)"
+
+
+class LASTamFrequency(Enum, metaclass=EnumMeta):
+    """Enum class for TAM Frequency."""
+
+    STANDARD_5_DAY_DOSE = "Standard 5 day dose"
+    SINGLE_DOSE = "Single dose"
+    OTHER_TYPE_IN = "Other (Type in)"
+
+
+class LASTcprep(Enum, metaclass=EnumMeta):
+    """Enum class for TCPrep."""
+
+    FRESH_BRAIN_DISSECTION = "Fresh Brain Dissection (SOP AF0061)"
+    MOUSE_CARDIAC_PERFUSION = "Mouse Cardiac Perfusion (SOP AF0075)"
+    ACSF_PERFUSION = "ACSF Perfusion"
+    MOUSE_BRAIN_PERFUSION_A = (
+        "Mouse Brain Perfusion and Flash Freezing Protocol (SOP AF0138)"
+    )
+    EMBRYO_COLLECTION = "Embryo Collection"
+    MOUSE_CARDIAC_PERFUSION_2 = (
+        "Mouse Cardiac Perfusion and Brain Hemisphere Processing "
+        "for Viral Genetic Tools Pipeline (SOP AF0140)"
+    )
+    MOUSE_CARDIAC_PERFUSION_3 = "Mouse Cardiac Perfusion with Gel"
+
+
+class LASTctiss(Enum, metaclass=EnumMeta):
+    """Enum class for TCTiss."""
+
+    BRAIN = "Brain"
+    RIGHT_EYE = "Right Eye"
+    LEFT_EYE = "Left Eye"
+    EARS = "Ears"
+    SPINAL_CORD = "Spinal Cord"
+    HEART = "Heart"
+    LIVER = "Liver"
+    EMBRYO_SPECIFY_BELOW = "Embryo (Specify below)"
+    LYMPH_NODES_SPECIFY_BELO = "Lymph nodes (Specify below)"
+    SPLEEN = "Spleen"
+    KIDNEYS = "Kidneys"
+    REPRODUCTIVE_ORGAN = "Reproductive Organ"
+    EPIDIDYMIS = "Epididymis"
+    TAIL_SNIPS = "Tail Snips"
+    OTHER_TISSUE_SPECIFY_BE = "Other Tissue (Specify below)"
+
+
+class LASTmpFrequency(Enum, metaclass=EnumMeta):
+    """Enum class for TMP Frequency."""
+
+    STANDARD_3_DAY_DOSE = "Standard 3 day dose"
+    SINGLE_DOSE = "Single dose"
+    OTHER_TYPE_IN = "Other (Type-in)"
+
+
+class LASRosop(Enum, metaclass=EnumMeta):
+    """Enum class for roSOP."""
+
+    AF0131_RETRO_ORBITAL_IN = "AF0131 Retro-orbital Injection"
+    AF0139_RETRO_ORBITAL_IN = (
+        "AF0139 Retro-orbital Injection of AAV Vectors for Viral "
+        "Genetic Tools Pipeline"
+    )
+
+
+class LASRolims(Enum, metaclass=EnumMeta):
+    """Enum class for roLIMS."""
+
+    STEREOTAXIC_INJECTIONS = "Stereotaxic Injections"
+    NEW_STEREOTAXIC_INJECTI = "New Stereotaxic Injections"
+
+
+class LASWheretoobtainsubstanceIcv(Enum, metaclass=EnumMeta):
+    """Enum class for WheretoObtainsubstance(ICV)."""
+
+    LAS_BLUE_BIN_IN_VIVARIUM = "LAS blue bin in Vivarium –80 freezer"
+    OTHER_SPECIFY_BELOW = "Other (Specify below)"
+
+
+class LASSpecies(Enum, metaclass=EnumMeta):
+    """Enum class for Species."""
+
+    MOUSE = "Mouse"
+    RAT = "Rat"
 
 
 class LASReqpro4(Enum, metaclass=EnumMeta):
@@ -1512,7 +1512,7 @@ class Las2020List(BaseModel, extra="allow"):
         description=(
             "Type of tissue collection preparation"
             "(Embryo Collection currently not visible)",
-        )
+        ),
     )
     tc_tiss: Annotated[LASTctiss, WrapValidator(optional_enum)] = Field(
         default=None,
