@@ -68,7 +68,7 @@ Enum class for ProjectID.
 
 * `N_102_01_999_10_CTY__PROG` (value: `'102-01-999-10 CTY Program Admin'`)
 
-* `N_102_02_004_10_BTV__VISU` (value: `'102-02-004-10 BTV Visual NSB2023Behavior'`)
+* `N_102_02_004_10_BTV__VISU` (value: `'102-02-004-10 BTV Visual Behavior'`)
 
 * `N_102_02_012_20_BTV_BRAIN` (value: `'102-02-012-20 BTV BRAIN Viral Strategies'`)
 

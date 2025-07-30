@@ -6,7 +6,7 @@ Enum class for NSB2023Well.
 
 * `SELECT` (value: `'Select...'`)
 
-* `NO_WELL` (value: `'No NSB2023Well'`)
+* `NO_WELL` (value: `'No Well'`)
 
 * `SCIENTIFICA_CAM` (value: `'Scientifica (CAM)'`)
 

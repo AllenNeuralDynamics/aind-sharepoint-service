@@ -22,7 +22,7 @@ Enum class for NSB2023Protocol.
 
 * `N_2301__TESTING_OF_ENHANC` (value: `'2301 - Testing of enhancers and AAV gene therapy vectors'`)
 
-* `N_2304__NEUROSURGERY__BEH` (value: `'2304 - Neurosurgery & NSB2023Behavior Training NSB2023Protocol'`)
+* `N_2304__NEUROSURGERY__BEH` (value: `'2304 - Neurosurgery & Behavior Training Protocol'`)
 
 * `N_2305__IN__VIVO__BRAIN` (value: `'2305 - In Vivo Brain Stimulation'`)
 
