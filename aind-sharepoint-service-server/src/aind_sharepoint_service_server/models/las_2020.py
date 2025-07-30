@@ -34,7 +34,10 @@ class LASProtocol(Enum, metaclass=EnumMeta):
         "2304 - Neurosurgery & Behavior Training Protocol"
     )
     N_2305_IN_VIVO_BRAIN = "2305 - In Vivo Brain Stimulation"
-    N_2306_PATCH_SEQ_CHARACT = "2306 - Patch-seq characterization of mouse neurons in acute brain slices for cross-species comparison studies"
+    N_2306_PATCH_SEQ_CHARACT = (
+        "2306 - Patch-seq characterization of mouse neurons in acute brain"
+        " slices for cross-species comparison studies"
+    )
     N_2307_DISSECTING_THE_NE = (
         "2307 - Dissecting the neural circuits of adaptive control of behavior"
     )
@@ -59,29 +62,46 @@ class LASProtocol(Enum, metaclass=EnumMeta):
     N_2413_NEUROPHYSIOLOGY_O = (
         "2413 - Neurophysiology of Naturalistic Learning"
     )
-    N_2414_ELECTROPHYSIOLOGI = "2414 - Electrophysiological and optical interrogation of brain-wide neural circuits in the mouse"
-    N_2415_OPTOPHYSIOLOGICAL = "2415 - Optophysiological analysis of brain-wide neural circuits in the mouse"
+    N_2414_ELECTROPHYSIOLOGI = (
+        "2414 - Electrophysiological and optical interrogation of brain-wide"
+        " neural circuits in the mouse"
+    )
+    N_2415_OPTOPHYSIOLOGICAL = (
+        "2415 - Optophysiological analysis of brain-wide neural circuits "
+        "in the mouse"
+    )
     N_2416_ANATOMICAL_ANALYS = (
         "2416 - Anatomical analysis of brain-wide neural circuits in the mouse"
     )
-    N_2417_CHARACTERIZATION = "2417 - Characterization of transcriptomic cell type activation and their molecular adaptations that occur during psychedelic, antidepressants, and antipsychotic drug use"
+    N_2417_CHARACTERIZATION = (
+        "2417 - Characterization of transcriptomic cell type activation and "
+        "their molecular adaptations that occur during psychedelic, "
+        "antidepressants, and antipsychotic drug use"
+    )
     N_2418_IN_VITRO_SINGLE = "2418 - In Vitro Single Cell Characterization"
-    N_2427_OPEN_SCOPE_MINDS = "2427 - OpenScope Mindscope animal protocol for Optical Physiology and Neuropixel"
+    N_2427_OPEN_SCOPE_MINDS = (
+        "2427 - OpenScope Mindscope animal protocol for Optical Physiology and"
+        " Neuropixel"
+    )
     N_2453_MOUSE_BREEDING = "2453 - Mouse Breeding"
     N_2457_TRAINING_AND_QUAL = (
         "2457 - Training and qualification of animal users"
     )
-    N_2459_SPATIAL_CONNECTOM = "2459 - Spatial, connectomic and molecular characterization of spinal cord and sympathetic nervous system"
-    N_2505_TESTING_AA_VS_IN = (
-        "2505 - Testing AAVs in Parkinson's mouse models"
+    N_2459_SPATIAL_CONNECTOM = (
+        "2459 - Spatial, connectomic and molecular characterization "
+        "of spinal cord and sympathetic nervous system"
     )
+    N_2505_TESTING_AA_VS_IN = "2505 - Testing AAVs in Parkinson's mouse models"
     N_2511_DISSECTING_THE_NE = (
         "2511 - Dissecting the neural circuits of motor learning and control"
     )
     N_2530_DEVELOPMENT_OF_T = (
         "2530 - Development of Transgenic Technologies & Methodologies"
     )
-    N_2538_INTERROGATING_PRO = "2538 - Interrogating projections and gene expression of neurons by in situ sequencing"
+    N_2538_INTERROGATING_PRO = (
+        "2538 - Interrogating projections and gene expression of neurons"
+        " by in situ sequencing"
+    )
     N_2547_PROTEOMIC_EXPLORA = "2547 - Proteomic exploration of cell types"
     N_2577_IN_VITRO_BRAIN = "2577 - In Vitro Brain Stimulation"
     N_2580_OPTIMIZATION_AND = (
@@ -172,7 +192,10 @@ class LASProjectid(Enum, metaclass=EnumMeta):
     N_121_01_023_20_MSP_TEMP = (
         "121-01-023-20 MSP Templeton - Testing Theories of Consciousness"
     )
-    N_121_01_025_20_MSP_U01 = "121-01-025-20 MSP U01 Bridging Function, Connectivity, & Transcriptomics"
+    N_121_01_025_20_MSP_U01 = (
+        "121-01-025-20 MSP U01 Bridging Function, Connectivity,"
+        " & Transcriptomics"
+    )
     N_121_01_026_20_MSP_TEMP = (
         "121-01-026-20 MSP Templeton Measuring Distinct Conscious State"
     )
@@ -335,7 +358,10 @@ class LASTcprep(Enum, metaclass=EnumMeta):
         "Mouse Brain Perfusion and Flash Freezing Protocol (SOP AF0138)"
     )
     EMBRYO_COLLECTION = "Embryo Collection"
-    MOUSE_CARDIAC_PERFUSION_2 = "Mouse Cardiac Perfusion and Brain Hemisphere Processing for Viral Genetic Tools Pipeline (SOP AF0140)"
+    MOUSE_CARDIAC_PERFUSION_2 = (
+        "Mouse Cardiac Perfusion and Brain Hemisphere Processing "
+        "for Viral Genetic Tools Pipeline (SOP AF0140)"
+    )
     MOUSE_CARDIAC_PERFUSION_3 = "Mouse Cardiac Perfusion with Gel"
 
 
@@ -589,7 +615,10 @@ class LASRosop(Enum, metaclass=EnumMeta):
     """Enum class for roSOP."""
 
     AF0131_RETRO_ORBITAL_IN = "AF0131 Retro-orbital Injection"
-    AF0139_RETRO_ORBITAL_IN = "AF0139 Retro-orbital Injection of AAV Vectors for Viral Genetic Tools Pipeline"
+    AF0139_RETRO_ORBITAL_IN = (
+        "AF0139 Retro-orbital Injection of AAV Vectors for Viral "
+        "Genetic Tools Pipeline"
+    )
 
 
 class LASRolims(Enum, metaclass=EnumMeta):
@@ -1480,7 +1509,10 @@ class Las2020List(BaseModel, extra="allow"):
         default=None,
         alias="TCPrep",
         title="TCPrep",
-        description="Type of tissue collection preparation(Embryo Collection currently not visible)",
+        description=(
+            "Type of tissue collection preparation"
+            "(Embryo Collection currently not visible)",
+        )
     )
     tc_tiss: Annotated[LASTctiss, WrapValidator(optional_enum)] = Field(
         default=None,
