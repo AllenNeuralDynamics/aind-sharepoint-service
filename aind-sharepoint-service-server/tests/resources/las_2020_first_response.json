@@ -101,7 +101,16 @@
             "_ComplianceTagWrittenTime": "",
             "_ComplianceTagUserId": "",
             "AppAuthorLookupId": "9",
-            "AppEditorLookupId": "9"
+            "AppEditorLookupId": "9",
+            "AnimalsAvailableonProtocol": true,
+            "AppAuthor": null,
+            "AppEditor": null,
+            "Author": "9",
+            "DocIcon": null,
+            "_IsRecord": null,
+            "ReqAge4": "5 weeks post RO injection",
+            "ReqPro4": "Tissue Collection",
+            "Sign_x002d_off_x0020_status": null
          }
       },
       {
@@ -196,7 +205,16 @@
             "_ComplianceTagWrittenTime": "",
             "_ComplianceTagUserId": "",
             "AppAuthorLookupId": "9",
-            "AppEditorLookupId": "9"
+            "AppEditorLookupId": "9",
+            "AnimalsAvailableonProtocol": true,
+            "AppAuthor": null,
+            "AppEditor": null,
+            "Author": "9",
+            "DocIcon": null,
+            "_IsRecord": null,
+            "ReqAge4": "5 weeks post RO injection",
+            "ReqPro4": "Tissue Collection",
+            "Sign_x002d_off_x0020_status": null
          }
       }
    ]
