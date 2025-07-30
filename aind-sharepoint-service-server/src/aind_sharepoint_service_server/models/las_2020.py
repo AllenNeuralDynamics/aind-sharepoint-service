@@ -796,10 +796,10 @@ class Las2020List(BaseModel, extra="allow"):
         default=None, alias="ACSFID5", title="ACSFID5"
     )
     afternoon_pf: Optional[bool] = Field(
-        default="0", alias="AfternoonPF", title="AfternoonPF"
+        default=None, alias="AfternoonPF", title="AfternoonPF"
     )
     animals_availableon_proto: Optional[bool] = Field(
-        default="0",
+        default=None,
         alias="AnimalsAvailableonProtocol",
         title="AnimalsAvailableonProtocol",
     )
@@ -867,7 +867,7 @@ class Las2020List(BaseModel, extra="allow"):
         default=None, alias="CustomCom2", title="CustomCom2"
     )
     custpresent: Optional[bool] = Field(
-        default="0", alias="custpresent", title="custpresent"
+        default=None, alias="custpresent", title="custpresent"
     )
     delivery_location: Annotated[
         LASDeliverylocation, WrapValidator(optional_enum)
@@ -891,7 +891,7 @@ class Las2020List(BaseModel, extra="allow"):
         default=None, alias="dosevolume", title="dosevolume"
     )
     doxycycline: Optional[bool] = Field(
-        default="0", alias="Doxycycline", title="Doxycycline"
+        default=None, alias="Doxycycline", title="Doxycycline"
     )
     edit: Optional[str] = Field(default=None, alias="Edit", title="Edit")
     editor: Optional[str] = Field(
@@ -992,7 +992,7 @@ class Las2020List(BaseModel, extra="allow"):
         default=None, alias="LASComments", title="LASComments"
     )
     lims_entry: Optional[bool] = Field(
-        default="0", alias="LIMSEntry", title="LIMSEntry"
+        default=None, alias="LIMSEntry", title="LIMSEntry"
     )
     lims_project: Annotated[LASLimsproject, WrapValidator(optional_enum)] = (
         Field(default=None, alias="LIMSProject", title="LIMSProject")
@@ -1050,7 +1050,7 @@ class Las2020List(BaseModel, extra="allow"):
     n_start_date: Optional[str] = Field(
         default=None, alias="nStart_x0020_Date", title="Start Date"
     )
-    oct: Optional[bool] = Field(default="0", alias="OCT", title="OCT")
+    oct: Optional[bool] = Field(default=None, alias="OCT", title="OCT")
     post_fix: Annotated[LASPostfix, WrapValidator(optional_enum)] = Field(
         default=None, alias="PostFix", title="PostFix"
     )
@@ -1064,7 +1064,7 @@ class Las2020List(BaseModel, extra="allow"):
         default=None, alias="Protocol", title="Protocol"
     )
     qc_door_sheet: Optional[bool] = Field(
-        default="0", alias="QCDoorSheet", title="QCDoorSheet"
+        default=None, alias="QCDoorSheet", title="QCDoorSheet"
     )
     req_age1: Optional[str] = Field(
         default=None, alias="ReqAge1", title="ReqAge1"
@@ -1199,7 +1199,7 @@ class Las2020List(BaseModel, extra="allow"):
     ro_gc5d: Optional[str] = Field(
         default=None, alias="roGC5d", title="roGC5d"
     )
-    ro_ice: Optional[bool] = Field(default="0", alias="roIce", title="roIce")
+    ro_ice: Optional[bool] = Field(default=None, alias="roIce", title="roIce")
     ro_lims: Annotated[LASRolims, WrapValidator(optional_enum)] = Field(
         default=None, alias="roLIMS", title="roLIMS"
     )
@@ -1267,7 +1267,7 @@ class Las2020List(BaseModel, extra="allow"):
         default=None, alias="roSOP", title="roSOP"
     )
     ro_spin_down: Optional[bool] = Field(
-        default="0", alias="roSpinDown", title="roSpinDown"
+        default=None, alias="roSpinDown", title="roSpinDown"
     )
     ro_sub1: Optional[str] = Field(
         default=None, alias="roSub1", title="roSub1"
@@ -1498,7 +1498,7 @@ class Las2020List(BaseModel, extra="allow"):
     species: Annotated[LASSpecies, WrapValidator(optional_enum)] = Field(
         default="Mouse", alias="Species", title="Species"
     )
-    tam: Optional[bool] = Field(default="0", alias="TAM", title="TAM")
+    tam: Optional[bool] = Field(default=None, alias="TAM", title="TAM")
     tam_age: Optional[str] = Field(
         default=None, alias="TAMAge", title="TAM Age"
     )
@@ -1523,7 +1523,7 @@ class Las2020List(BaseModel, extra="allow"):
     title: Optional[str] = Field(
         default=None, alias="Title", title="Animal ID"
     )
-    tmp: Optional[bool] = Field(default="0", alias="TMP", title="TMP")
+    tmp: Optional[bool] = Field(default=None, alias="TMP", title="TMP")
     tmp_age: Optional[str] = Field(
         default=None, alias="TMPAge", title="TMP Age"
     )
