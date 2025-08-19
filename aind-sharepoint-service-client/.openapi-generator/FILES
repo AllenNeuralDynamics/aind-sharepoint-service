@@ -17,6 +17,7 @@ aind_sharepoint_service_client/models/health_check.py
 aind_sharepoint_service_client/models/http_validation_error.py
 aind_sharepoint_service_client/models/las2020_list.py
 aind_sharepoint_service_client/models/las_bctype.py
+aind_sharepoint_service_client/models/las_deliverylocation.py
 aind_sharepoint_service_client/models/las_doseroute.py
 aind_sharepoint_service_client/models/las_icvlims.py
 aind_sharepoint_service_client/models/las_icvroute1.py
@@ -33,6 +34,7 @@ aind_sharepoint_service_client/models/las_protocol.py
 aind_sharepoint_service_client/models/las_reqpro1.py
 aind_sharepoint_service_client/models/las_reqpro2.py
 aind_sharepoint_service_client/models/las_reqpro3.py
+aind_sharepoint_service_client/models/las_reqpro4.py
 aind_sharepoint_service_client/models/las_requeststatus2.py
 aind_sharepoint_service_client/models/las_roeye1.py
 aind_sharepoint_service_client/models/las_roeye2.py
@@ -41,10 +43,12 @@ aind_sharepoint_service_client/models/las_roeye4.py
 aind_sharepoint_service_client/models/las_roeye5.py
 aind_sharepoint_service_client/models/las_rolims.py
 aind_sharepoint_service_client/models/las_rosop.py
+aind_sharepoint_service_client/models/las_rowhere.py
 aind_sharepoint_service_client/models/las_species.py
 aind_sharepoint_service_client/models/las_tam_frequency.py
+aind_sharepoint_service_client/models/las_tcprep.py
+aind_sharepoint_service_client/models/las_tctiss.py
 aind_sharepoint_service_client/models/las_tmp_frequency.py
-aind_sharepoint_service_client/models/las_where_to_obtain_substance_ro.py
 aind_sharepoint_service_client/models/las_wheretoobtainsubstance_icv.py
 aind_sharepoint_service_client/models/lightcycle.py
 aind_sharepoint_service_client/models/nsb2019_after1_st_injection.py
@@ -249,6 +253,7 @@ docs/HTTPValidationError.md
 docs/HealthCheck.md
 docs/HealthcheckApi.md
 docs/LASBctype.md
+docs/LASDeliverylocation.md
 docs/LASDoseroute.md
 docs/LASIcvlims.md
 docs/LASIcvroute1.md
@@ -265,6 +270,7 @@ docs/LASProtocol.md
 docs/LASReqpro1.md
 docs/LASReqpro2.md
 docs/LASReqpro3.md
+docs/LASReqpro4.md
 docs/LASRequeststatus2.md
 docs/LASRoeye1.md
 docs/LASRoeye2.md
@@ -273,10 +279,12 @@ docs/LASRoeye4.md
 docs/LASRoeye5.md
 docs/LASRolims.md
 docs/LASRosop.md
+docs/LASRowhere.md
 docs/LASSpecies.md
 docs/LASTamFrequency.md
+docs/LASTcprep.md
+docs/LASTctiss.md
 docs/LASTmpFrequency.md
-docs/LASWhereToObtainSubstanceRo.md
 docs/LASWheretoobtainsubstanceIcv.md
 docs/Las2020List.md
 docs/Lightcycle.md
@@ -488,6 +496,7 @@ test/test_healthcheck_api.py
 test/test_http_validation_error.py
 test/test_las2020_list.py
 test/test_las_bctype.py
+test/test_las_deliverylocation.py
 test/test_las_doseroute.py
 test/test_las_icvlims.py
 test/test_las_icvroute1.py
@@ -504,6 +513,7 @@ test/test_las_protocol.py
 test/test_las_reqpro1.py
 test/test_las_reqpro2.py
 test/test_las_reqpro3.py
+test/test_las_reqpro4.py
 test/test_las_requeststatus2.py
 test/test_las_roeye1.py
 test/test_las_roeye2.py
@@ -512,10 +522,12 @@ test/test_las_roeye4.py
 test/test_las_roeye5.py
 test/test_las_rolims.py
 test/test_las_rosop.py
+test/test_las_rowhere.py
 test/test_las_species.py
 test/test_las_tam_frequency.py
+test/test_las_tcprep.py
+test/test_las_tctiss.py
 test/test_las_tmp_frequency.py
-test/test_las_where_to_obtain_substance_ro.py
 test/test_las_wheretoobtainsubstance_icv.py
 test/test_lightcycle.py
 test/test_nsb2019_after1_st_injection.py

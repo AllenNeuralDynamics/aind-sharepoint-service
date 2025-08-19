@@ -1,6 +1,6 @@
 # LASWheretoobtainsubstanceIcv
 
-Enum class for LASWheretoobtainsubstanceIcv
+Enum class for WheretoObtainsubstance(ICV).
 
 ## Enum
 

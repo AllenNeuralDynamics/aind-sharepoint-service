@@ -1,124 +1,8 @@
 # LASLimsproject
 
-Enum class for LASLimsproject
+Enum class for LIMSProject.
 
 ## Enum
-
-* `AINDDISCOVERY` (value: `'aind-discovery'`)
-
-* `AINDEPHYS` (value: `'aind-ephys'`)
-
-* `AINDMSMA` (value: `'aind-msma'`)
-
-* `AINDOPHYS` (value: `'aind-ophys'`)
-
-* `APR_OX` (value: `'APROx'`)
-
-* `A_XL_OX` (value: `'AXlOx'`)
-
-* `BA_RSEQ_GENETIC_TOOLS` (value: `'BARseq_GeneticTools'`)
-
-* `BRAINTV_VIRAL_STRATEGIES` (value: `'BraintvViralStrategies'`)
-
-* `BRAIN_STIM` (value: `'BrainStim'`)
-
-* `C200` (value: `'C200'`)
-
-* `C600` (value: `'C600'`)
-
-* `C600X` (value: `'C600x'`)
-
-* `C600_LATERAL` (value: `'C600Lateral'`)
-
-* `CELLTYPES_TRANSGENIC_CHAR` (value: `'CelltypesTransgenicCharacterizationGCaMP'`)
-
-* `CITRICACIDPILOT` (value: `'Citricacidpilot'`)
-
-* `CON9999` (value: `'CON-9999'`)
-
-* `CONC505` (value: `'CON-C505'`)
-
-* `CONCS04` (value: `'CON-CS04'`)
-
-* `DEEPSCOPE_SLM_DEVELOPMENT` (value: `'DeepscopeSLMDevelopment'`)
-
-* `DYNAMIC_ROUTING_BEHAVIOR` (value: `'DynamicRoutingBehaviorDev'`)
-
-* `DYNAMIC_ROUTING_OPTO_DEV` (value: `'DynamicRoutingOptoDev'`)
-
-* `DYNAMIC_ROUTING_SURGICAL` (value: `'DynamicRoutingSurgicalDevelopment'`)
-
-* `DYNAMIC_ROUTING_TASK1_PRO` (value: `'DynamicRoutingTask1Production'`)
-
-* `DYNAMIC_ROUTING_TASK2_PRO` (value: `'DynamicRoutingTask2Production'`)
-
-* `DYNAMIC_ROUTING_ULTRA_OPT` (value: `'DynamicRoutingUltraOptotaggingBehavior'`)
-
-* `H120` (value: `'H120'`)
-
-* `H200` (value: `'H200'`)
-
-* `H301` (value: `'H301'`)
-
-* `H301T` (value: `'H301t'`)
-
-* `H301_X` (value: `'H301X'`)
-
-* `H501_X` (value: `'H501X'`)
-
-* `H504` (value: `'H504'`)
-
-* `IS_IX` (value: `'ISIx'`)
-
-* `LARGE_SCALE_VOLTAGE` (value: `'LargeScaleVoltage'`)
-
-* `LEARNINGM_FISH_DEVELOPMEN` (value: `'LearningmFISHDevelopment'`)
-
-* `LEARNINGM_FISH_TASK1_A` (value: `'LearningmFISHTask1A'`)
-
-* `M301T` (value: `'M301t'`)
-
-* `MESOSCOPE_DEVELOPMENT` (value: `'MesoscopeDevelopment'`)
-
-* `MINDSCOPE_TRANSGENIC_CHAR` (value: `'MindscopeTransgenicCharacterizationGCaMP'`)
-
-* `MOUSE_BRAIN_CELL_ATLAS_CH` (value: `'MouseBrainCellAtlasCharacterizationPilot'`)
-
-* `MOUSE_BRAIN_CELL_ATLAS_TR` (value: `'MouseBrainCellAtlasTranssynaptic'`)
-
-* `MOUSE_BRAIN_CELL_ATLA_001` (value: `'MouseBrainCellAtlasCharacterizatlon'`)
-
-* `MOUSE_FULL_MORPHOLOGY_FMO` (value: `'MouseFullMorphologyFmost'`)
-
-* `MOUSE_GENETIC_TOOLS_PROJE` (value: `'MouseGeneticToolsProjectionMapping'`)
-
-* `MULTISCOPE_SIGNAL_NOISE` (value: `'MultiscopeSignalNoise'`)
-
-* `M_FISH_PLATFORM_DEVELOPME` (value: `'mFishPlatformDevelopment'`)
-
-* `M_IVSCCMET` (value: `'mIVSCC-MET'`)
-
-* `M_IVSCCME_TX` (value: `'mIVSCC-METx'`)
-
-* `M_MPATC_HX` (value: `'mMPATCHx'`)
-
-* `M_M_PATCHX` (value: `'mMPatchx'`)
-
-* `M_VISPTAXLO` (value: `'MVisp-taxl.o'`)
-
-* `N200` (value: `'N200'`)
-
-* `N310` (value: `'N310'`)
-
-* `NEUROPIXEL_VISUAL_BEHAVIO` (value: `'NeuropixelVisualBehavior'`)
-
-* `NEUROPIXEL_VISUAL_BEH_001` (value: `'NeuropixelVisualBehaviorDevelopment'`)
-
-* `NEUROPIXEL_VISUAL_CODING` (value: `'NeuropixelVisualCoding'`)
-
-* `N_0200` (value: `'0200'`)
-
-* `N_0309` (value: `'0309'`)
 
 * `N_0310` (value: `'0310'`)
 
@@ -254,9 +138,125 @@ Enum class for LASLimsproject
 
 * `N_0388` (value: `'0388'`)
 
+* `AIND_MSMA` (value: `'aind-msma'`)
+
+* `AIND_DISCOVERY` (value: `'aind-discovery'`)
+
+* `AIND_EPHYS` (value: `'aind-ephys'`)
+
+* `AIND_OPHYS` (value: `'aind-ophys'`)
+
+* `APR_OX` (value: `'APROx'`)
+
+* `A_XL_OX` (value: `'AXlOx'`)
+
+* `BA_RSEQ_GENETIC_TOOLS` (value: `'BARseq_GeneticTools'`)
+
+* `BRAIN_STIM` (value: `'BrainStim'`)
+
+* `BRAINTV_VIRAL_STRATEGIES` (value: `'BraintvViralStrategies'`)
+
+* `C200` (value: `'C200'`)
+
+* `C600` (value: `'C600'`)
+
+* `C600_LATERAL` (value: `'C600Lateral'`)
+
+* `C600X` (value: `'C600x'`)
+
+* `CELLTYPES_TRANSGENIC_CHAR` (value: `'CelltypesTransgenicCharacterizationGCaMP'`)
+
+* `CITRICACIDPILOT` (value: `'Citricacidpilot'`)
+
+* `CON_9999` (value: `'CON-9999'`)
+
+* `CON_C505` (value: `'CON-C505'`)
+
+* `CON_CS04` (value: `'CON-CS04'`)
+
+* `DEEPSCOPE_SLM_DEVELOPMENT` (value: `'DeepscopeSLMDevelopment'`)
+
+* `DYNAMIC_ROUTING_BEHAVIOR` (value: `'DynamicRoutingBehaviorDev'`)
+
+* `DYNAMIC_ROUTING_OPTO_DEV` (value: `'DynamicRoutingOptoDev'`)
+
+* `DYNAMIC_ROUTING_SURGICAL` (value: `'DynamicRoutingSurgicalDevelopment'`)
+
+* `DYNAMIC_ROUTING_TASK1_PRO` (value: `'DynamicRoutingTask1Production'`)
+
+* `DYNAMIC_ROUTING_TASK2_PRO` (value: `'DynamicRoutingTask2Production'`)
+
+* `DYNAMIC_ROUTING_ULTRA_OPT` (value: `'DynamicRoutingUltraOptotaggingBehavior'`)
+
+* `H120` (value: `'H120'`)
+
+* `H200` (value: `'H200'`)
+
+* `H301` (value: `'H301'`)
+
+* `H301T` (value: `'H301t'`)
+
+* `H301_X` (value: `'H301X'`)
+
+* `H501_X` (value: `'H501X'`)
+
+* `H504` (value: `'H504'`)
+
+* `IS_IX` (value: `'ISIx'`)
+
+* `LARGE_SCALE_VOLTAGE` (value: `'LargeScaleVoltage'`)
+
+* `LEARNINGM_FISH_DEVELOPMEN` (value: `'LearningmFISHDevelopment'`)
+
+* `LEARNINGM_FISH_TASK1_A` (value: `'LearningmFISHTask1A'`)
+
+* `M301T` (value: `'M301t'`)
+
+* `MESOSCOPE_DEVELOPMENT` (value: `'MesoscopeDevelopment'`)
+
+* `METHDEV_PECT_PROTEOMICS` (value: `'Methdev_PECT_Proteomics'`)
+
+* `M_FISH_PLATFORM_DEVELOPME` (value: `'mFishPlatformDevelopment'`)
+
+* `MINDSCOPE_TRANSGENIC_CHAR` (value: `'MindscopeTransgenicCharacterizationGCaMP'`)
+
+* `M_IVSCC_MET` (value: `'mIVSCC-MET'`)
+
+* `M_IVSCC_ME_TX` (value: `'mIVSCC-METx'`)
+
+* `M_IVSCC_MET_LINK_AIBS` (value: `'mIVSCC-MET-Link_AIBS'`)
+
+* `M_M_PATCHX` (value: `'mMPatchx'`)
+
+* `M_MPATC_HX` (value: `'mMPATCHx'`)
+
+* `MOUSE_BRAIN_CELL_ATLAS_CH` (value: `'MouseBrainCellAtlasCharacterizationPilot'`)
+
+* `MOUSE_BRAIN_CELL_ATLAS_CH_2` (value: `'MouseBrainCellAtlasCharacterizatlon'`)
+
+* `MOUSE_BRAIN_CELL_ATLAS_TR` (value: `'MouseBrainCellAtlasTranssynaptic'`)
+
+* `MOUSE_FULL_MORPHOLOGY_FMO` (value: `'MouseFullMorphologyFmost'`)
+
+* `MOUSE_GENETIC_TOOLS_PROJE` (value: `'MouseGeneticToolsProjectionMapping'`)
+
+* `M_VISP_TAXL_O` (value: `'MVisp-taxl.o'`)
+
+* `MULTISCOPE_SIGNAL_NOISE` (value: `'MultiscopeSignalNoise'`)
+
+* `N200` (value: `'N200'`)
+
+* `N310` (value: `'N310'`)
+
+* `NEUROPIXEL_VISUAL_BEHAVIO` (value: `'NeuropixelVisualBehavior'`)
+
+* `NEUROPIXEL_VISUAL_BEHAVIO_2` (value: `'NeuropixelVisualBehaviorDevelopment'`)
+
+* `NEUROPIXEL_VISUAL_CODING` (value: `'NeuropixelVisualCoding'`)
+
 * `OLVSX` (value: `'OLVSX'`)
 
-* `OM_FISHRO_BINJECTIONVIRUS` (value: `'omFISHROBinjectionviruspilot'`)
+* `OM_FIS_HCOREGISTRATIONPIL` (value: `'omFISHcoregistrationpilot'`)
 
 * `OM_FISH_CUX2_MESO` (value: `'omFISHCux2Meso'`)
 
@@ -268,19 +268,27 @@ Enum class for LASLimsproject
 
 * `OM_FISH_RORB_PILOT` (value: `'omFISHRorbPilot'`)
 
+* `OM_FISHRO_BINJECTIONVIRUS` (value: `'omFISHROBinjectionviruspilot'`)
+
 * `OM_FISH_SST_MESO` (value: `'omFISHSstMeso'`)
 
 * `OM_FISH_VIP_MESO` (value: `'omFISHVipMeso'`)
 
-* `OM_FIS_HCOREGISTRATIONPIL` (value: `'omFISHcoregistrationpilot'`)
-
-* `OPENSCOPELNJECTION_PILOT` (value: `'OpenscopelnjectionPilot'`)
+* `OPEN_SCOPE_DENDRITE_COUPL` (value: `'OpenScopeDendriteCoupling'`)
 
 * `OPENSCOPE_DEVELOPMENT` (value: `'OpenscopeDevelopment'`)
+
+* `OPEN_SCOPE_ILLUSION` (value: `'OpenScopeIllusion'`)
+
+* `OPEN_SCOPE_GLOBAL_LOCAL_O` (value: `'OpenScopeGlobalLocalOddball'`)
 
 * `OPENSCOPE_GAMMA_PILOT` (value: `'OpenscopeGammaPilot'`)
 
 * `OPENSCOPE_GAMMA_PRODUCTLO` (value: `'OpenscopeGammaProductlon'`)
+
+* `OPENSCOPELNJECTION_PILOT` (value: `'OpenscopelnjectionPilot'`)
+
+* `OPEN_SCOPE_LOOP` (value: `'OpenScopeLoop'`)
 
 * `OPENSCOPE_MOTION_PLLOT` (value: `'OpenscopeMotionPllot'`)
 
@@ -290,13 +298,7 @@ Enum class for LASLimsproject
 
 * `OPENSCOPE_MULTIPLEX_PRODU` (value: `'OpenscopeMultiplexProduction'`)
 
-* `OPEN_SCOPE_DENDRITE_COUPL` (value: `'OpenScopeDendriteCoupling'`)
-
-* `OPEN_SCOPE_GLOBAL_LOCAL_O` (value: `'OpenScopeGlobalLocalOddball'`)
-
-* `OPEN_SCOPE_ILLUSION` (value: `'OpenScopeIllusion'`)
-
-* `OPEN_SCOPE_LOOP` (value: `'OpenScopeLoop'`)
+* `OPEN_SCOPE_P3` (value: `'OpenScopeP3'`)
 
 * `OPEN_SCOPE_PSYCODE` (value: `'OpenScopePsycode'`)
 
@@ -305,6 +307,8 @@ Enum class for LASLimsproject
 * `OPEN_SCOPE_TEMPORAL_BARCO` (value: `'OpenScopeTemporalBarcode'`)
 
 * `OPEN_SCOPE_TEXTURE` (value: `'OpenScopeTexture'`)
+
+* `OPEN_SCOPE_V2` (value: `'OpenScopeV2'`)
 
 * `OPEN_SCOPE_VISION2_HIPPOC` (value: `'OpenScopeVision2Hippocampus'`)
 
@@ -338,11 +342,11 @@ Enum class for LASLimsproject
 
 * `T601_X` (value: `'T601X'`)
 
+* `TCYTX` (value: `'TCYTX'`)
+
 * `TASK_TRAINED_NETWORKS_MUL` (value: `'TaskTrainedNetworksMultiscope'`)
 
 * `TASK_TRAINED_NETWORKS_NEU` (value: `'TaskTrainedNetworksNeuropixel'`)
-
-* `TCYTX` (value: `'TCYTX'`)
 
 * `TEMPLETON_PSYCHEDELICS` (value: `'TempletonPsychedelics'`)
 
@@ -358,6 +362,12 @@ Enum class for LASLimsproject
 
 * `VARIABILITY_SPONTANEOUS` (value: `'VariabilitySpontaneous'`)
 
+* `VGT_102_01_064_10_CTY_GE` (value: `'VGT_102-01-064-10 CTY Genetic Tools'`)
+
+* `VI_DEEP_DIVE_EM_VOLUME` (value: `'VIDeepDiveEMVolume'`)
+
+* `VI_DEEPDLVE_DEEPSCOPE_PIE` (value: `'VIDeepdlveDeepscopePiezo'`)
+
 * `VIP_AXONAL_V1_PHASE1` (value: `'VipAxonalV1Phase1'`)
 
 * `VIP_SOMATIC_V1_MESO` (value: `'VIPSomaticV1Meso'`)
@@ -372,15 +382,11 @@ Enum class for LASLimsproject
 
 * `VISUAL_BEHAVIOR_MULTISCOP` (value: `'VisualBehaviorMultiscope'`)
 
-* `VISUAL_BEHAVIOR_MULTI_001` (value: `'VisualBehaviorMultiscope4areasx2d'`)
-
-* `VISUAL_BEHAVIOR_TASK1_B` (value: `'VisualBehaviorTask1B'`)
+* `VISUAL_BEHAVIOR_MULTISCOP_2` (value: `'VisualBehaviorMultiscope4areasx2d'`)
 
 * `VISUAL_BEHAV_IOR_MULTISCO` (value: `'VisualBehavIorMultiscopeTask1G'`)
 
-* `VI_DEEPDLVE_DEEPSCOPE_PIE` (value: `'VIDeepdlveDeepscopePiezo'`)
-
-* `VI_DEEP_DIVE_EM_VOLUME` (value: `'VIDeepDiveEMVolume'`)
+* `VISUAL_BEHAVIOR_TASK1_B` (value: `'VisualBehaviorTask1B'`)
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

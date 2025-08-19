@@ -1,12 +1,12 @@
 # LASIcvroute5
 
-Enum class for LASIcvroute5
+Enum class for icvRoute5.
 
 ## Enum
 
-* `ANY_UNILATERAL` (value: `'Any, Unilateral'`)
-
 * `BILATERAL` (value: `'Bilateral'`)
+
+* `ANY_UNILATERAL` (value: `'Any, Unilateral'`)
 
 * `LEFT_UNILATERAL` (value: `'Left, Unilateral'`)
 

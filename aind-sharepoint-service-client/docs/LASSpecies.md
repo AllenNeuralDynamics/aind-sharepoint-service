@@ -1,6 +1,6 @@
 # LASSpecies
 
-Enum class for LASSpecies
+Enum class for Species.
 
 ## Enum
 

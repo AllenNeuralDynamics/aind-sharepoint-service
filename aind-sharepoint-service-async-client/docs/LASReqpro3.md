@@ -1,24 +1,24 @@
 # LASReqpro3
 
-Enum class for LASReqpro3
+Enum class for ReqPro3.
 
 ## Enum
 
-* `BLOOD_COLLECTION` (value: `'Blood Collection'`)
-
-* `CEREBROSPINAL_FLUID_COLLE` (value: `'Cerebrospinal Fluid Collection (CSF)'`)
-
-* `DOSING` (value: `'Dosing'`)
+* `TISSUE_COLLECTION` (value: `'Tissue Collection'`)
 
 * `INDUCTION` (value: `'Induction'`)
 
-* `INTRACEREBROVENTRICULAR_I` (value: `'Intracerebroventricular Injection'`)
-
-* `OTHER` (value: `'Other'`)
+* `DOSING` (value: `'Dosing'`)
 
 * `RETRO_ORBITAL_INJECTION` (value: `'Retro-Orbital Injection'`)
 
-* `TISSUE_COLLECTION` (value: `'Tissue Collection'`)
+* `INTRACEREBROVENTRICULAR` (value: `'Intracerebroventricular Injection'`)
+
+* `BLOOD_COLLECTION` (value: `'Blood Collection'`)
+
+* `CEREBROSPINAL_FLUID_COL` (value: `'Cerebrospinal Fluid Collection (CSF)'`)
+
+* `OTHER` (value: `'Other'`)
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

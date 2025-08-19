@@ -1,16 +1,16 @@
 # LASRequeststatus2
 
-Enum class for LASRequeststatus2
+Enum class for RequestStatus2.
 
 ## Enum
 
-* `CANCELLED` (value: `'Cancelled'`)
-
-* `COMPLETE` (value: `'Complete'`)
+* `NEW` (value: `'New'`)
 
 * `IN_PROGRESS` (value: `'In Progress'`)
 
-* `NEW` (value: `'New'`)
+* `COMPLETE` (value: `'Complete'`)
+
+* `CANCELLED` (value: `'Cancelled'`)
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,12 +1,12 @@
 # LASBctype
 
-Enum class for LASBctype
+Enum class for BCType.
 
 ## Enum
 
-* `SUBMANDIBULAR` (value: `'Submandibular'`)
-
 * `SUBMANDIBULAR_IMMUNOLOGY` (value: `'Submandibular - Immunology'`)
+
+* `SUBMANDIBULAR` (value: `'Submandibular'`)
 
 * `TERMINAL` (value: `'Terminal'`)
 

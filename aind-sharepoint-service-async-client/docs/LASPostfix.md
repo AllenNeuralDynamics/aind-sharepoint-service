@@ -1,34 +1,32 @@
 # LASPostfix
 
-Enum class for LASPostfix
+Enum class for PostFix.
 
 ## Enum
 
-* `NUCLEASEFREE_1X_PBS_OM_FI` (value: `'Nuclease-free 1xPBS (omFISH)'`)
+* `N_30_SUCROSE` (value: `'30% Sucrose'`)
 
-* `NUCLEASEFREE_30_SUCROSE` (value: `'Nuclease-free 30% Sucrose'`)
-
-* `NUCLEASEFREE_30_SUCROSEFO` (value: `'Nuclease-free 30% Sucrose(FOIL)'`)
-
-* `N_10_SUCROSE` (value: `'10% Sucrose'`)
-
-* `N_10_SUCROSE_TO_30_SUCROS` (value: `'10% Sucrose to 30% Sucrose'`)
+* `N_30_SUCROSE_FOIL_WRAPPE` (value: `'30% Sucrose (foil-wrapped tube)'`)
 
 * `N_1X_PBS` (value: `'1xPBS'`)
 
-* `N_1X_PBS_001_AZIDE` (value: `'1xPBS+ 0.01%Azide'`)
+* `N_1X_PBS_FOIL_WRAPPED_TUB` (value: `'1xPBS (foil-wrapped tube)'`)
 
-* `N_1X_PBS_001_AZIDE_5M_L_T` (value: `'1xPBS+ 0.01%Azide (5mL tubes)'`)
+* `N_1X_PBS_0_01_AZIDE` (value: `'1xPBS+ 0.01%Azide'`)
 
-* `N_1X_PBS_001_AZIDE_FOILWR` (value: `'1xPBS+ 0.01%Azide (foil-wrapped tube)'`)
+* `N_1X_PBS_0_01_AZIDE_5M_L` (value: `'1xPBS+ 0.01%Azide (5mL tubes)'`)
 
-* `N_1X_PBS_FOILWRAPPED_TUBE` (value: `'1xPBS (foil-wrapped tube)'`)
+* `N_1X_PBS_0_01_AZIDE_FOIL` (value: `'1xPBS+ 0.01%Azide (foil-wrapped tube)'`)
 
-* `N_30_SUCROSE` (value: `'30% Sucrose'`)
+* `N_4_PFA_TO_1X_PBS` (value: `'4%PFA to 1xPBS'`)
 
-* `N_30_SUCROSE_FOILWRAPPED` (value: `'30% Sucrose (foil-wrapped tube)'`)
+* `NUCLEASE_FREE_1X_PBS_OM_F` (value: `'Nuclease-free 1xPBS (omFISH)'`)
 
-* `N_4PFA_TO_1X_PBS` (value: `'4%PFA to 1xPBS'`)
+* `NUCLEASE_FREE_30_SUCROSE` (value: `'Nuclease-free 30% Sucrose'`)
+
+* `NUCLEASE_FREE_30_SUCROSE_2` (value: `'Nuclease-free 30% Sucrose(FOIL)'`)
+
+* `DPBS_NUCLEASE_FREE` (value: `'DPBS(Nuclease-free)'`)
 
 * `OTHER_SPECIFY_BELOW` (value: `'Other (Specify below)'`)
 

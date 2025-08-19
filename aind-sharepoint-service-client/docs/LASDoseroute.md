@@ -1,6 +1,6 @@
 # LASDoseroute
 
-Enum class for LASDoseroute
+Enum class for doseRoute.
 
 ## Enum
 
