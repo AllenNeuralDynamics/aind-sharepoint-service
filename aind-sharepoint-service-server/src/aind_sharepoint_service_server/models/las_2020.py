@@ -603,6 +603,19 @@ class LASReqpro3(Enum, metaclass=EnumMeta):
     OTHER = "Other"
 
 
+class LASReqpro4(Enum, metaclass=EnumMeta):
+    """Enum class for ReqPro4."""
+
+    TISSUE_COLLECTION = "Tissue Collection"
+    INDUCTION = "Induction"
+    DOSING = "Dosing"
+    RETRO_ORBITAL_INJECTION = "Retro-Orbital Injection"
+    INTRACEREBROVENTRICULAR = "Intracerebroventricular Injection"
+    BLOOD_COLLECTION = "Blood Collection"
+    CEREBROSPINAL_FLUID_COL = "Cerebrospinal Fluid Collection (CSF)"
+    OTHER = "Other"
+
+
 class LASRequeststatus2(Enum, metaclass=EnumMeta):
     """Enum class for RequestStatus2."""
 
@@ -652,12 +665,36 @@ class LASRoeye5(Enum, metaclass=EnumMeta):
     BEHIND_LEFT = "Behind Left"
 
 
+class LASRolims(Enum, metaclass=EnumMeta):
+    """Enum class for roLIMS."""
+
+    STEREOTAXIC_INJECTIONS = "Stereotaxic Injections"
+    NEW_STEREOTAXIC_INJECTI = "New Stereotaxic Injections"
+
+
+class LASRosop(Enum, metaclass=EnumMeta):
+    """Enum class for roSOP."""
+
+    AF0131_RETRO_ORBITAL_IN = "AF0131 Retro-orbital Injection"
+    AF0139_RETRO_ORBITAL_IN = (
+        "AF0139 Retro-orbital Injection of AAV Vectors for Viral "
+        "Genetic Tools Pipeline"
+    )
+
+
 class LASRowhere(Enum, metaclass=EnumMeta):
     """Enum class for roWhere."""
 
     LAS_DROP_BOX_IN_VIVARIU = "LAS Drop box in Vivarium -80 freezer"
     VIVARIUM_4C_156 = "Vivarium 4c 156"
     OTHER_SPECIFY_BELOW = "Other (Specify below)"
+
+
+class LASSpecies(Enum, metaclass=EnumMeta):
+    """Enum class for Species."""
+
+    MOUSE = "Mouse"
+    RAT = "Rat"
 
 
 class LASTamFrequency(Enum, metaclass=EnumMeta):
@@ -713,48 +750,11 @@ class LASTmpFrequency(Enum, metaclass=EnumMeta):
     OTHER_TYPE_IN = "Other (Type-in)"
 
 
-class LASRosop(Enum, metaclass=EnumMeta):
-    """Enum class for roSOP."""
-
-    AF0131_RETRO_ORBITAL_IN = "AF0131 Retro-orbital Injection"
-    AF0139_RETRO_ORBITAL_IN = (
-        "AF0139 Retro-orbital Injection of AAV Vectors for Viral "
-        "Genetic Tools Pipeline"
-    )
-
-
-class LASRolims(Enum, metaclass=EnumMeta):
-    """Enum class for roLIMS."""
-
-    STEREOTAXIC_INJECTIONS = "Stereotaxic Injections"
-    NEW_STEREOTAXIC_INJECTI = "New Stereotaxic Injections"
-
-
 class LASWheretoobtainsubstanceIcv(Enum, metaclass=EnumMeta):
     """Enum class for WheretoObtainsubstance(ICV)."""
 
     LAS_BLUE_BIN_IN_VIVARIUM = "LAS blue bin in Vivarium –80 freezer"
     OTHER_SPECIFY_BELOW = "Other (Specify below)"
-
-
-class LASSpecies(Enum, metaclass=EnumMeta):
-    """Enum class for Species."""
-
-    MOUSE = "Mouse"
-    RAT = "Rat"
-
-
-class LASReqpro4(Enum, metaclass=EnumMeta):
-    """Enum class for ReqPro4."""
-
-    TISSUE_COLLECTION = "Tissue Collection"
-    INDUCTION = "Induction"
-    DOSING = "Dosing"
-    RETRO_ORBITAL_INJECTION = "Retro-Orbital Injection"
-    INTRACEREBROVENTRICULAR = "Intracerebroventricular Injection"
-    BLOOD_COLLECTION = "Blood Collection"
-    CEREBROSPINAL_FLUID_COL = "Cerebrospinal Fluid Collection (CSF)"
-    OTHER = "Other"
 
 
 class Las2020List(BaseModel, extra="allow"):
@@ -1510,8 +1510,8 @@ class Las2020List(BaseModel, extra="allow"):
         alias="TCPrep",
         title="TCPrep",
         description=(
-            "Type of tissue collection preparation"
-            "(Embryo Collection currently not visible)",
+            "Type of tissue collection preparation "
+            "(Embryo Collection currently not visible)"
         ),
     )
     tc_tiss: Annotated[LASTctiss, WrapValidator(optional_enum)] = Field(
