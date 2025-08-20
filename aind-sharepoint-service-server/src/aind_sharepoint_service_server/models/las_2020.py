@@ -2,7 +2,7 @@
 
 from datetime import datetime
 from enum import Enum, EnumMeta
-from typing import Annotated, Optional
+from typing import Annotated, Optional, List
 
 from pydantic import (
     BaseModel,
@@ -1505,7 +1505,7 @@ class Las2020List(BaseModel, extra="allow"):
     tam_freq: Annotated[LASTamFrequency, WrapValidator(optional_enum)] = Field(
         default=None, alias="TAMFreq", title="TAM Frequency"
     )
-    tc_prep: Annotated[LASTcprep, WrapValidator(optional_enum)] = Field(
+    tc_prep: Optional[List[LASTcprep]] = Field(
         default=None,
         alias="TCPrep",
         title="TCPrep",
@@ -1514,7 +1514,7 @@ class Las2020List(BaseModel, extra="allow"):
             "(Embryo Collection currently not visible)"
         ),
     )
-    tc_tiss: Annotated[LASTctiss, WrapValidator(optional_enum)] = Field(
+    tc_tiss: Optional[List[LASTctiss]] = Field(
         default=None,
         alias="TCTiss",
         title="TCTiss",
