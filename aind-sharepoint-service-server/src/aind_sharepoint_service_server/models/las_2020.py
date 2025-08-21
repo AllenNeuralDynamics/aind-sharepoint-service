@@ -973,19 +973,19 @@ class Las2020List(BaseModel, extra="allow"):
     l_ta_id5: Optional[str] = Field(
         default=None, alias="LTaID5", title="LTaID5"
     )
-    l_tdate1: Optional[str] = Field(
+    l_tdate1: Optional[datetime] = Field(
         default=None, alias="LTdate1", title="LTdate1"
     )
-    l_tdate2: Optional[str] = Field(
+    l_tdate2: Optional[datetime] = Field(
         default=None, alias="LTdate2", title="LTdate2"
     )
-    l_tdate3: Optional[str] = Field(
+    l_tdate3: Optional[datetime] = Field(
         default=None, alias="LTdate3", title="LTdate3"
     )
-    l_tdate4: Optional[str] = Field(
+    l_tdate4: Optional[datetime] = Field(
         default=None, alias="LTdate4", title="LTdate4"
     )
-    l_tdate5: Optional[str] = Field(
+    l_tdate5: Optional[datetime] = Field(
         default=None, alias="LTdate5", title="LTdate5"
     )
     las_comments: Optional[str] = Field(
@@ -1129,7 +1129,7 @@ class Las2020List(BaseModel, extra="allow"):
         default=None, alias="roComment", title="roComment"
     )
     ro_discard: Optional[bool] = Field(
-        default="1",
+        default=None,
         alias="roDiscard",
         title="roDiscard",
         description="Discard remaining substance after dose?",
