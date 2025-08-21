@@ -973,19 +973,19 @@ class Las2020List(BaseModel, extra="allow"):
     l_ta_id5: Optional[str] = Field(
         default=None, alias="LTaID5", title="LTaID5"
     )
-    l_tdate1: Optional[str] = Field(
+    l_tdate1: Optional[datetime] = Field(
         default=None, alias="LTdate1", title="LTdate1"
     )
-    l_tdate2: Optional[str] = Field(
+    l_tdate2: Optional[datetime] = Field(
         default=None, alias="LTdate2", title="LTdate2"
     )
-    l_tdate3: Optional[str] = Field(
+    l_tdate3: Optional[datetime] = Field(
         default=None, alias="LTdate3", title="LTdate3"
     )
-    l_tdate4: Optional[str] = Field(
+    l_tdate4: Optional[datetime] = Field(
         default=None, alias="LTdate4", title="LTdate4"
     )
-    l_tdate5: Optional[str] = Field(
+    l_tdate5: Optional[datetime] = Field(
         default=None, alias="LTdate5", title="LTdate5"
     )
     las_comments: Optional[str] = Field(
@@ -1047,7 +1047,7 @@ class Las2020List(BaseModel, extra="allow"):
     n_roid5: Optional[str] = Field(
         default=None, alias="nROID5", title="nROID5"
     )
-    n_start_date: Optional[str] = Field(
+    n_start_date: Optional[datetime] = Field(
         default=None, alias="nStart_x0020_Date", title="Start Date"
     )
     oct: Optional[bool] = Field(default=None, alias="OCT", title="OCT")
@@ -1090,16 +1090,16 @@ class Las2020List(BaseModel, extra="allow"):
     req_pro4: Annotated[LASReqpro4, WrapValidator(optional_enum)] = Field(
         default=None, alias="ReqPro4", title="ReqPro4"
     )
-    reqdate1: Optional[str] = Field(
+    reqdate1: Optional[datetime] = Field(
         default=None, alias="Reqdate1", title="Reqdate1"
     )
-    reqdate2: Optional[str] = Field(
+    reqdate2: Optional[datetime] = Field(
         default=None, alias="Reqdate2", title="Reqdate2"
     )
-    reqdate3: Optional[str] = Field(
+    reqdate3: Optional[datetime] = Field(
         default=None, alias="Reqdate3", title="Reqdate3"
     )
-    reqdate4: Optional[str] = Field(
+    reqdate4: Optional[datetime] = Field(
         default=None, alias="Reqdate4", title="Reqdate4"
     )
     request_status2: Annotated[
@@ -1129,7 +1129,7 @@ class Las2020List(BaseModel, extra="allow"):
         default=None, alias="roComment", title="roComment"
     )
     ro_discard: Optional[bool] = Field(
-        default="1",
+        default=None,
         alias="roDiscard",
         title="roDiscard",
         description="Discard remaining substance after dose?",
