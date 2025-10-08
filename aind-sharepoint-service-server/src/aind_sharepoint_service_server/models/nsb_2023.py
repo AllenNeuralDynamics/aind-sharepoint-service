@@ -2,7 +2,7 @@
 
 from datetime import datetime
 from enum import Enum, EnumMeta
-from typing import Annotated, Optional
+from typing import Annotated, List, Optional
 
 from pydantic import BaseModel, Field, WrapValidator
 
@@ -5009,9 +5009,7 @@ class NSB2023List(BaseModel, extra="allow"):
         alias="Burr_x0020_1_x0020_Injectable_x0",
         title="Burr 1 Injectable Material 1",
     )
-    burr_1_intended: Annotated[
-        NSB2023Burr1IntendedCcfTarget, WrapValidator(optional_enum)
-    ] = Field(
+    burr_1_intended: Optional[List[NSB2023Burr1IntendedCcfTarget]] = Field(
         default=None,
         alias="Burr_x0020_1_x0020_Intended_x002",
         title="Burr 1 Intended CCF Target",
@@ -5109,9 +5107,7 @@ class NSB2023List(BaseModel, extra="allow"):
         alias="Burr_x0020_2_x0020_Injectable_x0",
         title="Burr 2 Injectable Material 1",
     )
-    burr_2_intended: Annotated[
-        NSB2023Burr2IntendedCcfTarget, WrapValidator(optional_enum)
-    ] = Field(
+    burr_2_intended: Optional[List[NSB2023Burr2IntendedCcfTarget]] = Field(
         default=None,
         alias="Burr_x0020_2_x0020_Intended_x002",
         title="Burr 2 Intended CCF Target",
@@ -5218,9 +5214,7 @@ class NSB2023List(BaseModel, extra="allow"):
         alias="Burr_x0020_3_x0020_Injectable_x0",
         title="Burr 3 Injectable Material 1",
     )
-    burr_3_intended: Annotated[
-        NSB2023Burr3IntendedCcfTarget, WrapValidator(optional_enum)
-    ] = Field(
+    burr_3_intended: Optional[List[NSB2023Burr3IntendedCcfTarget]] = Field(
         default=None,
         alias="Burr_x0020_3_x0020_Intended_x002",
         title="Burr 3 Intended CCF Target",
@@ -5320,9 +5314,7 @@ class NSB2023List(BaseModel, extra="allow"):
         alias="Burr_x0020_4_x0020_Injectable_x0",
         title="Burr 4 Injectable Material 1",
     )
-    burr_4_intended: Annotated[
-        NSB2023Burr4IntendedCcfTarget, WrapValidator(optional_enum)
-    ] = Field(
+    burr_4_intended: Optional[List[NSB2023Burr4IntendedCcfTarget]] = Field(
         default=None,
         alias="Burr_x0020_4_x0020_Intended_x002",
         title="Burr 4 Intended CCF Target",
@@ -5422,9 +5414,7 @@ class NSB2023List(BaseModel, extra="allow"):
         alias="Burr_x0020_5_x0020_Injectable_x0",
         title="Burr 5 Injectable Material 1",
     )
-    burr_5_intended: Annotated[
-        NSB2023Burr5IntendedCcfTarget, WrapValidator(optional_enum)
-    ] = Field(
+    burr_5_intended: Optional[List[NSB2023Burr5IntendedCcfTarget]] = Field(
         default=None,
         alias="Burr_x0020_5_x0020_Intended_x002",
         title="Burr 5 Intended CCF Target",
@@ -5535,9 +5525,7 @@ class NSB2023List(BaseModel, extra="allow"):
         alias="Burr_x0020_6_x0020_Injectable_x0",
         title="Burr 6 Injectable Material 1",
     )
-    burr_6_intended: Annotated[
-        NSB2023Burr6IntendedCcfTarget, WrapValidator(optional_enum)
-    ] = Field(
+    burr_6_intended: Optional[List[NSB2023Burr6IntendedCcfTarget]] = Field(
         default=None,
         alias="Burr_x0020_6_x0020_Intended_x002",
         title="Burr 6 Intended CCF Target",
