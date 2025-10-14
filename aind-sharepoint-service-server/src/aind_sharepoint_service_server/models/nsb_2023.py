@@ -1816,6 +1816,7 @@ class NSB2023BehaviorFirstFipStage(Enum, metaclass=EnumMeta):
 class NSB2023Burr1IntendedCcfTarget(Enum, metaclass=EnumMeta):
     """Enum class for Burr 1 Intended CCF Target."""
 
+    SELECT = "Select..."
     FRP__FRONTAL_POLE_CEREBRA = "FRP - Frontal pole cerebral cortex"
     M_OP__PRIMARY_MOTOR_AREA = "MOp - Primary motor area"
     M_OS__SECONDARY_MOTOR_ARE = "MOs - Secondary motor area"
@@ -2204,6 +2205,7 @@ class NSB2023Burr1IntendedCcfTarget(Enum, metaclass=EnumMeta):
 class NSB2023Burr2IntendedCcfTarget(Enum, metaclass=EnumMeta):
     """Enum class for Burr 2 Intended CCF Target."""
 
+    SELECT = "Select..."
     FRP__FRONTAL_POLE_CEREBRA = "FRP - Frontal pole cerebral cortex"
     M_OP__PRIMARY_MOTOR_AREA = "MOp - Primary motor area"
     M_OS__SECONDARY_MOTOR_ARE = "MOs - Secondary motor area"
@@ -2592,6 +2594,7 @@ class NSB2023Burr2IntendedCcfTarget(Enum, metaclass=EnumMeta):
 class NSB2023Burr3IntendedCcfTarget(Enum, metaclass=EnumMeta):
     """Enum class for Burr 3 Intended CCF Target."""
 
+    SELECT = "Select..."
     FRP__FRONTAL_POLE_CEREBRA = "FRP - Frontal pole cerebral cortex"
     M_OP__PRIMARY_MOTOR_AREA = "MOp - Primary motor area"
     M_OS__SECONDARY_MOTOR_ARE = "MOs - Secondary motor area"
@@ -2980,6 +2983,7 @@ class NSB2023Burr3IntendedCcfTarget(Enum, metaclass=EnumMeta):
 class NSB2023Burr4IntendedCcfTarget(Enum, metaclass=EnumMeta):
     """Enum class for Burr 4 Intended CCF Target."""
 
+    SELECT = "Select..."
     FRP__FRONTAL_POLE_CEREBRA = "FRP - Frontal pole cerebral cortex"
     M_OP__PRIMARY_MOTOR_AREA = "MOp - Primary motor area"
     M_OS__SECONDARY_MOTOR_ARE = "MOs - Secondary motor area"
@@ -3368,6 +3372,7 @@ class NSB2023Burr4IntendedCcfTarget(Enum, metaclass=EnumMeta):
 class NSB2023Burr5IntendedCcfTarget(Enum, metaclass=EnumMeta):
     """Enum class for Burr 5 Intended CCF Target."""
 
+    SELECT = "Select..."
     FRP__FRONTAL_POLE_CEREBRA = "FRP - Frontal pole cerebral cortex"
     M_OP__PRIMARY_MOTOR_AREA = "MOp - Primary motor area"
     M_OS__SECONDARY_MOTOR_ARE = "MOs - Secondary motor area"
@@ -3756,6 +3761,7 @@ class NSB2023Burr5IntendedCcfTarget(Enum, metaclass=EnumMeta):
 class NSB2023Burr6IntendedCcfTarget(Enum, metaclass=EnumMeta):
     """Enum class for Burr 6 Intended CCF Target."""
 
+    SELECT = "Select..."
     FRP__FRONTAL_POLE_CEREBRA = "FRP - Frontal pole cerebral cortex"
     M_OP__PRIMARY_MOTOR_AREA = "MOp - Primary motor area"
     M_OS__SECONDARY_MOTOR_ARE = "MOs - Secondary motor area"
