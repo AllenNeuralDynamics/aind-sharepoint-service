@@ -4,6 +4,8 @@ Enum class for Burr 5 Intended CCF Target.
 
 ## Enum
 
+* `SELECT` (value: `'Select...'`)
+
 * `FRP__FRONTAL_POLE_CEREBRA` (value: `'FRP - Frontal pole cerebral cortex'`)
 
 * `M_OP__PRIMARY_MOTOR_AREA` (value: `'MOp - Primary motor area'`)
