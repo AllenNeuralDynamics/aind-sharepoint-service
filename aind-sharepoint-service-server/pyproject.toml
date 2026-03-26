@@ -23,6 +23,8 @@ dependencies = [
     'fastapi-cache2[redis]>=0.2.2',
     'azure-identity>=1.15.0',
     'requests',
+    'python-json-logger',
+    'PyYAML'
 ]
 
 [project.optional-dependencies]
