@@ -784,7 +784,6 @@ class NSB2023Procedure(Enum, metaclass=EnumMeta):
     WHC_2_P = "WHC 2P"
     WHC_NP = "WHC NP"
 
-
     # Missing attributes after Sx NSB2023Procedure # Removal
     MOTOR_CTX_2_P = "Motor Ctx 2P"
     GRID_INJ_6_OR_9_VISUAL = "Grid INJ (6 or 9) + Visual Ctx 2P"
