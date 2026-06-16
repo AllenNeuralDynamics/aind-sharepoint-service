@@ -11,6 +11,7 @@ from fastapi.routing import APIRoute
 from fastapi_cache import FastAPICache
 from fastapi_cache.backends.inmemory import InMemoryBackend
 from fastapi_cache.backends.redis import RedisBackend
+from starlette.routing import Mount
 
 # from redis import asyncio as aioredis  # noqa
 from redis.asyncio import from_url  # noqa
@@ -61,6 +62,6 @@ app.add_middleware(
 app.include_router(router)
 
 # Clean up the methods names that is generated in the client code
-for route in app.routes:
+for route in router.routes:
     if isinstance(route, APIRoute):
         route.operation_id = route.name

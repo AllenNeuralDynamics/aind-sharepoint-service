@@ -92,24 +92,26 @@ def client_with_redis() -> Generator[TestClient, Any, None]:
     """Creating a client when settings have a redis_url. Only used in one test
     to verify the lifespan method in main is called correctly."""
 
-    # Import moved to be able to mock cache
-    from aind_sharepoint_service_server.main import app
-
     settings_with_redis = settings.model_copy(
         update={"redis_url": RedisDsn("redis://example.com:1234")}, deep=True
     )
+    mock_redis = AsyncMock()
     with (
         patch(
             "aind_sharepoint_service_server.main.settings",
-            return_value=settings_with_redis,
+            settings_with_redis,
         ),
         patch(
-            "aind_sharepoint_service_server.main.from_url", return_value=None
+            "aind_sharepoint_service_server.main.from_url",
+            return_value=mock_redis,
         ),
         patch(
             "aind_sharepoint_service_server.main.RedisBackend",
             return_value=None,
         ),
     ):
+        # Import moved inside patch context to ensure settings are patched
+        from aind_sharepoint_service_server.main import app
+
         with TestClient(app) as c:
             yield c
