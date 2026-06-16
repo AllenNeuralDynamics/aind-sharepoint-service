@@ -784,6 +784,7 @@ class NSB2023Procedure(Enum, metaclass=EnumMeta):
     WHC_2_P = "WHC 2P"
     WHC_NP = "WHC NP"
 
+
     # Missing attributes after Sx NSB2023Procedure # Removal
     MOTOR_CTX_2_P = "Motor Ctx 2P"
     GRID_INJ_6_OR_9_VISUAL = "Grid INJ (6 or 9) + Visual Ctx 2P"
@@ -799,6 +800,16 @@ class NSB2023Procedure(Enum, metaclass=EnumMeta):
     EMG__ARRAY = "EMG Array"
     TESTES__INJECTION = "Testes Injection"
     OVIDUCT__INJECTION = "Oviduct Injection"
+
+    # Additional procedure types
+    THERMISTOR__IMPLANT_WITH = "Thermistor Implant (with Headpost)"
+    HP_INJ__THERMISTOR__IMPLA = "HP + INJ + Thermistor Implant"
+    WHC_NP__THERMISTOR__IMPLA = "WHC NP + Thermistor Implant"
+    DHC__THERMISTOR__IMPLANT = "DHC + Thermistor Implant"
+    SPINAL__CORD_INJ = "Spinal Cord INJ"
+    CHRONOS = "Chronos"
+    ΜLED__IMPLANTATION = "µLED Implantation"
+    CHRONOS_HP__SKULL__SCREW = "Chronos HP + Skull Screw + Thermistor Implant"
 
 
 class NSB2023Headpost(Enum, metaclass=EnumMeta):
