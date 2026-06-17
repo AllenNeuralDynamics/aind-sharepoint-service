@@ -118,6 +118,22 @@ Enum class for NSB2023Procedure.
 
 * `OVIDUCT__INJECTION` (value: `'Oviduct Injection'`)
 
+* `THERMISTOR__IMPLANT_WITH` (value: `'Thermistor Implant (with Headpost)'`)
+
+* `HP_INJ__THERMISTOR__IMPLA` (value: `'HP + INJ + Thermistor Implant'`)
+
+* `WHC_NP__THERMISTOR__IMPLA` (value: `'WHC NP + Thermistor Implant'`)
+
+* `DHC__THERMISTOR__IMPLANT` (value: `'DHC + Thermistor Implant'`)
+
+* `SPINAL__CORD_INJ` (value: `'Spinal Cord INJ'`)
+
+* `CHRONOS` (value: `'Chronos'`)
+
+* `ΜLED__IMPLANTATION` (value: `'µLED Implantation'`)
+
+* `CHRONOS_HP__SKULL__SCREW` (value: `'Chronos HP + Skull Screw + Thermistor Implant'`)
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 
