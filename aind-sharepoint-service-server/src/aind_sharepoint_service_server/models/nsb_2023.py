@@ -800,6 +800,16 @@ class NSB2023Procedure(Enum, metaclass=EnumMeta):
     TESTES__INJECTION = "Testes Injection"
     OVIDUCT__INJECTION = "Oviduct Injection"
 
+    # Additional procedure types
+    THERMISTOR__IMPLANT_WITH = "Thermistor Implant (with Headpost)"
+    HP_INJ__THERMISTOR__IMPLA = "HP + INJ + Thermistor Implant"
+    WHC_NP__THERMISTOR__IMPLA = "WHC NP + Thermistor Implant"
+    DHC__THERMISTOR__IMPLANT = "DHC + Thermistor Implant"
+    SPINAL__CORD_INJ = "Spinal Cord INJ"
+    CHRONOS = "Chronos"
+    ΜLED__IMPLANTATION = "µLED Implantation"
+    CHRONOS_HP__SKULL__SCREW = "Chronos HP + Skull Screw + Thermistor Implant"
+
 
 class NSB2023Headpost(Enum, metaclass=EnumMeta):
     """Enum class for NSB2023Headpost."""
