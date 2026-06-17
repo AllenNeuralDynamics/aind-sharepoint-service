@@ -11,7 +11,6 @@ from fastapi.routing import APIRoute
 from fastapi_cache import FastAPICache
 from fastapi_cache.backends.inmemory import InMemoryBackend
 from fastapi_cache.backends.redis import RedisBackend
-from starlette.routing import Mount
 
 # from redis import asyncio as aioredis  # noqa
 from redis.asyncio import from_url  # noqa
