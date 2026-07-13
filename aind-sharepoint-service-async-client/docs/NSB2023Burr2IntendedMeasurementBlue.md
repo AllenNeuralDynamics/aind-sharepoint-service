@@ -6,6 +6,10 @@ Enum class for Burr 2 intended measurement blue.
 
 * `N_A` (value: `'N/A'`)
 
+* `SELECT` (value: `'Select...'`)
+
+* `NONE` (value: `'None'`)
+
 * `DOPAMINE` (value: `'dopamine'`)
 
 * `SEROTONIN` (value: `'serotonin'`)

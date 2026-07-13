@@ -6,6 +6,10 @@ Enum class for Burr 5 intended measurement green.
 
 * `N_A` (value: `'N/A'`)
 
+* `SELECT` (value: `'Select...'`)
+
+* `NONE` (value: `'None'`)
+
 * `DOPAMINE` (value: `'dopamine'`)
 
 * `SEROTONIN` (value: `'serotonin'`)
