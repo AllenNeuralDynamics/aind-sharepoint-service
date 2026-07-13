@@ -4161,6 +4161,8 @@ class NSB2023Burr1IntendedMeasurementRed(Enum, metaclass=EnumMeta):
     """Enum class for Burr 1 intended measurement red."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4177,6 +4179,8 @@ class NSB2023Burr2IntendedMeasurementRed(Enum, metaclass=EnumMeta):
     """Enum class for Burr 2 intended measurement red."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4193,6 +4197,8 @@ class NSB2023Burr3IntendedMeasurementRed(Enum, metaclass=EnumMeta):
     """Enum class for Burr 3 intended measurement red."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4209,6 +4215,8 @@ class NSB2023Burr4IntendedMeasurementRed(Enum, metaclass=EnumMeta):
     """Enum class for Burr 4 intended measurement red."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4225,6 +4233,8 @@ class NSB2023Burr5IntendedMeasurementRed(Enum, metaclass=EnumMeta):
     """Enum class for Burr 5 intended measurement red."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4241,6 +4251,8 @@ class NSB2023Burr6IntendedMeasurementRed(Enum, metaclass=EnumMeta):
     """Enum class for Burr 6 intended measurement red."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4257,6 +4269,8 @@ class NSB2023Burr1IntendedMeasurementGreen(Enum, metaclass=EnumMeta):
     """Enum class for Burr 1 intended measurement green."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4273,6 +4287,8 @@ class NSB2023Burr2IntendedMeasurementGreen(Enum, metaclass=EnumMeta):
     """Enum class for Burr 2 intended measurement green."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4289,6 +4305,8 @@ class NSB2023Burr3IntendedMeasurementGreen(Enum, metaclass=EnumMeta):
     """Enum class for Burr 3 intended measurement green."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4305,6 +4323,8 @@ class NSB2023Burr4IntendedMeasurementGreen(Enum, metaclass=EnumMeta):
     """Enum class for Burr 4 intended measurement green."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4321,6 +4341,8 @@ class NSB2023Burr5IntendedMeasurementGreen(Enum, metaclass=EnumMeta):
     """Enum class for Burr 5 intended measurement green."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4337,6 +4359,8 @@ class NSB2023Burr6IntendedMeasurementGreen(Enum, metaclass=EnumMeta):
     """Enum class for Burr 6 intended measurement green."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4353,6 +4377,8 @@ class NSB2023Burr1IntendedMeasurementBlue(Enum, metaclass=EnumMeta):
     """Enum class for Burr 1 intended measurement blue."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4369,6 +4395,8 @@ class NSB2023Burr2IntendedMeasurementBlue(Enum, metaclass=EnumMeta):
     """Enum class for Burr 2 intended measurement blue."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4385,6 +4413,8 @@ class NSB2023Burr3IntendedMeasurementBlue(Enum, metaclass=EnumMeta):
     """Enum class for Burr 3 intended measurement blue."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4401,6 +4431,8 @@ class NSB2023Burr4IntendedMeasurementBlue(Enum, metaclass=EnumMeta):
     """Enum class for Burr 4 intended measurement blue."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4417,6 +4449,8 @@ class NSB2023Burr5IntendedMeasurementBlue(Enum, metaclass=EnumMeta):
     """Enum class for Burr 5 intended measurement blue."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4433,6 +4467,8 @@ class NSB2023Burr6IntendedMeasurementBlue(Enum, metaclass=EnumMeta):
     """Enum class for Burr 6 intended measurement blue."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4449,6 +4485,8 @@ class NSB2023Burr1IntendedMeasurementIsosbestic(Enum, metaclass=EnumMeta):
     """Enum class for Burr 1 intended measurement isosbestic."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4465,6 +4503,8 @@ class NSB2023Burr2IntendedMeasurementIsosbestic(Enum, metaclass=EnumMeta):
     """Enum class for Burr 2 intended measurement isosbestic."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4481,6 +4521,8 @@ class NSB2023Burr3IntendedMeasurementIsosbestic(Enum, metaclass=EnumMeta):
     """Enum class for Burr 3 intended measurement isosbestic."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4497,6 +4539,8 @@ class NSB2023Burr4IntendedMeasurementIsosbestic(Enum, metaclass=EnumMeta):
     """Enum class for Burr 4 intended measurement isosbestic."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4513,6 +4557,8 @@ class NSB2023Burr5IntendedMeasurementIsosbestic(Enum, metaclass=EnumMeta):
     """Enum class for Burr 5 intended measurement isosbestic."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
@@ -4529,6 +4575,8 @@ class NSB2023Burr6IntendedMeasurementIsosbestic(Enum, metaclass=EnumMeta):
     """Enum class for Burr 6 intended measurement isosbestic."""
 
     N_A = "N/A"
+    SELECT = "Select..."
+    NONE = "None"
     DOPAMINE = "dopamine"
     SEROTONIN = "serotonin"
     NOREPINEPHRINE = "norepinephrine"
