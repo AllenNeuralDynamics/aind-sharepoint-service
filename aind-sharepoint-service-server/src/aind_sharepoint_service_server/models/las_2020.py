@@ -2,7 +2,7 @@
 
 from datetime import datetime
 from enum import Enum, EnumMeta
-from typing import Annotated, Optional, List
+from typing import Annotated, List, Optional
 
 from pydantic import (
     BaseModel,

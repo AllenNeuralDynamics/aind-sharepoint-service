@@ -4845,6 +4845,13 @@ class NSB2023List(BaseModel, extra="allow"):
     breg2_lamb: Optional[float] = Field(
         default=None, alias="Breg2Lamb", title="Bregma to Lambda"
     )
+    burr1_status: Annotated[
+        NSB2023Burr1Status, WrapValidator(optional_enum)
+    ] = Field(
+        default=None,
+        alias="Burr_x0020_Hole_x0020_1_x0020_st",
+        title="Burr1 Status",
+    )
     burr1_injection_devi: Annotated[
         NSB2023Burr1InjectionDevice, WrapValidator(optional_enum)
     ] = Field(

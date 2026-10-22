@@ -4,5 +4,7 @@ exclude =
     __pycache__,
     build,
     .venv,
-    venv
+    venv,
+    env,
+    .env
 max-complexity = 10
